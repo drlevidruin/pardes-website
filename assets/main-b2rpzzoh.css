@@ -655,10 +655,11 @@
   }
   .hero-split__text {
     padding: var(--space-5) var(--space-5) var(--space-4);
-    order: 0;
+    order: -2 !important;
   }
-  .hero-split > .hero-carousel {
-    order: 1 !important;
+  .hero-split > .hero-carousel,
+  .hero-split .hero-carousel {
+    order: 5 !important;
     min-height: 280px;
     margin: var(--space-3);
   }
