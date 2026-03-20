@@ -167,7 +167,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: calc(var(--header-height) + 1.5rem) 1.25rem 1.25rem;
+    padding: calc(var(--header-height) + 0.5rem) 1.25rem 0.75rem;
     margin-top: 0;
     max-width: 100%;
   }
@@ -177,7 +177,7 @@
     text-shadow: none;
     text-align: center;
     line-height: 1.08;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.3rem;
     letter-spacing: -0.03em;
   }
   .hero-immersive__content .lead {
@@ -185,9 +185,9 @@
   }
   .hero-tagline {
     color: var(--forest);
-    font-size: 1.3rem;
-    margin-top: 0.4rem;
-    margin-bottom: 0;
+    font-size: 1.6rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
   }
   .hero-immersive__bg {
     position: relative;
@@ -231,6 +231,18 @@
   }
 
   .hero-immersive__scroll-hint { display: none !important; }
+
+  /* Fix hamburger menu flush right */
+  .nav-toggle {
+    margin-left: auto;
+    border: 1px solid var(--line);
+  }
+  .header-inner {
+    padding-right: 0;
+  }
+  .header-actions {
+    display: none;
+  }
 }
 
 /* ── Proof Bar ── */
