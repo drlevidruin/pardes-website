@@ -598,29 +598,86 @@
    VISUAL AUDIT POLISH — March 2026
    ══════════════════════════════════════════════════════ */
 
-/* ── 1. Hero text centering: raise content on desktop ── */
-.hero-immersive__content {
-  margin-top: calc(var(--header-height) * -0.6);
-}
-@media(max-width:760px) {
-  .hero-immersive__content {
-    margin-top: calc(var(--header-height) * -0.2);
-    padding: var(--space-4) var(--space-3);
-  }
-  .hero-immersive__content h1 {
-    font-size: clamp(2.2rem, 7.5vw, 3rem);
-  }
+/* ── 1. Hero accent text ── */
+.hero-accent {
+  color: var(--forest);
 }
 
-/* ── 2. Ghost button: more visible on hero ── */
-.btn-ghost {
-  border-color: rgba(255,255,255,0.7);
-  background: rgba(255,255,255,0.18);
-  font-weight: 600;
+/* ── 2. Hero split: upgraded for homepage ── */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: clamp(520px, 80vh, 780px);
+  overflow: hidden;
+  background: var(--cream);
 }
-.btn-ghost:hover {
-  background: rgba(255,255,255,0.35);
-  border-color: rgba(255,255,255,0.95);
+.hero-split__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--header-height) + var(--space-4)) var(--space-7) var(--space-6);
+}
+.hero-split__text h1 {
+  color: var(--navy);
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+.hero-split__text .lead {
+  color: var(--text);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  max-width: 480px;
+  margin-bottom: var(--space-5);
+}
+
+/* ── Nav toggle: hamburger icon ── */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--navy);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  padding: 0;
+}
+.nav-toggle svg {
+  display: block;
+}
+
+@media(max-width:1024px) {
+  .nav-toggle { display: inline-flex; }
+  .hero-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero-split__text {
+    padding: var(--space-5) var(--space-5) var(--space-6);
+    order: 1;
+  }
+  .hero-carousel {
+    order: 0;
+    min-height: 280px;
+    margin: var(--space-3);
+  }
+}
+@media(max-width:760px) {
+  .hero-split__text {
+    padding: var(--space-4) var(--space-4) var(--space-5);
+  }
+  .hero-split__text h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+  .hero-carousel {
+    min-height: 240px;
+    margin: var(--space-2);
+  }
+  /* Hide carousel arrows on mobile — swipe only */
+  .hero-carousel__btn {
+    display: none;
+  }
 }
 
 /* ── 3. Testimonial cards: equal height ── */
@@ -645,7 +702,7 @@
   object-fit: cover;
 }
 
-/* ── 5. Mobile sticky CTA bar ── */
+/* ── 5. Mobile sticky CTA bar — hidden by default, shown via JS on scroll ── */
 .mobile-cta-bar {
   display: none;
 }
@@ -662,6 +719,11 @@
     box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
     padding: var(--space-3) var(--space-4);
     gap: var(--space-3);
+    transform: translateY(100%);
+    transition: transform 0.3s var(--ease-out);
+  }
+  .mobile-cta-bar.is-visible {
+    transform: translateY(0);
   }
   .mobile-cta-bar .btn {
     flex: 1;

@@ -20,7 +20,7 @@
           <span class="brand__text">Pardes Day School</span>
         </a>
         <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">
-          <span aria-hidden="true">Menu</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
         <nav class="site-nav" data-site-nav aria-label="Primary navigation">
           <ul class="nav-list">
@@ -166,6 +166,24 @@
       <a href="admissions.html#schedule-tour" class="btn btn-primary">Schedule a Tour</a>
       <a href="tel:+13056902548" class="btn btn-outline">Call Us</a>
     </div>
+
+  
+    <!-- Sticky CTA bar: show only after scrolling past hero -->
+    <script>
+    (function(){
+      var bar = document.querySelector('.mobile-cta-bar');
+      if (!bar) return;
+      var threshold = window.innerHeight * 0.6;
+      var visible = false;
+      window.addEventListener('scroll', function() {
+        var shouldShow = window.scrollY > threshold;
+        if (shouldShow !== visible) {
+          visible = shouldShow;
+          bar.classList.toggle('is-visible', visible);
+        }
+      }, {passive: true});
+    })();
+    </script>
 
   </body>
 </html>

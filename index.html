@@ -57,7 +57,7 @@
         </a>
 
         <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">
-          <span aria-hidden="true">Menu</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
 
         <nav class="site-nav" data-site-nav aria-label="Primary navigation">
@@ -92,26 +92,21 @@
     </header>
 
     <main id="main-content">
-      <!-- ── Hero ──────────────────────────────────────────────── -->
-      <section class="hero-immersive">
-        <div class="hero-immersive__bg" data-hero-carousel>
-          <div class="hero-immersive__track" data-hero-track></div>
-          <div class="hero-carousel__dots" data-hero-dots></div>
-          <button class="hero-carousel__btn hero-carousel__btn--prev" data-hero-prev aria-label="Previous image">&lsaquo;</button>
-          <button class="hero-carousel__btn hero-carousel__btn--next" data-hero-next aria-label="Next image">&rsaquo;</button>
-        </div>
-        <div class="hero-immersive__overlay"></div>
-        <div class="hero-immersive__content container">
-          <h1>The school you wish<br>you had growing up.</h1>
+      <!-- ── Hero (Split Layout) ─────────────────────────────── -->
+      <section class="hero-split">
+        <div class="hero-split__text">
+          <h1>The school<br>you wish<br><span class="hero-accent">you had</span><br>growing up.</h1>
           <p class="lead">Preschool through 8th grade in Miami Beach.<br>This is The Pardes Way.</p>
           <div class="btn-row">
             <a class="btn btn-primary btn-lg" href="pages/admissions.html#schedule-tour">Schedule a Tour</a>
-            <a class="btn btn-ghost btn-lg" href="#difference">See What Makes Us Different</a>
+            <a class="btn btn-outline btn-lg" href="#difference">See What Makes Us Different</a>
           </div>
         </div>
-        <div class="hero-immersive__scroll-hint" aria-hidden="true">
-          <span>Scroll to explore</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        <div class="hero-carousel" data-hero-carousel>
+          <div class="hero-carousel__track" data-hero-track></div>
+          <div class="hero-carousel__dots" data-hero-dots></div>
+          <button class="hero-carousel__btn hero-carousel__btn--prev" data-hero-prev aria-label="Previous image">&lsaquo;</button>
+          <button class="hero-carousel__btn hero-carousel__btn--next" data-hero-next aria-label="Next image">&rsaquo;</button>
         </div>
       </section>
 
@@ -502,6 +497,24 @@
       <a href="pages/admissions.html#schedule-tour" class="btn btn-primary">Schedule a Tour</a>
       <a href="tel:+13056902548" class="btn btn-outline">Call Us</a>
     </div>
+
+  
+    <!-- Sticky CTA bar: show only after scrolling past hero -->
+    <script>
+    (function(){
+      var bar = document.querySelector('.mobile-cta-bar');
+      if (!bar) return;
+      var threshold = window.innerHeight * 0.6;
+      var visible = false;
+      window.addEventListener('scroll', function() {
+        var shouldShow = window.scrollY > threshold;
+        if (shouldShow !== visible) {
+          visible = shouldShow;
+          bar.classList.toggle('is-visible', visible);
+        }
+      }, {passive: true});
+    })();
+    </script>
 
   </body>
 </html>
