@@ -150,12 +150,7 @@
 
 /* ── "wish" accent word ── */
 .hero-wish {
-  font-family: 'Caveat', cursive;
   color: var(--forest);
-  font-style: normal;
-  font-weight: 700;
-  position: relative;
-  font-size: 1.15em;
 }
 /* On dark overlay, keep it a lighter green */
 .hero-immersive__content .hero-wish {
@@ -201,7 +196,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.75rem 1.25rem 0.5rem;
+    padding: var(--header-height) 1.25rem 0.5rem;
     margin-top: 0;
     max-width: 100%;
   }
@@ -216,8 +211,6 @@
   }
   .hero-immersive__content .hero-wish {
     color: var(--forest) !important;
-    font-family: 'Caveat', cursive !important;
-    font-size: 1.25em;
   }
   .hero-immersive__content .lead {
     display: none;
