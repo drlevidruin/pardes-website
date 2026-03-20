@@ -1,0 +1,58 @@
+{
+  "school": {
+    "name": "Pardes Day School",
+    "tagline": "The Pardes Way. Discover the Difference.",
+    "heroLine": "The school you wish you had growing up.",
+    "location": "Miami Beach, Florida",
+    "grades": "18 months through 8th grade",
+    "contact": {
+      "phone": "(305) 690-2548",
+      "email": "office@pardesdayschool.org",
+      "address": "1211 Marseille Dr, Miami, FL 33141"
+    },
+    "social": {
+      "instagram": "https://instagram.com/pardesdayschool",
+      "facebook": "https://facebook.com/pardesdayschool",
+      "youtube": "https://youtube.com/@pardesdayschool"
+    }
+  },
+  "divisions": [
+    {
+      "name": "Gan Katan (Preschool)",
+      "grades": "18 months to 5-year-olds"
+    },
+    {
+      "name": "Pardes Day School (Elementary)",
+      "grades": "Kindergarten through 5th grade"
+    },
+    {
+      "name": "Middle School at Pardes",
+      "grades": "6th through 8th grade"
+    }
+  ],
+  "pillars": [
+    "Academic Excellence Through Design",
+    "Built for Life, Not Just School",
+    "Practical Jewish Living",
+    "A School Built for Families",
+    "The Work Never Stops"
+  ],
+  "differentiators": [
+    "Multiple teachers working simultaneously in every classroom",
+    "Fluid instructional groups, continuously reassessed",
+    "JSAT standards through COJDS with targeted data tracking",
+    "Proprietary English curriculum developed by our founder",
+    "Judaic and General Studies skills in the morning, integrated content in the afternoon",
+    "Practice time built into the school day with trained teacher guidance",
+    "Dedicated real-life skills classes: collaboration, emotional intelligence, and more",
+    "Practical Jewish living in a Chabad-inspired way",
+    "A love for Israel woven into the student experience"
+  ],
+  "cta": {
+    "tour": "Schedule a Tour",
+    "discover": "Discover the Difference",
+    "requestInfo": "Request Information",
+    "apply": "Apply",
+    "donate": "Donate"
+  }
+}

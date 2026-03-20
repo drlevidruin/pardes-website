@@ -1,0 +1,20 @@
+{
+  "mainCampus": {
+    "name": "Main Campus (Preschool & Elementary)",
+    "address": "1211 Marseille Dr, Miami Beach, FL 33141",
+    "phone": "(305) 690-2548"
+  },
+  "msapCampus": {
+    "name": "MSAP Campus (Middle School)",
+    "address": "7055 Bonita Dr, Miami Beach, FL 33141",
+    "phone": "(786) 790-8662"
+  },
+  "email": "office@pardesdayschool.org",
+  "hours": [
+    { "division": "Elementary (Mon–Thu)", "schedule": "8:15 AM – 3:55 PM" },
+    { "division": "Elementary (Friday)", "schedule": "8:15 AM – 1:45 PM" },
+    { "division": "Gan Katan (Mon–Thu)", "schedule": "8:30 AM – 3:15 PM" },
+    { "division": "Gan Katan (Friday)", "schedule": "8:30 AM – 1:45 PM" },
+    { "division": "Half Days", "schedule": "8:30 AM – 12:00 PM" }
+  ]
+}

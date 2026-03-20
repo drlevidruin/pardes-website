@@ -1,0 +1,22 @@
+{
+  "testimonials": [
+    {
+      "quote": "This is the school I wish I had growing up. Our kids love it here, and we see it in everything they bring home.",
+      "name": "Sarah M.",
+      "detail": "Parent of a 2nd grader and 4th grader",
+      "initials": "SM"
+    },
+    {
+      "quote": "Our evenings are ours again. Practice happens at school with real teacher support, and our child is thriving. This is how school should work.",
+      "name": "David & Rachel L.",
+      "detail": "Parents of three Pardes students",
+      "initials": "DL"
+    },
+    {
+      "quote": "We chose Pardes because our children are growing into the best versions of themselves, academically and as proud Jews. We wouldn't change a thing.",
+      "name": "Jessica K.",
+      "detail": "Gan Katan parent",
+      "initials": "JK"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pardes Day School — Admin</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Montserrat", -apple-system, sans-serif; background: #f3ede4; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+
+    /* Login gate */
+    #login-gate {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      padding: 3rem 2.5rem;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+    }
+    #login-gate h1 { font-size: 1.4rem; color: #343e85; margin-bottom: .5rem; }
+    #login-gate p { font-size: .9rem; color: #6b7280; margin-bottom: 1.5rem; }
+    #login-gate input {
+      width: 100%;
+      padding: .85rem 1rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: .95rem;
+      margin-bottom: .75rem;
+      outline: none;
+      transition: border-color .2s;
+    }
+    #login-gate input:focus { border-color: #10653c; box-shadow: 0 0 0 3px rgba(16,101,60,0.15); }
+    #login-gate button {
+      width: 100%;
+      padding: .85rem;
+      background: #10653c;
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: .95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    #login-gate button:hover { background: #0b4d2d; }
+    #login-gate .error { color: #dc2626; font-size: .85rem; margin-top: .5rem; display: none; }
+
+    /* CMS container - hidden until login */
+    #cms-container { display: none; width: 100%; height: 100vh; }
+    body.cms-active { display: block; }
+    body.cms-active #login-gate { display: none; }
+    body.cms-active #cms-container { display: block; }
+  </style>
+</head>
+<body>
+  <div id="login-gate">
+    <h1>Pardes Admin</h1>
+    <p>Enter your credentials to manage the website.</p>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" required autocomplete="username" />
+      <input type="password" id="password" placeholder="Password" required autocomplete="current-password" />
+      <button type="submit">Sign In</button>
+      <p class="error" id="login-error">Invalid username or password.</p>
+    </form>
+  </div>
+
+  <div id="cms-container"></div>
+
+  <script>
+    // Simple admin authentication
+    // To change credentials: update the hash values below
+    // Generate new hashes at: https://emn178.github.io/online-tools/sha256.html
+    const ADMIN_USERS = {
+      // username: SHA-256 hash of password
+      // Default: username "pardesadmin" / password "Pardes2026!"
+      "pardesadmin": "2fa7181a929287457126ac551c90b3a603a6ed00f478bc445e66a7ee569c98ca"
+    };
+
+    // SHA-256 hash function
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim().toLowerCase();
+      const password = document.getElementById('password').value;
+      const hash = await sha256(password);
+
+      if (ADMIN_USERS[username] && ADMIN_USERS[username] === hash) {
+        // Store session
+        sessionStorage.setItem('pardes_admin', 'true');
+        loadCMS();
+      } else {
+        document.getElementById('login-error').style.display = 'block';
+        setTimeout(() => {
+          document.getElementById('login-error').style.display = 'none';
+        }, 3000);
+      }
+    });
+
+    function loadCMS() {
+      document.body.classList.add('cms-active');
+      // Load Decap CMS
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js';
+      document.body.appendChild(script);
+    }
+
+    // Check for existing session
+    if (sessionStorage.getItem('pardes_admin') === 'true') {
+      loadCMS();
+    }
+  </script>
+</body>
+</html>

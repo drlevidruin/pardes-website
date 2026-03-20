@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "What grades does Pardes Day School serve?",
+      "answer": "Pardes serves students from 18 months (Preschool / Gan Katan) through 8th Grade. Our three divisions — Preschool, Elementary (K-5), and Middle School (6-8) — each have their own leadership team while sharing one unified educational philosophy.",
+      "showOnHomepage": true
+    },
+    {
+      "question": "What makes The Pardes Way different from other schools?",
+      "answer": "We redesigned how school works. Every classroom has multiple teachers working simultaneously with fluid instructional groups, so every child receives direct instruction at exactly the right level every day. Practice time is built into the school day with trained teacher support — families get their evenings back. And we teach real-life skills alongside academics because both matter equally.",
+      "showOnHomepage": true
+    },
+    {
+      "question": "What are the school hours?",
+      "answer": "Elementary (Mon–Thu): 8:15 AM – 3:55 PM. Elementary (Friday): 8:15 AM – 1:45 PM. Gan Katan (Mon–Thu): 8:30 AM – 3:15 PM. Gan Katan (Friday): 8:30 AM – 1:45 PM. Half Days: 8:30 AM – 12:00 PM.",
+      "showOnHomepage": false
+    },
+    {
+      "question": "How does the admissions process work?",
+      "answer": "It starts with a campus tour where you can walk through real classrooms and meet our educators. From there, you submit an online application, meet with our admissions team, and — once accepted — receive clear onboarding with a buddy system so your family feels at home before day one. Applications are accepted on a rolling basis, with early submissions receiving priority.",
+      "showOnHomepage": true
+    },
+    {
+      "question": "Do you offer financial aid or scholarships?",
+      "answer": "Yes. Pardes offers need-based financial aid and merit scholarships. We believe every family that wants The Pardes Way for their child should have a path to get here. Contact our admissions team at (305) 690-2548 to discuss what options are available for your family.",
+      "showOnHomepage": true
+    },
+    {
+      "question": "What is fluid instructional grouping?",
+      "answer": "Instead of one teacher lecturing to the whole class, multiple teachers work with students in small groups that shift based on each child's current level in that subject. Groups are constantly reassessed using tools like NWEA MAP Growth and JSAT standards, so your child is always working where they'll grow the most.",
+      "showOnHomepage": false
+    },
+    {
+      "question": "Do students have homework?",
+      "answer": "Practice time is built into the school day at Pardes. Students work through problems and apply what they've learned with trained teachers guiding them in real time. This means less homework at home and more meaningful family time in the evenings.",
+      "showOnHomepage": true
+    },
+    {
+      "question": "How does Pardes approach Jewish education?",
+      "answer": "Judaism at Pardes is something students experience, appreciate, and make their own. From Chumash and Kriah to Shabbat assembly and a love for Israel, our program weaves Jewish identity throughout the day.",
+      "showOnHomepage": false
+    },
+    {
+      "question": "Is Hebrew language instruction included?",
+      "answer": "Yes. Hebrew is integrated throughout our curriculum starting in Preschool. Our language program builds real proficiency and deepens students' cultural connection to Israel and Jewish traditions across every division.",
+      "showOnHomepage": false
+    },
+    {
+      "question": "How does Pardes support students who learn differently?",
+      "answer": "Our fluid instructional grouping means every child already receives instruction at their level. Beyond that, we provide targeted learning support including tutoring and individualized educational plans when needed. Our team works closely with families to make sure no child falls through the cracks.",
+      "showOnHomepage": false
+    },
+    {
+      "question": "What extracurricular activities are available?",
+      "answer": "Pardes offers sports, arts, music, Judaic clubs, robotics, and community service opportunities. Students also participate in holiday celebrations, theatrical productions, art exhibitions, and field trips.",
+      "showOnHomepage": false
+    },
+    {
+      "question": "Where is Pardes Day School located?",
+      "answer": "Our main campus is at 1211 Marseille Dr, Miami Beach, FL 33141. Our middle school (MSAP) campus is at 7055 Bonita Dr, Miami Beach, FL 33141. You can reach us at (305) 690-2548 or office@pardesdayschool.org.",
+      "showOnHomepage": false
+    }
+  ]
+}

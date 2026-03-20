@@ -1,0 +1,10 @@
+{
+  "members": [
+    { "name": "Katy Horowitz", "title": "Head of School & Co-Founder", "initials": "KH", "email": "", "featured": true },
+    { "name": "Sharon Eichberg", "title": "CFO, Co-Founder & Director of Gan Katan", "initials": "SE", "email": "", "featured": true },
+    { "name": "Rabbi Dr. Levi Druin", "title": "Principal, Elementary (K-5)", "initials": "LD", "email": "", "featured": true },
+    { "name": "Mimi Edwards", "title": "Principal, Middle School (MSAP)", "initials": "ME", "email": "", "featured": true },
+    { "name": "Adam Eshel", "title": "Dean of Students & LeHashlim Director", "initials": "AE", "email": "", "featured": true },
+    { "name": "Dina Kranz", "title": "Educational Consultant & Board Member", "initials": "DK", "email": "", "featured": true }
+  ]
+}
