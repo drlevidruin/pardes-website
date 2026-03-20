@@ -138,75 +138,78 @@
   z-index: 3;
 }
 
-@media(max-width:760px) {
-  /* ── MOBILE HERO: Apple-level clean ── */
-  .hero-immersive {
-    min-height: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    overflow: visible !important;
-  }
+/* ── Hero tagline style ── */
+.hero-tagline {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  margin-top: var(--space-3);
+  letter-spacing: 0.02em;
+}
 
-  /* Text block: centered, clean, on cream bg — NO image behind it */
+@media(max-width:760px) {
+  .hero-immersive {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: hidden;
+  }
+  .hero-immersive__overlay { display: none; }
   .hero-immersive__content {
-    position: relative !important;
+    position: relative;
     z-index: 2;
     order: 1;
-    background: var(--cream) !important;
-    color: var(--ink) !important;
-    text-align: center !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    padding: calc(var(--header-height) + 2rem) 1.5rem 1.5rem !important;
-    margin-top: 0 !important;
-    max-width: 100% !important;
+    background: var(--cream);
+    color: var(--ink);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(var(--header-height) + 1.5rem) 1.25rem 1.25rem;
+    margin-top: 0;
+    max-width: 100%;
   }
   .hero-immersive__content h1 {
-    color: var(--navy) !important;
-    font-size: clamp(2.2rem, 9vw, 3rem) !important;
-    text-shadow: none !important;
-    text-align: center !important;
-    line-height: 1.1 !important;
-    margin-bottom: 0.75rem !important;
+    color: var(--navy);
+    font-size: 2.6rem;
+    text-shadow: none;
+    text-align: center;
+    line-height: 1.08;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.03em;
   }
   .hero-immersive__content .lead {
-    color: var(--text) !important;
-    text-align: center !important;
-    font-size: 1rem !important;
-    max-width: 100% !important;
-    margin-bottom: 0 !important;
+    display: none;
   }
-
-  /* HIDE buttons on mobile hero — Apple style, no clutter */
-  .hero-immersive__content .btn-row {
-    display: none !important;
+  .hero-tagline {
+    color: var(--forest);
+    font-size: 1.3rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0;
   }
-
-  /* Hide overlay on mobile — not needed */
-  .hero-immersive__overlay {
-    display: none !important;
-  }
-
-  /* Image carousel: right below text, no gap */
   .hero-immersive__bg {
-    position: relative !important;
+    position: relative;
     order: 2;
-    min-height: 280px;
-    margin: 0 !important;
+    min-height: 0;
+    margin: 0;
+    padding: 0 1rem 0.5rem;
   }
   .hero-immersive__track {
-    position: relative !important;
-    min-height: 280px;
+    position: relative;
+    min-height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
   }
   .hero-immersive__track .hero-carousel__card {
-    border-radius: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
+    border-radius: 20px;
+    margin: 0;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   }
-
-  /* Carousel controls: hide arrows, show dots below image */
+  .hero-immersive__track .hero-carousel__card img {
+    border-radius: 20px;
+  }
   .hero-immersive .hero-carousel__btn {
     display: none !important;
   }
