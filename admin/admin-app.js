@@ -5,8 +5,8 @@
 const CONFIG = {
   repo: 'drlevidruin/pardes-website',
   branch: 'main',
-  // Set this after generating a GitHub PAT with Contents read/write on this repo
-  token: '',
+  // Token is entered at login and stored in sessionStorage (never committed to repo)
+  get token() { return sessionStorage.getItem('pardes_gh_token') || ''; },
 };
 
 // Admin credentials: username → SHA-256(password)
@@ -85,8 +85,10 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
   const user = document.getElementById('loginUser').value.trim().toLowerCase();
   const pass = document.getElementById('loginPass').value;
   const hash = await sha256(pass);
-  if (ADMINS[user] && ADMINS[user] === hash) {
+  const token = document.getElementById('loginToken').value.trim();
+  if (ADMINS[user] && ADMINS[user] === hash && token) {
     sessionStorage.setItem('pardes_admin', 'true');
+    sessionStorage.setItem('pardes_gh_token', token);
     showAdmin();
   } else {
     const err = document.getElementById('loginError');
@@ -97,6 +99,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 
 document.getElementById('logoutBtn').addEventListener('click', () => {
   sessionStorage.removeItem('pardes_admin');
+  sessionStorage.removeItem('pardes_gh_token');
   location.reload();
 });
 
