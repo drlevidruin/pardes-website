@@ -201,7 +201,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: calc(var(--header-height) + 0.25rem) 1.25rem 0.5rem;
+    padding: 0.75rem 1.25rem 0.5rem;
     margin-top: 0;
     max-width: 100%;
   }
@@ -215,8 +215,9 @@
     letter-spacing: -0.03em;
   }
   .hero-immersive__content .hero-wish {
-    color: var(--forest);
-    font-size: 1.2em;
+    color: var(--forest) !important;
+    font-family: 'Caveat', cursive !important;
+    font-size: 1.25em;
   }
   .hero-immersive__content .lead {
     display: none;
