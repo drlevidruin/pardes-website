@@ -141,11 +141,31 @@
 /* ── Hero tagline style ── */
 .hero-tagline {
   font-family: 'Caveat', cursive;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.85);
-  margin-top: var(--space-3);
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.92);
+  margin-top: var(--space-4);
   letter-spacing: 0.02em;
+}
+
+/* ── Green text on dark hero overlay needs to stay white ── */
+.hero-immersive__content .text-forest {
+  color: #7dcfa0;
+}
+
+/* ── Hide carousel arrows and dots globally ── */
+.hero-immersive .hero-carousel__btn {
+  display: none;
+}
+.hero-immersive .hero-carousel__dots {
+  display: none;
+}
+
+/* ── Make scroll hint more visible ── */
+.hero-immersive__scroll-hint {
+  bottom: var(--space-8);
+  font-size: .9rem;
+  color: rgba(255,255,255,0.85);
 }
 
 @media(max-width:760px) {
@@ -180,12 +200,15 @@
     margin-bottom: 0.3rem;
     letter-spacing: -0.03em;
   }
+  .hero-immersive__content .text-forest {
+    color: var(--forest);
+  }
   .hero-immersive__content .lead {
     display: none;
   }
   .hero-tagline {
     color: var(--forest);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-top: 0.3rem;
     margin-bottom: 0.5rem;
   }
@@ -223,25 +246,34 @@
     justify-content: center;
     background: var(--cream);
   }
-  .hero-immersive .hero-carousel__dot {
-    background: var(--line) !important;
+  .hero-immersive .hero-carousel__dots {
+    display: none !important;
   }
-  .hero-immersive .hero-carousel__dot.is-active {
-    background: var(--navy) !important;
+  .hero-immersive .hero-carousel__dot {
+    display: none !important;
   }
 
   .hero-immersive__scroll-hint { display: none !important; }
 
   /* Fix hamburger menu flush right */
   .nav-toggle {
-    margin-left: auto;
-    border: 1px solid var(--line);
+    margin-left: auto !important;
+    position: absolute !important;
+    right: 5vw !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
   }
   .header-inner {
-    padding-right: 0;
+    position: relative !important;
+    padding: 0 5vw !important;
   }
   .header-actions {
-    display: none;
+    display: none !important;
+  }
+
+  /* Kill the whitespace above headline */
+  .hero-immersive__content {
+    padding-top: calc(var(--header-height) + 0.25rem) !important;
   }
 }
 
