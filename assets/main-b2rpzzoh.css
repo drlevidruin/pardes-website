@@ -654,11 +654,11 @@
     min-height: auto;
   }
   .hero-split__text {
-    padding: var(--space-5) var(--space-5) var(--space-6);
-    order: 1;
-  }
-  .hero-carousel {
+    padding: var(--space-5) var(--space-5) var(--space-4);
     order: 0;
+  }
+  .hero-split > .hero-carousel {
+    order: 1 !important;
     min-height: 280px;
     margin: var(--space-3);
   }
@@ -670,13 +670,56 @@
   .hero-split__text h1 {
     font-size: clamp(2rem, 8vw, 2.8rem);
   }
+  /* Hero buttons: not full-width, side by side, compact */
+  .hero-split__text .btn-row {
+    flex-direction: row;
+    gap: var(--space-2);
+  }
+  .hero-split__text .btn {
+    width: auto;
+    flex: 1;
+    padding: .7rem 1rem;
+    font-size: .85rem;
+  }
   .hero-carousel {
     min-height: 240px;
     margin: var(--space-2);
   }
-  /* Hide carousel arrows on mobile — swipe only */
+  /* Carousel arrows: slim, at photo edges on mobile */
   .hero-carousel__btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+    opacity: 0.7;
+    background: rgba(255,255,255,0.85);
+  }
+  /* Hide dots on mobile */
+  .hero-carousel__dots {
     display: none;
+  }
+  /* Header: hide empty actions container gap */
+  .header-actions {
+    display: none;
+  }
+  /* Proof cards: 2x2 grid, compact */
+  .proof-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--space-2);
+  }
+  .proof-card {
+    padding: var(--space-3) var(--space-2);
+  }
+  .proof-card strong {
+    font-size: 1.6rem;
+    margin-bottom: var(--space-1);
+  }
+  .proof-card span {
+    font-size: .68rem;
+    letter-spacing: .04em;
+  }
+  .proof-bar {
+    margin-top: -30px;
+    padding-bottom: var(--space-4);
   }
 }
 
