@@ -141,11 +141,25 @@
 /* ── Hero tagline style ── */
 .hero-tagline {
   font-family: 'Caveat', cursive;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: rgba(255,255,255,0.92);
   margin-top: var(--space-4);
   letter-spacing: 0.02em;
+}
+
+/* ── "wish" accent word ── */
+.hero-wish {
+  font-family: 'Caveat', cursive;
+  color: var(--forest);
+  font-style: normal;
+  font-weight: 700;
+  position: relative;
+  font-size: 1.15em;
+}
+/* On dark overlay, keep it a lighter green */
+.hero-immersive__content .hero-wish {
+  color: #7dcfa0;
 }
 
 /* ── Green text on dark hero overlay needs to stay white ── */
@@ -187,30 +201,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: calc(var(--header-height) + 0.5rem) 1.25rem 0.75rem;
+    padding: calc(var(--header-height) + 0.25rem) 1.25rem 0.5rem;
     margin-top: 0;
     max-width: 100%;
   }
   .hero-immersive__content h1 {
     color: var(--navy);
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     text-shadow: none;
     text-align: center;
-    line-height: 1.08;
-    margin-bottom: 0.3rem;
+    line-height: 1.12;
+    margin-bottom: 0.2rem;
     letter-spacing: -0.03em;
   }
-  .hero-immersive__content .text-forest {
+  .hero-immersive__content .hero-wish {
     color: var(--forest);
+    font-size: 1.2em;
   }
   .hero-immersive__content .lead {
     display: none;
   }
   .hero-tagline {
     color: var(--forest);
-    font-size: 1.8rem;
-    margin-top: 0.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.4rem;
   }
   .hero-immersive__bg {
     position: relative;
