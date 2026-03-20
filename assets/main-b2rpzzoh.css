@@ -593,3 +593,124 @@
 .faq-more-link:hover {
   color: var(--navy);
 }
+
+/* ══════════════════════════════════════════════════════
+   VISUAL AUDIT POLISH — March 2026
+   ══════════════════════════════════════════════════════ */
+
+/* ── 1. Hero text centering: raise content on desktop ── */
+.hero-immersive__content {
+  margin-top: calc(var(--header-height) * -0.6);
+}
+@media(max-width:760px) {
+  .hero-immersive__content {
+    margin-top: calc(var(--header-height) * -0.2);
+    padding: var(--space-4) var(--space-3);
+  }
+  .hero-immersive__content h1 {
+    font-size: clamp(2.2rem, 7.5vw, 3rem);
+  }
+}
+
+/* ── 2. Ghost button: more visible on hero ── */
+.btn-ghost {
+  border-color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.18);
+  font-weight: 600;
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.35);
+  border-color: rgba(255,255,255,0.95);
+}
+
+/* ── 3. Testimonial cards: equal height ── */
+.testimonial-grid {
+  align-items: stretch;
+}
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+}
+.testimonial-card blockquote {
+  flex: 1;
+}
+
+/* ── 4. Gallery aspect ratio enforcement ── */
+.gallery-grid .media-tile {
+  aspect-ratio: 4 / 3 !important;
+}
+.gallery-grid .media-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── 5. Mobile sticky CTA bar ── */
+.mobile-cta-bar {
+  display: none;
+}
+@media(max-width:760px) {
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: var(--white);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-3);
+  }
+  .mobile-cta-bar .btn {
+    flex: 1;
+    padding: .75rem 1rem;
+    font-size: .88rem;
+    width: auto;
+  }
+  /* Add padding at bottom of page so content isn't hidden behind sticky bar */
+  .site-footer {
+    padding-bottom: 72px;
+  }
+}
+
+/* ── 6. Section label refinement ── */
+.section-label {
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ── 7. FAQ accordion hover state ── */
+.faq-toggle:hover:after {
+  transform: scale(1.12);
+  box-shadow: 0 2px 8px rgba(16, 101, 60, 0.2);
+}
+
+/* ── 8. Proof cards: tighter spacing on desktop ── */
+.proof-card strong {
+  font-size: 2.2rem;
+}
+.proof-card span {
+  font-size: .82rem;
+}
+.proof-card {
+  padding: var(--space-5) var(--space-4);
+}
+
+/* ── 9. Page hero images: subtle zoom on load ── */
+@keyframes heroImageReveal {
+  from { transform: scale(1.08); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.page-hero__image {
+  animation: heroImageReveal 0.8s var(--ease-out) both;
+}
+
+/* ── 10. Division card hover: lift the image slightly ── */
+.division-hz-card:hover .division-hz-card__image {
+  transform: scale(1.02);
+  transition: transform var(--duration-normal) var(--ease-out);
+}
