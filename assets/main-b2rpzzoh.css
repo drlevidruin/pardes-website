@@ -139,8 +139,95 @@
 }
 
 @media(max-width:760px) {
-  .hero-immersive { min-height: 85vh; }
-  .hero-immersive__scroll-hint { display: none; }
+  /* ── MOBILE HERO: Apple-level clean ── */
+  .hero-immersive {
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+  }
+
+  /* Text block: centered, clean, on cream bg — NO image behind it */
+  .hero-immersive__content {
+    position: relative !important;
+    z-index: 2;
+    order: 1;
+    background: var(--cream) !important;
+    color: var(--ink) !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: calc(var(--header-height) + 2rem) 1.5rem 1.5rem !important;
+    margin-top: 0 !important;
+    max-width: 100% !important;
+  }
+  .hero-immersive__content h1 {
+    color: var(--navy) !important;
+    font-size: clamp(2.2rem, 9vw, 3rem) !important;
+    text-shadow: none !important;
+    text-align: center !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .hero-immersive__content .lead {
+    color: var(--text) !important;
+    text-align: center !important;
+    font-size: 1rem !important;
+    max-width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* HIDE buttons on mobile hero — Apple style, no clutter */
+  .hero-immersive__content .btn-row {
+    display: none !important;
+  }
+
+  /* Hide overlay on mobile — not needed */
+  .hero-immersive__overlay {
+    display: none !important;
+  }
+
+  /* Image carousel: right below text, no gap */
+  .hero-immersive__bg {
+    position: relative !important;
+    order: 2;
+    min-height: 280px;
+    margin: 0 !important;
+  }
+  .hero-immersive__track {
+    position: relative !important;
+    min-height: 280px;
+  }
+  .hero-immersive__track .hero-carousel__card {
+    border-radius: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Carousel controls: hide arrows, show dots below image */
+  .hero-immersive .hero-carousel__btn {
+    display: none !important;
+  }
+  .hero-immersive .hero-carousel__dots {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    padding: 0.75rem 0 !important;
+    order: 3;
+    justify-content: center;
+    background: var(--cream);
+  }
+  .hero-immersive .hero-carousel__dot {
+    background: var(--line) !important;
+  }
+  .hero-immersive .hero-carousel__dot.is-active {
+    background: var(--navy) !important;
+  }
+
+  .hero-immersive__scroll-hint { display: none !important; }
 }
 
 /* ── Proof Bar ── */
@@ -186,8 +273,24 @@
 }
 @media(max-width:1024px) { .proof-grid { grid-template-columns: repeat(2, 1fr); } }
 @media(max-width:760px) {
-  .proof-bar { margin-top: -40px; }
-  .proof-grid { grid-template-columns: 1fr; }
+  .proof-bar {
+    margin-top: 0;
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-5);
+  }
+  .proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+  .proof-card {
+    padding: var(--space-4) var(--space-3);
+  }
+  .proof-card strong {
+    font-size: 1.8rem;
+  }
+  .proof-card span {
+    font-size: .78rem;
+  }
 }
 
 /* ── Pillar Blocks (The Pardes Way) ── */
@@ -592,257 +695,4 @@
 }
 .faq-more-link:hover {
   color: var(--navy);
-}
-
-/* ══════════════════════════════════════════════════════
-   VISUAL AUDIT POLISH — March 2026
-   ══════════════════════════════════════════════════════ */
-
-/* ── 1. Hero accent text ── */
-.hero-accent {
-  color: var(--forest);
-}
-
-/* ── 2. Hero split: upgraded for homepage ── */
-.hero-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: clamp(520px, 80vh, 780px);
-  overflow: hidden;
-  background: var(--cream);
-}
-.hero-split__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: calc(var(--header-height) + var(--space-4)) var(--space-7) var(--space-6);
-}
-.hero-split__text h1 {
-  color: var(--navy);
-  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
-  line-height: 1.1;
-  margin-bottom: var(--space-4);
-}
-.hero-split__text .lead {
-  color: var(--text);
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  max-width: 480px;
-  margin-bottom: var(--space-5);
-}
-
-/* ── Nav toggle: hamburger icon ── */
-.nav-toggle {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--line);
-  background: var(--white);
-  color: var(--navy);
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-sm);
-  padding: 0;
-}
-.nav-toggle svg {
-  display: block;
-}
-
-@media(max-width:1024px) {
-  .nav-toggle { display: inline-flex; }
-  .hero-split {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-  .hero-split__text {
-    padding: var(--space-5) var(--space-5) var(--space-4);
-    order: -2 !important;
-    text-align: center;
-    align-items: center;
-  }
-  .hero-split__text .lead {
-    max-width: 480px;
-    margin-inline: auto;
-  }
-  .hero-split__text .btn-row {
-    justify-content: center;
-  }
-  .hero-split > .hero-carousel,
-  .hero-split .hero-carousel {
-    order: 5 !important;
-    min-height: 320px;
-    margin: 0 var(--space-3) var(--space-3);
-  }
-}
-@media(max-width:760px) {
-  /* ── Mobile hero: Apple-clean, centered, section-separated ── */
-  .hero-split__text {
-    padding: var(--space-5) var(--space-5) var(--space-4);
-    text-align: center;
-    align-items: center;
-  }
-  .hero-split__text h1 {
-    font-size: clamp(1.8rem, 7.5vw, 2.5rem);
-    line-height: 1.15;
-    text-wrap: balance;
-  }
-  .hero-split__text .lead {
-    text-align: center;
-    max-width: 340px;
-  }
-  /* Hero buttons: compact, side by side, centered */
-  .hero-split__text .btn-row {
-    flex-direction: row;
-    gap: var(--space-2);
-    justify-content: center;
-    width: auto;
-  }
-  .hero-split__text .btn {
-    width: auto;
-    padding: .65rem 1.2rem;
-    font-size: .82rem;
-  }
-  /* Carousel: clean full-width photo, no arrows */
-  .hero-carousel {
-    min-height: 260px;
-    margin: 0;
-    border-radius: 0;
-  }
-  .hero-carousel__track {
-    border-radius: 0;
-  }
-  .hero-carousel__card {
-    border-radius: 0;
-  }
-  /* Hide carousel arrows on mobile — swipe only */
-  .hero-carousel__btn {
-    display: none;
-  }
-  /* Show dots below photo for carousel position */
-  .hero-carousel__dots {
-    display: flex;
-    margin-top: var(--space-3);
-    justify-content: center;
-  }
-  /* Header: hide empty actions container gap */
-  .header-actions {
-    display: none;
-  }
-  /* ── Proof cards: 2x2 grid, NO overlap with photo ── */
-  .proof-bar {
-    margin-top: 0;
-    padding-top: var(--space-4);
-    padding-bottom: var(--space-4);
-  }
-  .proof-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: var(--space-2);
-  }
-  .proof-card {
-    padding: var(--space-4) var(--space-3);
-  }
-  .proof-card strong {
-    font-size: 1.8rem;
-    margin-bottom: var(--space-1);
-  }
-  .proof-card span {
-    font-size: .72rem;
-    letter-spacing: .04em;
-  }
-}
-
-/* ── 3. Testimonial cards: equal height ── */
-.testimonial-grid {
-  align-items: stretch;
-}
-.testimonial-card {
-  display: flex;
-  flex-direction: column;
-}
-.testimonial-card blockquote {
-  flex: 1;
-}
-
-/* ── 4. Gallery aspect ratio enforcement ── */
-.gallery-grid .media-tile {
-  aspect-ratio: 4 / 3 !important;
-}
-.gallery-grid .media-tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ── 5. Mobile sticky CTA bar — hidden by default, shown via JS on scroll ── */
-.mobile-cta-bar {
-  display: none;
-}
-@media(max-width:760px) {
-  .mobile-cta-bar {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    background: var(--white);
-    border-top: 1px solid var(--line);
-    box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
-    padding: var(--space-3) var(--space-4);
-    gap: var(--space-3);
-    transform: translateY(100%);
-    transition: transform 0.3s var(--ease-out);
-  }
-  .mobile-cta-bar.is-visible {
-    transform: translateY(0);
-  }
-  .mobile-cta-bar .btn {
-    flex: 1;
-    padding: .75rem 1rem;
-    font-size: .88rem;
-    width: auto;
-  }
-  /* Add padding at bottom of page so content isn't hidden behind sticky bar */
-  .site-footer {
-    padding-bottom: 72px;
-  }
-}
-
-/* ── 6. Section label refinement ── */
-.section-label {
-  font-family: var(--font-accent);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-/* ── 7. FAQ accordion hover state ── */
-.faq-toggle:hover:after {
-  transform: scale(1.12);
-  box-shadow: 0 2px 8px rgba(16, 101, 60, 0.2);
-}
-
-/* ── 8. Proof cards: tighter spacing on desktop ── */
-.proof-card strong {
-  font-size: 2.2rem;
-}
-.proof-card span {
-  font-size: .82rem;
-}
-.proof-card {
-  padding: var(--space-5) var(--space-4);
-}
-
-/* ── 9. Page hero images: subtle zoom on load ── */
-@keyframes heroImageReveal {
-  from { transform: scale(1.08); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-.page-hero__image {
-  animation: heroImageReveal 0.8s var(--ease-out) both;
-}
-
-/* ── 10. Division card hover: lift the image slightly ── */
-.division-hz-card:hover .division-hz-card__image {
-  transform: scale(1.02);
-  transition: transform var(--duration-normal) var(--ease-out);
 }
