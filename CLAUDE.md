@@ -93,8 +93,8 @@ The JS bundle (`main-cpapzbpt.js`) dynamically loads images from `data/image-man
 
 **Directories that do NOT exist** (stale references were fixed 2026-03-22): `Website Pictures Elementary/`, `Gan Katan Website Pictures/`
 
-### Known image cleanup needed
-Some files in `assets/images/preschool/` have junk names (`ddd.jpeg`, `hghgh.jpeg`, `erere.jpeg`, `dfdfd.jpeg`) that are likely test uploads. These should be reviewed and either renamed or removed from the manifest rotation.
+### Preschool gallery naming
+Former low-signal preschool upload filenames were standardized on 2026-03-22 to `preschool-gallery-01.jpeg` through `preschool-gallery-19.jpeg` so the manifest and validation script stay clean.
 
 ## Forms
 
@@ -166,6 +166,8 @@ This repo is actively worked on by both **Claude Code** and **OpenAI Codex**. Co
 
 | Date | Agent | Changes |
 |------|-------|---------|
+| 2026-03-22 | OpenAI Codex | Standardized 19 preschool gallery filenames and updated `data/image-manifest.json` so validation passes without junk filename findings |
+| 2026-03-22 | OpenAI Codex | Completed SEO foundation refresh: GitHub Pages canonicals and OG tags on public pages, new favicon set, sitemap.xml, robots.txt, and expanded homepage School JSON-LD with founding date and geo coordinates |
 | 2026-03-22 | OpenAI Codex | Added `scripts/validate.js`, a dependency-free predeploy validator for HTML asset refs, stale image directories, secret-like literals, image manifest integrity, and junk image filenames |
 | 2026-03-22 | Claude Code | Switched forms from Netlify to Formspree (contact: xojkzodv, admissions: mpqyegdp) |
 | 2026-03-22 | Claude Code | Removed plaintext password comment from admin-app.js |
