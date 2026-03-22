@@ -1,0 +1,19 @@
+/* Mobile spacing fixes */
+
+/* Reduce gap between header and hero text on mobile */
+@media (max-width: 760px) {
+  .hero-immersive__content {
+    padding-top: 0.75rem !important;
+  }
+
+  .hero-immersive__content h1 {
+    margin-top: 0;
+  }
+}
+
+/* Slightly tighter on very small screens */
+@media (max-width: 420px) {
+  .hero-immersive__content {
+    padding-top: 0.5rem !important;
+  }
+}
