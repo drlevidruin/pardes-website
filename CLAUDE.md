@@ -166,6 +166,7 @@ This repo is actively worked on by both **Claude Code** and **OpenAI Codex**. Co
 
 | Date | Agent | Changes |
 |------|-------|---------|
+| 2026-03-22 | OpenAI Codex | Completed consistency and technical polish pass: standardized Preschool (Gan Katan) naming across site content and data files, removed Photo Strip labels on preschool and elementary pages, updated homepage stat copy, added two-campus Google Maps embeds on contact page, improved descriptive alt text, and added noscript gallery fallbacks across dynamic gallery sections |
 | 2026-03-22 | OpenAI Codex | Standardized 19 preschool gallery filenames and updated `data/image-manifest.json` so validation passes without junk filename findings |
 | 2026-03-22 | OpenAI Codex | Completed SEO foundation refresh: GitHub Pages canonicals and OG tags on public pages, new favicon set, sitemap.xml, robots.txt, and expanded homepage School JSON-LD with founding date and geo coordinates |
 | 2026-03-22 | OpenAI Codex | Added `scripts/validate.js`, a dependency-free predeploy validator for HTML asset refs, stale image directories, secret-like literals, image manifest integrity, and junk image filenames |

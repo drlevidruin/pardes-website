@@ -1,6 +1,6 @@
 {
   "mainCampus": {
-    "name": "Gan Katan & Elementary Campus",
+    "name": "Preschool (Gan Katan) & Elementary Campus",
     "address": "1211 Marseille Dr, Miami Beach, FL 33141",
     "phone": "(305) 690-2548"
   },
@@ -14,9 +14,9 @@
   "hours": [
     { "division": "Elementary (Mon-Thu)", "schedule": "8:15 AM - 3:55 PM" },
     { "division": "Elementary (Friday)", "schedule": "1:45 PM" },
-    { "division": "Gan Katan (Mon-Thu)", "schedule": "8:30 AM - 3:15 PM" },
-    { "division": "Gan Katan (Friday)", "schedule": "1:45 PM" },
-    { "division": "Middle School / MSAP (Mon-Thu)", "schedule": "8:10 AM - 4:00 PM" },
-    { "division": "Middle School / MSAP (Friday)", "schedule": "8:10 AM - 2:00 PM" }
+    { "division": "Preschool (Gan Katan) (Mon-Thu)", "schedule": "8:30 AM - 3:15 PM" },
+    { "division": "Preschool (Gan Katan) (Friday)", "schedule": "1:45 PM" },
+    { "division": "Middle School (MSAP) (Mon-Thu)", "schedule": "8:10 AM - 4:00 PM" },
+    { "division": "Middle School (MSAP) (Friday)", "schedule": "8:10 AM - 2:00 PM" }
   ]
 }

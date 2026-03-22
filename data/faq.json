@@ -2,7 +2,7 @@
   "questions": [
     {
       "question": "What grades does Pardes Day School serve?",
-      "answer": "Pardes serves students from 18 months (Preschool / Gan Katan) through 8th Grade. Our three divisions, Preschool, Elementary (K-5), and Middle School (6-8), each have their own leadership team while sharing one unified educational philosophy.",
+      "answer": "Pardes serves students from 18 months in Preschool (Gan Katan) through 8th Grade. Our three divisions, Preschool, Elementary (K-5), and Middle School (6-8), each have their own leadership team while sharing one unified educational philosophy.",
       "showOnHomepage": true
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "question": "What are the school hours?",
-      "answer": "Gan Katan & Elementary (Mon-Thu): 8:00 AM - 4:15 PM. Friday carpool begins at 1:45 PM. Middle School / MSAP (Mon-Thu): 8:10 AM - 4:00 PM. Middle School / MSAP (Friday): 8:10 AM - 2:00 PM.",
+      "answer": "Preschool (Gan Katan) & Elementary (Mon-Thu): 8:00 AM - 4:15 PM. Friday carpool begins at 1:45 PM. Middle School (MSAP) (Mon-Thu): 8:10 AM - 4:00 PM. Middle School (MSAP) (Friday): 8:10 AM - 2:00 PM.",
       "showOnHomepage": false
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "question": "Is Hebrew language instruction included?",
-      "answer": "Yes. Hebrew is integrated throughout our curriculum starting in Preschool. Our language program builds real proficiency and deepens students' cultural connection to Israel and Jewish traditions across every division.",
+      "answer": "Yes. Hebrew is integrated throughout our curriculum starting in Preschool (Gan Katan). Our language program builds real proficiency and deepens students' cultural connection to Israel and Jewish traditions across every division.",
       "showOnHomepage": false
     },
     {
