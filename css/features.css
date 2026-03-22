@@ -84,3 +84,10 @@
 .share-btn--copied svg {
   stroke: #fefefe;
 }
+
+/* --- Remove hero bottom borders --- */
+.page-hero--elementary,
+.page-hero--preschool,
+.page-hero--middle {
+  border-bottom: none;
+}
