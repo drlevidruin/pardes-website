@@ -150,13 +150,15 @@ This repo is actively worked on by both **Claude Code** and **OpenAI Codex**. Co
 1. **Read this file first** before making changes to understand current state
 2. **Pull before starting work** to get the latest from the other agent
 3. **Push after every commit** so the other agent sees your changes
-4. **Update this file** if you make architectural changes, add new features, or change how something works
-5. **Don't work on the same files simultaneously** — coordinate via the owner
+4. **Run `node scripts/validate.js` before deploy-adjacent pushes** when you touch HTML, assets, or the image manifest. It checks broken asset refs, stale image directories, manifest integrity, secret-like literals, and junk image filenames.
+5. **Update this file** if you make architectural changes, add new features, or change how something works
+6. **Don't work on the same files simultaneously** — coordinate via the owner
 
 ## Change Log
 
 | Date | Agent | Changes |
 |------|-------|---------|
+| 2026-03-22 | OpenAI Codex | Added `scripts/validate.js`, a dependency-free predeploy validator for HTML asset refs, stale image directories, secret-like literals, image manifest integrity, and junk image filenames |
 | 2026-03-22 | Claude Code | Switched forms from Netlify to Formspree (contact: xojkzodv, admissions: mpqyegdp) |
 | 2026-03-22 | Claude Code | Removed plaintext password comment from admin-app.js |
 | 2026-03-22 | Claude Code | Fixed all broken image paths across 11 pages (Website Pictures Elementary → elementary, Gan Katan Website Pictures → preschool) |
