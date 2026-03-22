@@ -23,14 +23,17 @@
 | Katy Horowitz | VP of Academics & Co-founder |
 | Desbe Hafif | Principal's Assistant |
 
-### REMOVE these fake names from site
-- Mimi Edwards (not real)
-- Adam Eshel (not real)
-- Dina Kranz (not real)
-- Yossi Brock (not real)
-- Sarah Hecht (not real)
-- Moshe Blotner (not real)
-- Sabrina Sole (not real)
+### These are ALL REAL staff (DO NOT REMOVE)
+- Mimi Edwards - Principal, Middle School (MSAP)
+- Adam Eshel - Dean of Students & LeHashlim Director
+- Dina Kranz - Educational Consultant & Board Member
+- Yossi Brock - Principal Assistant
+- Sabrina Sole - Office Admin
+- Katy Horowitz - Head of School & Co-Founder (NOT VP of Academics)
+
+### Names that were replaced (confirmed by Levi)
+- Sarah Hecht -> Shoshana Gertz (3rd grade Assistant)
+- Moshe Blotner -> Moshe Barrocas (Judaic Studies, 5th grade)
 
 ### Fix these names
 - "Lilly" -> Lilly Tyagney
