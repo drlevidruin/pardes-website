@@ -41,7 +41,14 @@ Static website for **Pardes Day School**, a Jewish day school in Miami Beach, FL
 │       ├── elementary/         # Elementary school photos
 │       ├── preschool/          # Preschool photos
 │       ├── logos/              # School logos
-│       └── uploads/            # Admin-uploaded images
+│       ├── uploads/            # Admin-uploaded images
+│       └── og/                 # Open Graph social sharing images
+├── css/
+│   ├── alerts.css              # Announcement banner styles
+│   └── features.css            # Shared styles for new features (scholarship callout, share button)
+├── js/
+│   ├── alerts.js               # Announcement banner (reads /data/alerts.json)
+│   └── share.js                # Share button (Web Share API with clipboard fallback)
 ├── data/
 │   ├── site.json               # School info, pillars, CTAs
 │   ├── homepage.json           # Homepage content
@@ -49,7 +56,8 @@ Static website for **Pardes Day School**, a Jewish day school in Miami Beach, FL
 │   ├── faq.json                # FAQ entries
 │   ├── testimonials.json       # Parent testimonials
 │   ├── contact.json            # Campus addresses, hours, phone
-│   └── image-manifest.json     # Generated image catalog (see Image System)
+│   ├── image-manifest.json     # Generated image catalog (see Image System)
+│   └── alerts.json             # Announcement banner content (set active:false to hide)
 └── .gitignore
 ```
 
@@ -162,3 +170,7 @@ This repo is actively worked on by both **Claude Code** and **OpenAI Codex**. Co
 | 2026-03-22 | Claude Code | Switched forms from Netlify to Formspree (contact: xojkzodv, admissions: mpqyegdp) |
 | 2026-03-22 | Claude Code | Removed plaintext password comment from admin-app.js |
 | 2026-03-22 | Claude Code | Fixed all broken image paths across 11 pages (Website Pictures Elementary → elementary, Gan Katan Website Pictures → preschool) |
+| 2026-03-22 | Claude Code | Added announcement banner system: /data/alerts.json + /js/alerts.js + /css/alerts.css (loaded on all pages) |
+| 2026-03-22 | Claude Code | Added Step Up For Students scholarship callout on admissions page (#71) |
+| 2026-03-22 | Claude Code | Added share button (Web Share API) on admissions and contact pages: /js/share.js + styles in /css/features.css |
+| 2026-03-22 | Claude Code | Created OG sharing image: /assets/images/og/og-share.svg (1200x630 branded card for social previews) |
