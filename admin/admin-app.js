@@ -10,7 +10,6 @@ const CONFIG = {
 };
 
 // Admin credentials: username → SHA-256(password)
-// Default: pardesadmin / Pardes2026!
 const ADMINS = {
   "pardesadmin": "2fa7181a929287457126ac551c90b3a603a6ed00f478bc445e66a7ee569c98ca"
 };
