@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Feature Styles (shared across new features added by Claude Code)
+   ========================================================================== */
+
+/* --- Scholarship Callout (#71) --- */
+.scholarship-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #f3ede4 0%, #fefefe 100%);
+  border-left: 4px solid #10653c;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.scholarship-callout__icon {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.scholarship-callout__content h2 {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #343e85;
+  margin: 0 0 0.75rem 0;
+}
+
+.scholarship-callout__content p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.25rem 0;
+}
+
+@media (max-width: 760px) {
+  .scholarship-callout {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+}
+
+/* --- Share Button (#65) --- */
+.share-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1.5px solid #343e85;
+  color: #343e85;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.share-btn:hover {
+  background: #343e85;
+  color: #fefefe;
+}
+
+.share-btn:hover svg {
+  stroke: #fefefe;
+}
+
+.share-btn--copied {
+  background: #10653c;
+  border-color: #10653c;
+  color: #fefefe;
+}
+
+.share-btn--copied svg {
+  stroke: #fefefe;
+}
