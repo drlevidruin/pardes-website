@@ -1,138 +1,154 @@
 # Pardes Day School: Site Content Inputs
 
 **Started:** 2026-03-22
-**Status:** In progress
+**Status:** Phase 1 Complete - Phase 2 In Progress
 
 ---
 
-## Category 1: Branding Assets
+## Category 1: Branding
+- **Logo**: Use merged Gan Katan + Pardes logo (both brands side by side). File: assets/images/logos/merged-logo.png
+- **Tagline**: "The school you wish you had growing up." (confirmed)
+- **Social Media**: Instagram only: https://www.instagram.com/pardesdayschool/
+- **Colors**: Navy #343e85, Forest Green #10653c, Brown #5e3b1d, Off-White #fefefe
+- **Font**: Montserrat
+- **Rule**: No em dashes ever
 
-- **Logo file (SVG or high-res PNG):** Merged logo (Gan Katan + Pardes tree) already in repo at `assets/images/logos/merged-logo.png`. Use this as the primary logo site-wide.
-- **Tagline/motto:** Primary: "The Pardes Way. Discover the Difference." Hero: "The school you wish you had growing up." Full rebrand strategy in `/Users/levidruin/Pardes Rebrand/The Pardes Way - Rebrand Strategy v3.docx`
-- **Social media URLs (Instagram, Facebook, YouTube):** Instagram only: https://www.instagram.com/pardesdayschool/ (no Facebook or YouTube)
+## Category 2: Staff & Leadership
 
----
+### Leadership (CORRECTED)
+| Name | Title |
+|------|-------|
+| Rabbi Dr. Levi Druin | Principal |
+| Sharone Eichberg | Director & Co-founder |
+| Katy Horowitz | VP of Academics & Co-founder |
+| Desbe Hafif | Principal's Assistant |
 
-## Category 2: Staff Information
+### REMOVE these fake names from site
+- Mimi Edwards (not real)
+- Adam Eshel (not real)
+- Dina Kranz (not real)
+- Yossi Brock (not real)
+- Sarah Hecht (not real)
+- Moshe Blotner (not real)
+- Sabrina Sole (not real)
 
-- **Lilly's full name (Gan Katan Daisies):** Lilly Tyagney
-- **Desbe's full name (Middle School):** Desbe Hafif
-- **Yossi Brock title confirmation ("Principal Assistant"):** Change to "Principal's Assistant" (he assists Levi, not an assistant principal)
-- **Leadership headshot photos:** Being taken Thursday 2026-03-26. Will replace initial-circle avatars once available.
-- **Sharon Eichberg title correction:** Change from "CFO, Co-Founder & Director of Gan Katan" to "Director & Co-Founder"
-- **Leadership bios (or permission to draft):** Draft temporary bios based on available info. Leadership will review and edit once live.
-- **Judaic vs. General Studies designations for teachers:** Show for K-8 only, not preschool.
-  - **Elementary:** Chaya Gerber-Katz (A), Camryn Winograd (GS), Sima Masarano (JS), Noa Castro (A), Jenny Emsalem (GS), Stephanie Nigri (JS), Chaya Mushka Fuchs (A), Chaya Sara Barrocas (GS), Mushky Druin (JS), Shoshana Gertz (A), Henya Gutnick (JS), Zahava Stilman (GS), Felicia John (GS), Yehudis Herrman (JS), Aniaha Wesley (GS), Maytar Jerufi (JS), Moshe Barrocas (JS)
-  - **Middle School (first names, match to staff.html):** Jared (GS), Nava (GS), Ovadaya (JS), Yishai (JS), Malka (JS)
+### Fix these names
+- "Lilly" -> Lilly Tyagney
+- "Desbe" -> Desbe Hafif
+- Sharon -> Sharone (spelling)
+- Sharone title: Director & Co-founder (NOT CFO, NOT Director of Gan Katan)
 
----
+### Elementary Teachers (K-5)
+| Name | Designation |
+|------|-------------|
+| Chaya Gerber-Katz | Assistant |
+| Camryn Winograd | General Studies |
+| Sima Masarano | Judaic Studies |
+| Noa Castro | Assistant |
+| Jenny Emsalem | General Studies |
+| Stephanie Nigri | Judaic Studies |
+| Chaya Mushka Fuchs | Assistant |
+| Chaya Sara Barrocas | General Studies |
+| Mushky Druin | Judaic Studies |
+| Shoshana Gertz | Assistant |
+| Henya Gutnick | Judaic Studies |
+| Zahava Stilman | General Studies |
+| Felicia John | General Studies |
+| Yehudis Herrman | Judaic Studies |
+| Aniaha Wesley | General Studies |
+| Maytar Jerufi | Judaic Studies |
+| Moshe Barrocas | Judaic Studies |
 
-## Category 3: Preschool (Gan Katan) Details
+Show JS/GS/A designations for K-5 only. NOT for preschool.
 
-- **Class sizes and student-to-teacher ratios:** Classes range from 11 to 20 students (youngest to oldest). 3-4 teachers/assistants per classroom. Present as a range, not per-class breakdown. Highlight the ratio (approx 1:5 or 1:6).
-- **Snack/meal policy (GK):** Morning snack is fruit only. Families send lunch or school supplies are included. Supply list cost built into tuition.
-- **Snack/meal policy (Elementary):** Morning snack: fruit/veggie/egg/cheese/yogurt. Lunch: bring from home or hot lunch option ($6/day, pizza Fridays $6/week). Candy-free school. No food sharing (allergies).
-- **Nap/rest time policy:** Yes, rest time exists but varies by class. Don't put specifics on site.
-- **Toileting expectations (GK):** School works with families on readiness. Not required to be fully trained at entry. Staff supports potty training with positive reinforcement. Send extra clothes. Diapers/wipes provided by families for untrained children.
-- **Security and drop-off procedures (GK):** Morning carpool 8:45-9:00 AM. Staff escort children from cars. Parents not permitted inside gates for safety. Afternoon carpool 3:15-3:30. Daisies half-day pickup at 12pm. Friday 8:45-1:30 (carpool 1:15).
-- **Security and drop-off procedures (Elementary):** Gates open 8:15, close 8:40. Class starts 8:30 AM. Late students not admitted until 10:00. Afternoon carpool 3:55-4:10. Friday carpool 1:45-2:00. Parents not allowed on school grounds during carpool.
-- **Gan Katan Director on preschool page:** Sharon Eichberg (Director & Co-Founder). Should be featured on preschool page.
+### Middle School (first names, match last names from current site)
+| First Name | Designation |
+|------------|-------------|
+| Jared | General Studies |
+| Nava | General Studies |
+| Ovadaya | Judaic Studies |
+| Yishai | Judaic Studies |
+| Malka | Judaic Studies |
 
----
+### PE/Specials
+- Coach Geoff: PE 2nd-5th grade
+- Coach Ariel: PE Daisies-1st grade
+- Pardes Pirates: school sports team
 
-## Category 4: Elementary Details
+## Category 3: Preschool
+- Classes: 11-20 students (youngest to oldest)
+- Ratio: 3-4 teachers per classroom
+- Schedule: Each class different. Show highlights only, not fixed schedule.
+- Handbook: https://www.canva.com/design/DAGthQcxhvU/s4mkx-sdVIRTTLgbcLRw1w/view
 
-- **Curriculum programs by subject:**
-  - Math: HMH Into Math
-  - Assessments: Growth Measure and NWEA MAP Growth (nationwide)
-  - Judaic Kriah & Chumash: Torah 4 Children and Bright Beginnings
-  - Judaic standards: JSAT standards by COJDS guide standards and skills
-  - ELA: Curriculum designed by Katy Horowitz (TBD - need more detail from Katy)
-  - Science: Designed in-house for Pardes students (TBD - more from Katy)
-  - Social Studies: Designed in-house for Pardes students (TBD - more from Katy)
-  - Judaic content subjects: Designed in-house (TBD - more from Katy)
-- **"Our proprietary English curriculum" explanation:** Designed by Katy Horowitz to ensure every student leaves with a love for reading, the skills to write clearly, and the ability to engage in meaningful conversation, all on a personal level.
-- **"LeHashlim framework" explanation:** LeHashlim is our real-life skills curriculum. It teaches collaboration, emotional management, and the skills the real world actually demands. (Use "real-life skills" not "SEL" per rebrand voice guidelines.)
-- **"JSAT standards" explanation:** JSAT (Jewish Studies Achievement Test) by COJDS, administered at Level 3 and Level 5. Pardes uses JSAT data to guide Judaic curriculum planning, not to teach to the test. The goal is for students to build genuine mastery in Chumash and Kriah so they thrive naturally. (Refs: cojds.org/jsat-level-3/ and cojds.org/jsat-level-5/)
-- **Typical daily schedule:** Remove specific schedules from both preschool and elementary pages (every class is different). Replace with highlights: skills-based instruction in the morning when focus peaks, rich integrated content in the afternoon. No fixed schedule to display.
-- **Homework policy details:** Only reading review (Hebrew and English) goes home as practice. All other work is completed during the school day with trained teachers guiding students. Families get their evenings back. (Don't mention the discipline/weekend policy on the site.)
+## Category 4: Elementary
+- Math: HMH Into Math
+- Assessments: NWEA MAP Growth
+- Judaic: Torah 4 Children, Bright Beginnings, JSAT Level 3 & 5 by COJDS
+- ELA: Custom by Katy (TBD for details). "Designed to ensure students leave with a love for reading, the skills to write, and the ability to engage in conversation, all on a personal level."
+- Science/Social Studies: Custom for Pardes
+- LeHashlim: "Our real-life skills curriculum that teaches collaboration, emotional management, and the skills the real world actually demands."
+- Schedule: Skills morning, content afternoon. No fixed schedule to display.
+- Homework: Reading review only (Hebrew + English). Practice only. Everything else done in school.
+- Handbook: https://www.canva.com/design/DAGPKjVhF48/TACm_fhDzb2IqN5m0DKZHg/view
 
----
+## Category 5: Middle School (MSAP)
+- Address: 7055 Bonita Dr, Miami Beach, FL 33141
+- Email: msapoffice@pardesdayschool.org
+- Hours: Mon-Thu 8:10 AM-4:00 PM, Fri 8:10 AM-2:00 PM
+- Tuition: $27,000
+- Laptops, breakfast bar, Pizza Fridays, internships
+- Skipping detailed MS content for now per Levi
 
-## Category 5: Middle School Details
+## Category 6: Admissions
+- Process: Inquiry form -> Tour (scheduled by office) -> Waitlist form -> Parent interview -> Enrollment
+- We interview PARENTS, not kids. Key differentiator.
+- Rolling admissions, no deadlines, until space is full
+- No tour dates online
 
-- **MSAP campus address:** Already on site: 7055 Bonita Dr, Miami Beach, FL 33141. No change needed.
-- **Middle school hours (start, dismissal, Friday):** 8:00 AM - 4:15 PM, Friday dismissal same as elementary (carpool begins 1:45 PM)
-- **Course names by grade (math, science, electives):** TBD (Levi needs to ask middle school team)
-- **High school credit courses:** TBD
-- **Advisory/mentoring structure:** TBD
-- **Grading philosophy:** TBD
-- **High school placement outcomes:** TBD
-- **Elementary-to-middle transition info:** TBD
+## Category 7: Tuition (2026-27)
+### Gan Katan
+- Daisies: $13,500 ($12,000 half day)
+- Sunflowers: $13,500
+- Caterpillars: $15,000
+- Butterflies: $16,500
+- Fees: Security $1,000/family, Snack $150, Supply $150, Enrichment $250, PTA $100
 
----
+### Elementary
+- K: $18,500, 1st: $19,500, 2nd: $20,750, 3rd: $21,750, 4th: $22,950, 5th: $23,750
+- Fees: Security $1,000/family, Supply $250, PTA $100
 
-## Category 6: Admissions Process
+### Middle School
+- 6-8: $27,000
 
-- **Application form URL (or fallback text):**
-- **Admissions timeline:**
-- **Required documents:**
-- **Family interview description:**
-- **Tuition information for site:**
-
----
-
-## Category 7: Student Life Content
-
-- **Clubs and extracurriculars:**
-- **Signature annual events:**
-- **Real student/parent quotes:**
-- **Event/activity photos:**
-- **Arts programming details:**
-- **Athletics details:**
-
----
+### Multi-Child Deposit: 1st $1,000, 2nd $800, 3rd $600, 4th $400
 
 ## Category 8: Parent Resources
+- Elementary Handbook: https://www.canva.com/design/DAGPKjVhF48/TACm_fhDzb2IqN5m0DKZHg/view
+- Gan Katan Handbook: https://www.canva.com/design/DAGthQcxhvU/s4mkx-sdVIRTTLgbcLRw1w/view
+- Calendar: https://www.canva.com/design/DAGqjcpbArk/PsthOw8IhyDRLN4v7PAcxA/view
 
-- **Canva links working publicly?:**
-- **Parent Portal login URL:**
-- **Dress code/uniform policy (GK):** Comfortable practical clothing. Slip-on/Velcro shoes for older classes. Friday is mandatory Gan Katan T-shirt day ($12 each).
-- **Dress code/uniform policy (Elementary):** Pardes uniform polo (royal blue or white) with logo required. Boys: kippah and tzitzit, any bottoms. Girls: polo or navy polo dress, skirts only (knee length). Closed-toe shoes (sneakers recommended). No fake nails, no hanging earrings, no heels/platforms, no purses. Orders through Morah Sharone.
-- **Lunch program details:** Bring from home or hot lunch ($6/day, pizza Friday $6/week). Morning snack: fruit/veggie/protein. Afternoon snack: carb (cookies, granola, etc). Candy-free. No food sharing. Reusable water bottle encouraged.
-- **School supply lists (GK):** Supplies purchased by school and built into tuition. Families only provide diapers/wipes (if needed), water bottles, slippers.
-- **School supply lists (Elementary):** TBD (not in handbook)
+## Category 9: Contact
+- Main: 305-690-2548, office@pardesdayschool.org
+- Elementary: 1211 Marseille Dr, Miami Beach, FL 33141
+- MSAP: 7055 Bonita Dr, Miami Beach, FL 33141
 
----
+## Category 10: Compliance
+- Accreditation: AISF (elementary)
+- Non-discrimination: "We embrace and value differences, such as ethnicity and national origin, religious denomination and spiritual practice, race, age, gender, gender identity, sexual orientation, socio-economic levels and mental and physical ability."
+- Miami Federation funded school
+- Scholarships: Ahavas Yeladim Fund + Step Up, FES-UA, FES-EO, FTC
 
-## Category 9: Fundraising and Giving
+## Student Life
+- Clubs: Chess, football, LEGO robotics, ballet, soccer, self-defense, tutoring clinics
+- Events: Mom's Night, Dad's Night, Purim Carnival, Chanukah Carnival, graduation trips, Grandparent/VIP Day, Pesach Mock Seder, Rabbi G. programs
+- Sports: Pardes Pirates, Coach Geoff (2-5), Coach Ariel (Daisies-1st)
 
-- **Online donation link:**
-- **Annual financials document:**
-- **Current fundraising campaigns:**
-
----
-
-## Category 10: Governance and Credibility
-
-- **Board of Directors names/titles:**
-- **Accreditation status:**
-- **Organizational affiliations:**
-
----
-
-## Category 11: Testimonials
-
-- **Are current testimonial families real?:**
-- **Additional family testimonials:**
-- **Preferred attribution format:**
-
----
-
-## Category 12: Quick Confirmations
-
-- **"100% State scholarship recipients" meaning:**
-- **"One Unified Philosophy" stat - keep or replace?:**
-- **"Respond within 24 hours" - accurate?:**
-- **"Why Parents Built Pardes" - stay on parents page or move to about?:**
-- **Katy Horowitz teaching 5th Grade ELA - feature more?:**
+## Outstanding TBD Items
+1. Headshots (Thursday)
+2. Parent testimonials
+3. Katy ELA details
+4. Board of Directors
+5. More photos
+6. Donation link
+7. Annual financials doc
