@@ -176,3 +176,4 @@ This repo is actively worked on by both **Claude Code** and **OpenAI Codex**. Co
 | 2026-03-22 | Claude Code | Added Step Up For Students scholarship callout on admissions page (#71) |
 | 2026-03-22 | Claude Code | Added share button (Web Share API) on admissions and contact pages: /js/share.js + styles in /css/features.css |
 | 2026-03-22 | Claude Code | Created OG sharing image: /assets/images/og/og-share.svg (1200x630 branded card for social previews) |
+| 2026-03-22 | Claude Code | Disabled announcement banner (active:false). Owner wants to re-enable later this week after mobile spacing is fixed. Banner pushes content down and has too much whitespace on mobile. Before re-enabling: fix mobile padding so banner sits tighter, and reduce gap between banner and hero section. |
