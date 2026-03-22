@@ -149,7 +149,7 @@ This repo is actively worked on by both **Claude Code** and **OpenAI Codex**. Co
 
 1. **Read this file first** before making changes to understand current state
 2. **Pull before starting work** to get the latest from the other agent
-3. **Push after every commit** so the other agent sees your changes
+3. **Always commit AND push** — every change must be committed and pushed to `origin main` before finishing. Never leave uncommitted or unpushed work. This is non-negotiable.
 4. **Run `node scripts/validate.js` before deploy-adjacent pushes** when you touch HTML, assets, or the image manifest. It checks broken asset refs, stale image directories, manifest integrity, secret-like literals, and junk image filenames.
 5. **Update this file** if you make architectural changes, add new features, or change how something works
 6. **Don't work on the same files simultaneously** — coordinate via the owner
