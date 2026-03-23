@@ -99,10 +99,14 @@
 }
 
 /* --- Hero background color overrides --- */
-/* Middle School: warm brown */
+/* Middle School: light warm brown (matching soft blue preschool vibe) */
 .page-hero--middle {
-  background: linear-gradient(135deg, #5c3d2e 0%, #7a5240 60%, #4a2e1f 100%) !important;
+  background: #f0e6dc !important;
 }
+.page-hero--middle .page-hero__text h1 { color: #3d2b1f !important; }
+.page-hero--middle .page-hero__text .lead { color: #5c4033 !important; }
+.page-hero--middle .btn-primary { background: #5c3d2e !important; color: #fff !important; border-color: #5c3d2e !important; }
+.page-hero--middle .btn-outline { border-color: #5c3d2e !important; color: #5c3d2e !important; }
 
 /* Preschool: soft blue */
 .page-hero--preschool {
@@ -110,6 +114,14 @@
 }
 .page-hero--preschool::before {
   background: rgba(52, 62, 133, 0.08) !important;
+}
+
+/* Homepage MS division card: match brown */
+.division-hz-card--middle {
+  background: #5c3d2e !important;
+}
+.division-hz-card--middle .btn-outline:hover {
+  color: #5c3d2e !important;
 }
 
 /* Middle School hero image styling */
