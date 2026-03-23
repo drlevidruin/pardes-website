@@ -30,15 +30,15 @@ span.section-label {
 
 /* ===== HERO ===== */
 .hero-immersive {
-  min-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background: #1a2a1a;
+  min-height: 85vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background: #1a2a1a !important;
 }
 
 .hero-bg-redesign {
@@ -56,30 +56,36 @@ span.section-label {
 }
 
 .hero-overlay-redesign {
-  position: absolute;
-  inset: 0;
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
   background: linear-gradient(
     to bottom,
     rgba(10, 40, 20, 0.3) 0%,
     rgba(10, 40, 20, 0.4) 40%,
     rgba(10, 40, 20, 0.55) 100%
-  );
+  ) !important;
 }
 
+/* Override bundle's mobile cream-background layout */
 .hero-immersive__content {
-  position: relative;
-  z-index: 2;
-  padding: 0 24px;
-  max-width: 900px;
+  position: relative !important;
+  z-index: 2 !important;
+  padding: 0 24px !important;
+  max-width: 900px !important;
+  background: transparent !important;
+  color: white !important;
+  order: unset !important;
+  margin-top: 0 !important;
 }
 
 .hero-immersive h1 {
-  font-size: clamp(48px, 7vw, 84px);
-  font-weight: 800;
-  line-height: 1.05;
-  color: white;
-  letter-spacing: -2px;
-  text-shadow: 0 2px 40px rgba(0,0,0,0.3);
+  font-size: clamp(48px, 7vw, 84px) !important;
+  font-weight: 800 !important;
+  line-height: 1.05 !important;
+  color: white !important;
+  letter-spacing: -2px !important;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.3) !important;
 }
 
 .hero-immersive h1 .hero-wish {
@@ -487,13 +493,32 @@ details[open] .faq-question::after {
 
 /* ===== RESPONSIVE: MOBILE ===== */
 @media (max-width: 768px) {
-  /* Hero */
+  /* Hero - must override bundle's 760px breakpoint that adds cream bg */
   .hero-immersive {
-    min-height: 65vh;
+    min-height: 65vh !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .hero-immersive__overlay,
+  .hero-overlay-redesign {
+    display: block !important;
+  }
+  .hero-immersive__content {
+    background: transparent !important;
+    color: white !important;
+    padding: 0 20px !important;
+    order: unset !important;
+    max-width: 100% !important;
   }
   .hero-immersive h1 {
-    font-size: 42px;
-    letter-spacing: -1px;
+    font-size: 42px !important;
+    letter-spacing: -1px !important;
+    color: white !important;
+    text-shadow: 0 2px 40px rgba(0,0,0,0.3) !important;
+  }
+  .hero-immersive h1 .hero-wish {
+    color: #7ecc9f !important;
   }
 
   /* Proof bar */
