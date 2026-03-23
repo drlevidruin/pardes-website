@@ -24,3 +24,123 @@
     padding-bottom: 0.1rem !important;
   }
 }
+
+/* ==========================================================================
+   T1-6: Mobile menu - fully opaque overlay
+   ========================================================================== */
+@media (max-width: 760px) {
+  .site-nav[aria-hidden="false"],
+  .site-nav.is-open {
+    background: rgba(26, 31, 46, 0.97) !important;
+    backdrop-filter: blur(12px);
+  }
+
+  /* Toggle button shows X when menu is open */
+  .nav-toggle[aria-expanded="true"] span {
+    font-size: 0;
+  }
+  .nav-toggle[aria-expanded="true"] span::after {
+    content: "\00D7";
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+}
+
+/* ==========================================================================
+   T1-9: Fix body text size and contrast site-wide
+   ========================================================================== */
+
+/* Minimum body text 16px and darker color */
+.panel p,
+.panel__summary,
+.section-subtitle,
+.faq-panel p,
+.highlight-card p,
+.feature-card p,
+.division-hz-card p,
+.step-card p {
+  font-size: max(0.95rem, 15px) !important;
+  color: #374151 !important;
+}
+
+/* Card summaries need better contrast */
+.panel--card .panel__summary {
+  color: #4b5563 !important;
+}
+
+/* Muted text minimum contrast */
+.testimonial-detail,
+.staff-card__role {
+  color: #6b7280 !important;
+}
+
+/* ==========================================================================
+   T1-10: Sticky mobile CTA bar - "Schedule a Tour" always visible
+   ========================================================================== */
+.mobile-sticky-cta {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .mobile-sticky-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9990;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .mobile-sticky-cta .btn {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.7rem 1rem;
+  }
+
+  /* Add bottom padding to body so footer isn't hidden behind sticky bar */
+  body {
+    padding-bottom: 70px;
+  }
+
+  /* Hide the header Schedule a Tour button on mobile (sticky bar replaces it) */
+  .header-actions .btn-primary {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Hero descriptor and CTA row
+   ========================================================================== */
+.hero-descriptor {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-weight: 400;
+  margin: 0.5rem 0 1.75rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-cta-row {
+  justify-content: center;
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem !important;
+  }
+  .hero-cta-row .btn {
+    width: 80%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
