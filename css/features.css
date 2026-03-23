@@ -92,9 +92,22 @@
   border-bottom: none;
 }
 
-/* --- Paragraph spacing in panels --- */
-.panel p + p {
+/* --- Paragraph spacing site-wide --- */
+.panel p + p,
+.detail-modal__body p + p,
+.page-hero__text p + p,
+main p + p {
+  margin-top: 1.25rem;
+}
+
+/* Ensure bullet lists inside panels have spacing */
+.panel ul,
+.panel ol {
   margin-top: 1rem;
+}
+
+.panel li + li {
+  margin-top: 0.5rem;
 }
 
 /* --- Content cards with images --- */
