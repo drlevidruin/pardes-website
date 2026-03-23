@@ -98,6 +98,26 @@
   display: none !important;
 }
 
+/* --- Hero background color overrides --- */
+/* Middle School: warm brown */
+.page-hero--middle {
+  background: linear-gradient(135deg, #5c3d2e 0%, #7a5240 60%, #4a2e1f 100%) !important;
+}
+
+/* Preschool: soft blue */
+.page-hero--preschool {
+  background: #e8f0fa !important;
+}
+.page-hero--preschool::before {
+  background: rgba(52, 62, 133, 0.08) !important;
+}
+
+/* Middle School hero image styling */
+.page-hero--middle .page-hero__image {
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
 /* --- Paragraph spacing site-wide --- */
 .panel p + p,
 .detail-modal__body p + p,
