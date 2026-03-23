@@ -177,6 +177,26 @@ main p + p {
 .panel__read-more svg {
   width: 16px;
   height: 16px;
+  flex-shrink: 0;
+}
+
+/* Desktop: constrain card image height and grid */
+@media (min-width: 761px) {
+  .panel--card .panel__image {
+    height: 220px;
+  }
+
+  .panel--card {
+    max-width: 100%;
+  }
+
+  .panel--card .panel__body .section-heading h2 {
+    font-size: 1.15rem;
+  }
+
+  .panel--card .panel__summary {
+    font-size: 0.85rem;
+  }
 }
 
 /* --- Detail modal overlay --- */

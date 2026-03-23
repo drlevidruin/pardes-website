@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../css/features.css">
     <script src="../js/alerts.js" defer></script>
     <script src="../js/share.js" defer></script>
+    <script src="../js/panels.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -121,25 +122,49 @@
 
       <section class="section" aria-labelledby="gan-katan-culture-heading">
         <div class="container">
-          <article class="panel" data-reveal>
-            <div class="section-heading">
-              <span class="section-label">Our Culture</span>
-              <h2 id="gan-katan-culture-heading">Building independence, joy, and Jewish roots.</h2>
-              <p class="section-subtitle">In Preschool (Gan Katan), every child learns to belong.</p>
-            </div>
-            <p>
-              In Preschool (Gan Katan), children flourish in an environment <strong>built by design with warmth and intention</strong>. We help each child develop independence: caring for their belongings, using language to express needs, and participating proudly in shared routines.
-            </p>
-            <p>
-              Our teachers provide the <strong>structure and genuine connection</strong> that make children feel confident and cared for.
-            </p>
-            <p>
-              Through songs, blessings, celebrations, and everyday mitzvot, <strong>Jewish life is lived and practical</strong>, not distant or abstract. Children discover that being Jewish means caring for others, marking time with joy, and building community where everyone belongs.
-            </p>
-            <p>
-              By the time your child leaves Preschool (Gan Katan), they carry <strong>confidence, kindness, and their own connection</strong> to something meaningful.
-            </p>
-          </article>
+          <div class="section-heading" data-reveal>
+            <span class="section-label">Our Culture</span>
+            <h2 id="gan-katan-culture-heading">Building independence, joy, and Jewish roots.</h2>
+            <p class="section-subtitle">In Preschool (Gan Katan), every child learns to belong.</p>
+          </div>
+          <div class="content-grid reveal-stagger">
+            <article class="panel panel--card" data-reveal>
+              <img class="panel__image" src="../assets/images/preschool/preschool-gallery-01.jpeg" alt="Preschool children developing independence" loading="lazy">
+              <div class="panel__body">
+                <div class="section-heading">
+                  <span class="section-label">Independence</span>
+                  <h2>Built by design, with warmth.</h2>
+                </div>
+                <p class="panel__summary">Children develop independence through caring routines, language skills, and shared classroom rhythms.</p>
+                <button class="panel__read-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+              </div>
+              <div class="panel__detail" hidden>
+                <span class="section-label">Independence</span>
+                <h2>Built by design, with warmth.</h2>
+                <p>Children flourish in an environment <strong>built by design with warmth and intention</strong>. We help each child develop independence: caring for their belongings, using language to express needs, and participating proudly in shared routines.</p>
+                <p>Our teachers provide the <strong>structure and genuine connection</strong> that make children feel confident and cared for.</p>
+              </div>
+            </article>
+
+            <article class="panel panel--card" data-reveal>
+              <img class="panel__image" src="../assets/images/preschool/preschool-gallery-05.jpeg" alt="Preschool children celebrating Jewish traditions" loading="lazy">
+              <div class="panel__body">
+                <div class="section-heading">
+                  <span class="section-label">Jewish Life</span>
+                  <h2>Lived and practical, not distant.</h2>
+                </div>
+                <p class="panel__summary">Songs, blessings, celebrations, and everyday mitzvot make Jewish identity joyful and real.</p>
+                <button class="panel__read-more">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+              </div>
+              <div class="panel__detail" hidden>
+                <span class="section-label">Jewish Life</span>
+                <h2>Lived and practical, not distant.</h2>
+                <p>Through songs, blessings, celebrations, and everyday mitzvot, <strong>Jewish life is lived and practical</strong>, not distant or abstract.</p>
+                <p>Children discover that being Jewish means caring for others, marking time with joy, and building community where everyone belongs.</p>
+                <p>By the time your child leaves Preschool (Gan Katan), they carry <strong>confidence, kindness, and their own connection</strong> to something meaningful.</p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -165,6 +190,15 @@
         </div>
       </section>
     </main>
+
+    <!-- Detail Modal -->
+    <div class="detail-modal" id="detail-modal" role="dialog" aria-modal="true">
+      <div class="detail-modal__content">
+        <button class="detail-modal__close" aria-label="Close">&times;</button>
+        <img class="detail-modal__image" src="" alt="" loading="lazy">
+        <div class="detail-modal__body"></div>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="container footer-grid">
