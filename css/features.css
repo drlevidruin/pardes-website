@@ -85,11 +85,17 @@
   stroke: #fefefe;
 }
 
-/* --- Remove hero bottom borders --- */
+/* --- Remove hero bottom borders/lines --- */
 .page-hero--elementary,
 .page-hero--preschool,
 .page-hero--middle {
-  border-bottom: none;
+  border-bottom: none !important;
+}
+
+.page-hero--elementary::after,
+.page-hero--preschool::after,
+.page-hero--middle::after {
+  display: none !important;
 }
 
 /* --- Paragraph spacing site-wide --- */
