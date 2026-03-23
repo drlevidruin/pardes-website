@@ -1,0 +1,581 @@
+/* =============================================
+   Homepage Redesign Styles
+   Overrides the minified bundle for the new
+   streamlined Apple-inspired homepage design.
+   ============================================= */
+
+:root {
+  --forest: #10653c;
+  --forest-dark: #0a4a2b;
+  --navy: #343e85;
+  --cream: #f8f4ed;
+  --sage: #e8ede5;
+  --sage-light: #f0f4ee;
+  --white: #ffffff;
+  --text-dark: #1d1d1f;
+  --text-body: #424245;
+  --text-light: #86868b;
+  --amber: #d4940a;
+}
+
+/* ===== SECTION LABEL (Caveat font) ===== */
+span.section-label {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* ===== HERO ===== */
+.hero-immersive {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: #1a2a1a;
+}
+
+.hero-bg-redesign {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/elementary/20251205_090913.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  animation: ken-burns 20s ease-in-out infinite alternate;
+}
+
+@keyframes ken-burns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.06); }
+}
+
+.hero-overlay-redesign {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 40, 20, 0.3) 0%,
+    rgba(10, 40, 20, 0.4) 40%,
+    rgba(10, 40, 20, 0.55) 100%
+  );
+}
+
+.hero-immersive__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 24px;
+  max-width: 900px;
+}
+
+.hero-immersive h1 {
+  font-size: clamp(48px, 7vw, 84px);
+  font-weight: 800;
+  line-height: 1.05;
+  color: white;
+  letter-spacing: -2px;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.3);
+}
+
+.hero-immersive h1 .hero-wish {
+  font-style: italic;
+  color: #7ecc9f;
+}
+
+/* ===== PROOF BAR ===== */
+.proof-bar {
+  padding: 72px 0;
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.proof-card {
+  text-align: center;
+  padding: 20px;
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+
+.proof-card:last-child {
+  border-right: none;
+}
+
+.proof-card strong {
+  display: block;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--forest);
+  letter-spacing: -1.5px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.proof-card span {
+  font-size: 14px;
+  color: var(--text-light);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* ===== PARDES WAY INTRO ===== */
+.pardes-way-intro {
+  padding: 80px 0 48px;
+  background: var(--white);
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-intro h2 {
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.section-intro p {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--text-body);
+}
+
+/* ===== PILLARS ===== */
+.pillar {
+  padding: 72px 0;
+  position: relative;
+}
+
+.pillar--sage {
+  background: var(--sage-light);
+}
+
+.pillar-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pillar--reverse .pillar-inner {
+  direction: rtl;
+}
+
+.pillar--reverse .pillar-inner > * {
+  direction: ltr;
+}
+
+.pillar-image {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--sage);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.1);
+}
+
+.pillar-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pillar-text h3 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.pillar-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-body);
+  margin-bottom: 14px;
+}
+
+/* Green bold inline highlights */
+.pillar-text strong {
+  color: var(--forest-dark);
+  font-weight: 700;
+}
+
+/* Highlight quote callout */
+.pillar-highlight {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--forest-dark);
+  line-height: 1.4;
+  margin-top: 20px;
+  padding-left: 20px;
+  border-left: 3px solid var(--forest);
+}
+
+/* ===== DIVISIONS ===== */
+.divisions {
+  padding: 64px 0;
+  background: var(--white);
+}
+
+.divisions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 64px;
+}
+
+.division-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.division-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+}
+
+.division-card-image {
+  aspect-ratio: 16/10;
+  background-size: cover;
+  background-position: center;
+}
+
+.division-card-body {
+  padding: 28px;
+}
+
+.division-card-body .age {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--forest);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.division-card-body h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.division-card-body p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-body);
+}
+
+/* ===== STUDENT LIFE ===== */
+.student-life {
+  padding: 80px 0 72px;
+  background: var(--sage-light);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+}
+
+.photo-grid .photo {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.photo-grid .photo:hover {
+  transform: scale(1.02);
+}
+
+.photo-grid .photo:nth-child(2) {
+  margin-top: 40px;
+}
+
+.photo-grid .photo:nth-child(4) {
+  margin-top: 40px;
+}
+
+/* ===== FAQ ===== */
+.faq-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.faq-list {
+  max-width: 760px;
+  margin: 48px auto 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  padding: 28px 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.faq-question:hover {
+  color: var(--forest);
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--text-light);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+details[open] .faq-question::after {
+  content: '\2212';
+  color: var(--forest);
+}
+
+.faq-answer {
+  padding: 0 0 28px;
+}
+
+.faq-answer p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-body);
+}
+
+.faq-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.faq-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--forest);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.faq-link:hover {
+  opacity: 0.7;
+}
+
+/* ===== SOFT CTA ===== */
+.soft-cta {
+  padding: 80px 0;
+  text-align: center;
+  background: var(--forest-dark);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.soft-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(16,101,60,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.soft-cta .container {
+  position: relative;
+  z-index: 1;
+}
+
+.soft-cta h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.soft-cta p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 40px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.btn-cta-light {
+  display: inline-block;
+  background: white;
+  color: var(--forest-dark);
+  padding: 18px 44px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.btn-cta-light:hover {
+  transform: scale(1.04);
+}
+
+/* ===== RESPONSIVE: TABLET ===== */
+@media (max-width: 1024px) {
+  .pillar-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .pillar--reverse .pillar-inner {
+    direction: ltr;
+  }
+  .pillar {
+    padding: 72px 0;
+  }
+  .divisions-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ===== RESPONSIVE: MOBILE ===== */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero-immersive {
+    min-height: 65vh;
+  }
+  .hero-immersive h1 {
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+
+  /* Proof bar */
+  .proof-bar {
+    padding: 48px 0;
+  }
+  .proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .proof-card {
+    padding: 16px 12px;
+  }
+  .proof-card strong {
+    font-size: 32px;
+  }
+  .proof-card span {
+    font-size: 12px;
+  }
+
+  /* Pardes Way intro */
+  .pardes-way-intro {
+    padding: 56px 0 24px;
+  }
+  .section-intro h2 {
+    font-size: 30px;
+    letter-spacing: -0.5px;
+  }
+  .section-intro p {
+    font-size: 16px;
+  }
+
+  /* Pillars */
+  .pillar {
+    padding: 48px 0;
+  }
+  .pillar-text h3 {
+    font-size: 26px;
+  }
+  .pillar-text p {
+    font-size: 15px;
+  }
+  .pillar-image {
+    aspect-ratio: 16/10;
+  }
+  .pillar-highlight {
+    font-size: 17px;
+  }
+
+  /* Divisions */
+  .divisions {
+    padding: 56px 0;
+  }
+
+  /* Student life */
+  .student-life {
+    padding: 56px 0 48px;
+  }
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .photo-grid .photo:nth-child(2),
+  .photo-grid .photo:nth-child(4) {
+    margin-top: 0;
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: 56px 0;
+  }
+  .faq-question {
+    font-size: 16px;
+    padding: 22px 0;
+  }
+
+  /* Soft CTA */
+  .soft-cta {
+    padding: 64px 0;
+  }
+  .soft-cta h2 {
+    font-size: 28px;
+  }
+  .soft-cta p {
+    font-size: 16px;
+  }
+}
