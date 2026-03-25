@@ -26,9 +26,9 @@
 
 .about-hero {
   position: relative;
-  min-height: clamp(360px, 50svh, 540px);
+  min-height: clamp(340px, 46svh, 500px);
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   overflow: hidden;
   background: #10251a;
 }
@@ -42,58 +42,54 @@
 .about-hero__media {
   background-image: url('../assets/images/elementary/20251208_132924.jpg');
   background-size: cover;
-  background-position: center center;
-  transform: scale(1.02);
+  background-position: 60% 34%;
+  transform: scale(1.04);
 }
 
 .about-hero__overlay {
   background:
-    linear-gradient(180deg, rgba(10, 34, 20, 0.22) 0%, rgba(10, 34, 20, 0.52) 55%, rgba(10, 34, 20, 0.82) 100%),
-    linear-gradient(90deg, rgba(12, 35, 22, 0.72) 0%, rgba(12, 35, 22, 0.2) 65%);
+    linear-gradient(180deg, rgba(10, 34, 20, 0.18) 0%, rgba(10, 34, 20, 0.42) 54%, rgba(10, 34, 20, 0.7) 100%),
+    linear-gradient(90deg, rgba(10, 34, 20, 0.78) 0%, rgba(10, 34, 20, 0.46) 42%, rgba(10, 34, 20, 0.12) 72%);
 }
 
 .about-hero__content {
   position: relative;
   z-index: 1;
-  padding: 88px 0 28px;
-}
-
-.about-hero__content .section-label {
-  color: #b7dfc1;
+  padding: 74px 0 0;
 }
 
 .about-hero__content h1 {
-  max-width: 9ch;
+  max-width: 8ch;
   color: #ffffff;
-  font-size: clamp(38px, 4.8vw, 64px);
+  font-size: clamp(38px, 4.7vw, 60px);
   font-weight: 800;
-  line-height: 0.98;
-  letter-spacing: -1.4px;
+  line-height: 0.96;
+  letter-spacing: -1.2px;
   text-shadow: 0 12px 42px rgba(0, 0, 0, 0.24);
 }
 
 .about-hero__content p {
-  max-width: 31rem;
-  margin-top: 14px;
+  max-width: 26rem;
+  margin-top: 12px;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 17px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .about-story {
   position: relative;
   z-index: 2;
-  margin-top: -34px;
-  padding: 58px 0 80px;
+  margin-top: -18px;
+  padding: 46px 0 80px;
   background: #ffffff;
-  border-radius: 30px 30px 0 0;
-  box-shadow: 0 -14px 36px rgba(18, 43, 28, 0.08);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -10px 24px rgba(18, 43, 28, 0.05);
 }
 
 .about-story__grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
-  gap: 72px;
+  gap: 64px;
   align-items: start;
 }
 
@@ -123,15 +119,16 @@
 .about-milestones {
   display: grid;
   gap: 26px;
-  padding: 4px 0 4px 28px;
+  padding: 8px 0 4px 24px;
   border-left: 1px solid var(--about-line);
+  opacity: 0.84;
 }
 
 .about-milestone strong {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: var(--forest-dark);
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 800;
   line-height: 1;
 }
@@ -139,7 +136,7 @@
 .about-milestone p {
   color: #424245;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .about-beliefs {
@@ -311,18 +308,25 @@
 
 @media (max-width: 768px) {
   .about-hero {
-    min-height: 420px;
-    align-items: flex-end;
+    min-height: 370px;
+    align-items: flex-start;
   }
 
   .about-hero__content {
-    padding: 80px 0 28px;
+    padding: 70px 0 10px;
   }
 
   .about-hero__content h1 {
-    max-width: 8ch;
-    font-size: 40px;
-    letter-spacing: -0.8px;
+    max-width: 7ch;
+    font-size: 38px;
+    letter-spacing: -0.7px;
+  }
+
+  .about-hero__content p {
+    max-width: 18rem;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.45;
   }
 
   .about-hero__content p,
@@ -336,12 +340,12 @@
   }
 
   .about-story {
-    margin-top: -22px;
-    padding: 44px 0 64px;
+    margin-top: -14px;
+    padding: 38px 0 64px;
   }
 
   .about-story__grid {
-    gap: 40px;
+    gap: 34px;
   }
 
   .about-story__copy h2,
@@ -353,7 +357,7 @@
   }
 
   .about-milestones {
-    padding-left: 18px;
+    padding-left: 16px;
   }
 
   .about-beliefs,
