@@ -8,8 +8,7 @@
   background: #ffffff;
 }
 
-.about-main .section-label,
-.about-main .about-cta .section-label {
+.about-main .section-label {
   display: block;
   margin-bottom: 16px;
   color: var(--forest);
