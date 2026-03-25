@@ -6,6 +6,7 @@
   var ROUTES = {
     root: {
       home: 'index.html',
+      about: 'pages/about.html',
       preschool: 'pages/preschool.html',
       elementary: 'pages/elementary.html',
       middle: 'pages/middle-school.html',
@@ -19,6 +20,7 @@
     },
     subpage: {
       home: '../index.html',
+      about: '../pages/about.html',
       preschool: '../pages/preschool.html',
       elementary: '../pages/elementary.html',
       middle: '../pages/middle-school.html',
@@ -82,6 +84,7 @@
       '        <li class="nav-group">' +
       '          <span class="nav-group__label">About Us</span>' +
       '          <div class="nav-dropdown">' +
+      '            <a data-nav-link href="' + routes.about + '">About Pardes</a>' +
       '            <a data-nav-link href="' + routes.preschool + '">Preschool</a>' +
       '            <a data-nav-link href="' + routes.elementary + '">Elementary</a>' +
       '            <a data-nav-link href="' + routes.middle + '">Middle School</a>' +
