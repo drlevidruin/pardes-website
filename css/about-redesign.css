@@ -26,7 +26,7 @@
 
 .about-hero {
   position: relative;
-  min-height: clamp(360px, 48svh, 520px);
+  min-height: clamp(390px, 52svh, 560px);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -55,8 +55,8 @@
 .about-hero__content {
   position: relative;
   z-index: 1;
-  padding: 0 0 18px;
-  margin-top: -10px;
+  padding: 34px 0 40px;
+  margin-top: 0;
 }
 
 .about-hero__content h1 {
@@ -301,13 +301,13 @@
 
 @media (max-width: 768px) {
   .about-hero {
-    min-height: 390px;
+    min-height: 420px;
     align-items: center;
   }
 
   .about-hero__content {
-    padding: 0 0 14px;
-    margin-top: -8px;
+    padding: 30px 0 34px;
+    margin-top: 0;
   }
 
   .about-hero__content h1 {
