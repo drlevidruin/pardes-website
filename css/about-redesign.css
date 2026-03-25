@@ -95,6 +95,10 @@
   letter-spacing: -1.1px;
 }
 
+.about-story__copy h2 {
+  margin-bottom: 28px;
+}
+
 .about-story__copy p,
 .about-section-intro p,
 .belief p,
@@ -242,7 +246,8 @@
 }
 
 .about-cta .section-label {
-  color: rgba(192, 230, 203, 0.78);
+  color: #ffffff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.18);
 }
 
 .about-cta h2 {
