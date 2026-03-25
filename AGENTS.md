@@ -210,3 +210,4 @@ This repo is actively worked on by both **Codex** and **OpenAI Codex**. Coordina
 | 2026-03-25 | Codex | Added more breathing room to the About page story copy and lowered the timeline start in /css/about-redesign.css so the milestones align with the body text rather than the section heading |
 | 2026-03-25 | Codex | Restored the earlier About page story spacing in /css/about-redesign.css after the timeline was pushed too low, and updated the final milestone year in /pages/about.html from `2024` to `2026` so the school timeline does not feel dated |
 | 2026-03-25 | Codex | Changed the About page timeline in /css/about-redesign.css from a two-up grid to a single vertical sequence so the milestones read one after another instead of two per row |
+| 2026-03-25 | Codex | Added a cache-busting version query to the About page stylesheet link in /pages/about.html so browsers stop serving stale cached CSS during the timeline/layout fixes |
