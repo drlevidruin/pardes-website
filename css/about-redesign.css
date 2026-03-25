@@ -80,14 +80,14 @@
 
 .about-story__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(36px, 4vw, 64px);
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+  gap: clamp(28px, 3vw, 52px);
   align-items: start;
 }
 
 .about-story__copy {
-  max-width: 560px;
-  padding-right: clamp(12px, 2vw, 28px);
+  max-width: none;
+  padding-right: clamp(8px, 1.4vw, 18px);
 }
 
 .about-story__copy h2,
@@ -100,7 +100,7 @@
 }
 
 .about-story__copy h2 {
-  max-width: 11ch;
+  max-width: 13ch;
   margin-bottom: 42px;
 }
 
@@ -122,9 +122,9 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  max-width: 360px;
+  max-width: 480px;
   width: 100%;
-  justify-self: start;
+  justify-self: end;
   margin-top: 136px;
   padding: 0;
   opacity: 1;
