@@ -1,0 +1,133 @@
+:root {
+  --mockup-ink: rgba(29, 29, 31, 0.88);
+}
+
+.mockup-badge {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 50;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(10, 74, 43, 0.92);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.proof-item {
+  text-align: center;
+  padding: 18px 22px;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.proof-item:last-child {
+  border-right: none;
+}
+
+.proof-item strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--forest);
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: -1.3px;
+  line-height: 1;
+}
+
+.proof-item span {
+  display: block;
+  max-width: 12ch;
+  margin: 0 auto;
+  color: var(--text-light);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+}
+
+.pardes-way-intro .section-intro,
+.faq-section .section-intro,
+.student-life .section-intro {
+  max-width: 760px;
+}
+
+.section-intro p {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pillar-text p {
+  font-size: 18px;
+  color: var(--text-body);
+}
+
+.pillar-highlight {
+  max-width: 26ch;
+}
+
+.division-card-body p {
+  font-size: 16px;
+  color: var(--text-body);
+}
+
+.faq-answer p {
+  color: var(--text-body);
+}
+
+.faq-link {
+  font-size: 16px;
+}
+
+.soft-cta p {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.soft-cta h2,
+.soft-cta p {
+  text-wrap: balance;
+}
+
+@media (max-width: 768px) {
+  .mockup-badge {
+    right: 12px;
+    bottom: 12px;
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .proof-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .proof-item {
+    padding: 16px 12px;
+  }
+
+  .proof-item strong {
+    font-size: 32px;
+  }
+
+  .proof-item span {
+    font-size: 13px;
+  }
+
+  .section-intro p,
+  .pillar-text p,
+  .division-card-body p,
+  .faq-answer p,
+  .soft-cta p {
+    font-size: 16px;
+  }
+}

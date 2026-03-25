@@ -1,26 +1,3 @@
-/* Mobile spacing fixes */
-
-/* Tighten hero section on mobile: reduce whitespace above text and below tagline */
-@media (max-width: 760px) {
-  .hero-immersive__content {
-    padding-top: 0.25rem !important;
-    padding-bottom: 0.25rem !important;
-  }
-
-  .hero-immersive__content h1 {
-    margin-top: 0;
-    margin-bottom: 0.1rem;
-  }
-
-  .hero-tagline,
-  .hero-immersive__content .lead {
-    margin-bottom: 0.25rem;
-  }
-}
-
-@media (max-width: 420px) {
-  .hero-immersive__content {
-    padding-top: 0.1rem !important;
-    padding-bottom: 0.1rem !important;
-  }
-}
+/* Shared mobile hotfix file.
+   Homepage mobile hero rules were consolidated into css/homepage-redesign.css
+   during the 2026-03-25 homepage story polish pass. */
