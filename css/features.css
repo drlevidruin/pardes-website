@@ -213,6 +213,10 @@ main p + p {
 }
 
 /* --- Shared footer campus blocks --- */
+site-footer .site-footer {
+  margin-top: 0 !important;
+}
+
 .footer-campus + .footer-campus {
   margin-top: 1rem;
 }

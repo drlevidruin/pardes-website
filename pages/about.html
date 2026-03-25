@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Our Story and Mission | Pardes Day School</title>
-    <meta name="description" content="Learn how Pardes Day School grew into a thriving Miami Beach school serving Pre-K through 8th grade. Read our story and mission." />
-    <meta property="og:title" content="About Our Story and Mission | Pardes Day School" />
-    <meta property="og:description" content="Learn how Pardes Day School grew into a thriving Miami Beach school serving Pre-K through 8th grade. Read our story and mission." />
+    <title>About Pardes Day School | Our Story and Leadership</title>
+    <meta name="description" content="Learn how Pardes Day School grew in Miami Beach, what The Pardes Way stands for, and who leads the school today." />
+    <meta property="og:title" content="About Pardes Day School | Our Story and Leadership" />
+    <meta property="og:description" content="Learn how Pardes Day School grew in Miami Beach, what The Pardes Way stands for, and who leads the school today." />
     <meta property="og:url" content="https://drlevidruin.github.io/pardes-website/pages/about.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Pardes Day School" />
@@ -21,10 +21,11 @@
       <link rel="stylesheet" href="../css/mobile-fixes.css">
     <link rel="stylesheet" href="../css/alerts.css">
     <link rel="stylesheet" href="../css/features.css">
+    <link rel="stylesheet" href="../css/about-redesign.css">
     <script src="../js/alerts.js" defer></script>
     <script src="../js/share.js" defer></script>
   </head>
-  <body>
+  <body class="about-page">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <noscript>
       <div class="site-noscript">
@@ -42,65 +43,79 @@
         </div>
       </div>
     </noscript>
-    <site-header data-context="subpage" data-cta="tour"></site-header>
+    <site-header data-context="subpage" data-cta="team"></site-header>
 
-    <main id="main-content">
+    <main id="main-content" class="about-main">
 
-      <!-- Page Hero -->
-      <section class="page-hero">
-        <div class="page-hero__text">
-          <h1>Our Story</h1>
-          <p class="lead">From five children and a living room to over 220 students and two campuses. We're just getting started.</p>
+      <section class="about-hero">
+        <div class="about-hero__media" aria-hidden="true"></div>
+        <div class="about-hero__overlay" aria-hidden="true"></div>
+        <div class="about-hero__content container">
+          <span class="section-label">About Pardes</span>
+          <h1>A school that grew because families felt the difference.</h1>
+          <p>From five children in a living room to a full school across two campuses, Pardes kept the same belief at the center: school can be joyful, rigorous, and built for how children actually learn.</p>
         </div>
-        <div class="page-hero__image" data-hero-image style="background-image: url('../assets/images/elementary/20251205_090913.jpg'); background-size: cover; background-position: center;"></div>
       </section>
 
-      <!-- Origin Story -->
-      <section class="section origin-story" aria-labelledby="origin-heading">
-        <div class="container">
-          <div class="origin-story__inner" data-reveal>
-            <div class="origin-story__text">
-              <span class="section-label">Where It Began</span>
-              <h2 id="origin-heading">It started with five children and a living room.</h2>
-              <p>In 2011, Katy Horowitz moved from London to Miami Beach with a simple belief: Jewish education could be joyful, rigorous, and built for how children actually learn. She started with five students in a home daycare. That grew into Preschool (Gan Katan), then a kindergarten in 2017, then a grade added every year.</p>
-              <p>In 2024, the school purchased its building at 1211 Marseille Dr via an SBA loan after the community raised over $400,000, a testament to the families who believed in what Pardes was building.</p>
-              <p>Today, Pardes Day School serves over 220 students across two campuses from preschool through 8th grade. The building changed. The mission never did.</p>
+      <section class="about-story" aria-labelledby="about-story-heading">
+        <div class="container about-story__grid">
+          <div class="about-story__copy" data-reveal>
+            <span class="section-label">Our Story</span>
+            <h2 id="about-story-heading">Built in Miami Beach. Built on purpose.</h2>
+            <p>In 2011, Katy Horowitz moved from London to Miami Beach with a simple belief: Jewish education could be joyful, rigorous, and built around the way children actually learn. She started with five children in a living room.</p>
+            <p>That small beginning became Gan Katan, then a kindergarten in 2017, then a grade added every year. Families kept coming because the school felt different, close teaching, serious learning, Jewish life that felt lived, and a community that felt warm from the start.</p>
+            <p>Today, Pardes serves more than 220 students across two campuses from preschool through 8th grade. The scale changed. The purpose did not.</p>
+          </div>
+          <div class="about-milestones" data-reveal>
+            <div class="about-milestone">
+              <strong>2011</strong>
+              <p>Five children. One living room. The start of Pardes in Miami Beach.</p>
             </div>
-            <div class="origin-story__image">
-              <img src="../assets/images/elementary/20251205_090913.jpg" alt="Pardes students and teachers together on campus" data-origin-image loading="lazy">
-              <!-- PHOTO: Replace with portrait of Katy Horowitz when professional photo is available -->
+            <div class="about-milestone">
+              <strong>2017</strong>
+              <p>Kindergarten launches and the elementary school begins to grow grade by grade.</p>
+            </div>
+            <div class="about-milestone">
+              <strong>2023</strong>
+              <p>Middle School at Pardes opens, extending The Pardes Way through 8th grade.</p>
+            </div>
+            <div class="about-milestone">
+              <strong>2024</strong>
+              <p>The community helps purchase the main campus at 1211 Marseille Dr and gives the school a home of its own.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Mission -->
-      <section class="section section--sage" aria-labelledby="mission-heading">
+      <section class="about-beliefs" aria-labelledby="about-beliefs-heading">
         <div class="container">
-          <div class="section-heading" data-reveal>
-            <span class="section-label">Our Mission</span>
-            <h2 id="mission-heading">Why we exist.</h2>
+          <div class="about-section-intro" data-reveal>
+            <span class="section-label">What We Believe</span>
+            <h2 id="about-beliefs-heading">School should shape the whole child, and the whole day.</h2>
           </div>
-          <div class="panel" data-reveal>
-            <p class="lead">"To provide a joyful, rigorous education that develops the whole child academically, socially, and as a proud member of the Jewish community."</p>
-            <ul>
-              <li><strong>Right level, right pace.</strong> Every child learns at exactly the right level, not waiting and not struggling to keep pace</li>
-              <li><strong>Multiple teachers in every classroom</strong> so no child is ever just a face in the crowd</li>
-              <li><strong>Practice time built into the school day</strong> with trained teacher support</li>
-              <li><strong>Jewish identity woven through every day</strong>, experienced, appreciated, and made personal</li>
-              <li><strong>Real-life skills taught alongside academics:</strong> collaboration, emotional intelligence, resilience</li>
-              <li><strong>A community where families feel at home</strong> before day one</li>
-            </ul>
+          <div class="belief-grid">
+            <article class="belief" data-reveal>
+              <h3>Teach closely.</h3>
+              <p><strong>Multiple teachers in every classroom</strong> means children are seen, known, and taught with real attention every day.</p>
+            </article>
+            <article class="belief" data-reveal>
+              <h3>Live Judaism.</h3>
+              <p><strong>Jewish life is woven into the day</strong>, through learning, celebrations, middot, and a deep love for Israel.</p>
+            </article>
+            <article class="belief" data-reveal>
+              <h3>Build people.</h3>
+              <p><strong>Real-life skills matter here</strong>, from collaboration and resilience to guided practice that gives families calmer evenings.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Leadership Team -->
-      <section class="section" aria-labelledby="leadership-heading">
+      <section class="about-leadership" aria-labelledby="about-leadership-heading">
         <div class="container">
-          <div class="section-heading" data-reveal>
+          <div class="about-section-intro" data-reveal>
             <span class="section-label">Leadership</span>
-            <h2 id="leadership-heading">The people who built and sustain The Pardes Way.</h2>
+            <h2 id="about-leadership-heading">The people who built and sustain The Pardes Way.</h2>
+            <p>Strong schools do not happen by accident. They are shaped by people who know what they are building and why it matters.</p>
           </div>
           <div class="staff-grid staff-grid--leadership reveal-stagger" data-reveal>
             <article class="staff-card staff-card--featured" data-reveal>
@@ -138,88 +153,29 @@
         </div>
       </section>
 
-      <!-- Timeline -->
-      <section class="section section--sage" aria-labelledby="timeline-heading">
+      <section class="about-proof" aria-labelledby="about-proof-heading">
         <div class="container">
-          <div class="section-heading" data-reveal>
-            <span class="section-label">History</span>
-            <h2 id="timeline-heading">How we got here.</h2>
-          </div>
-          <ol class="timeline" data-reveal>
-            <li class="timeline__item" data-reveal>
-              <span class="timeline__year">2011</span>
-              <div class="timeline__content">
-                <h3>The Beginning</h3>
-                <p>Katy Horowitz starts a home daycare with five children in Miami Beach.</p>
-              </div>
-            </li>
-            <li class="timeline__item" data-reveal>
-              <span class="timeline__year">2013</span>
-              <div class="timeline__content">
-                <h3>Preschool (Gan Katan) Opens</h3>
-                <p>Preschool (Gan Katan) officially opens, bringing The Pardes Way to more Miami Beach families.</p>
-              </div>
-            </li>
-            <li class="timeline__item" data-reveal>
-              <span class="timeline__year">2017</span>
-              <div class="timeline__content">
-                <h3>Elementary Begins</h3>
-                <p>Kindergarten launches. The elementary school takes its first steps.</p>
-              </div>
-            </li>
-            <li class="timeline__item" data-reveal>
-              <span class="timeline__year">2018–2022</span>
-              <div class="timeline__content">
-                <h3>Grade by Grade</h3>
-                <p>One grade added every year through 5th grade, building a complete K-5 elementary program.</p>
-              </div>
-            </li>
-            <li class="timeline__item" data-reveal>
-              <span class="timeline__year">2023</span>
-              <div class="timeline__content">
-                <h3>Middle School Opens</h3>
-                <p>Middle School at Pardes (MSAP) opens at 7055 Bonita Dr, extending The Pardes Way through 8th grade.</p>
-              </div>
-            </li>
-            <li class="timeline__item" data-reveal>
-              <span class="timeline__year">2024</span>
-              <div class="timeline__content">
-                <h3>A Building of Our Own</h3>
-                <p>The school purchases its main campus building at 1211 Marseille Dr, supported by an SBA loan and over $400,000 raised by the community.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- Accreditation & Non-Discrimination -->
-      <section class="section" aria-labelledby="accreditation-heading">
-        <div class="container">
-          <div class="content-grid reveal-stagger">
-            <article class="panel" data-reveal>
-              <h3>Accreditation</h3>
-              <p>Pardes Day School's elementary program is accredited by the <strong>Association of Independent Schools of Florida (AISF)</strong>. We are a Miami Jewish Federation funded school.</p>
+          <div class="about-proof__grid">
+            <article class="about-proof__item" data-reveal>
+              <span class="about-proof__eyebrow">Accreditation</span>
+              <h3 id="about-proof-heading">Independent-school standards, grounded in Miami Beach.</h3>
+              <p>Pardes Day School's elementary program is accredited by the <strong>Association of Independent Schools of Florida (AISF)</strong>. We are also a Miami Jewish Federation funded school.</p>
             </article>
-            <article class="panel" data-reveal>
-              <h3>Non-Discrimination Policy</h3>
-              <p>We embrace and value differences, such as ethnicity and national origin, religious denomination and spiritual practice, race, age, gender, gender identity, sexual orientation, socio-economic levels and mental and physical ability.</p>
+            <article class="about-proof__item" data-reveal>
+              <span class="about-proof__eyebrow">Community</span>
+              <h3>A school families helped build.</h3>
+              <p>In 2024, the community helped secure the Marseille Dr campus through an SBA loan and more than <strong>$400,000 raised in support of the school</strong>. That kind of trust says a lot about what families feel here.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- CTA -->
-      <section class="section" aria-labelledby="about-cta-heading">
-        <div class="container">
-          <div class="section-heading" data-reveal>
-            <span class="section-label">Visit Us</span>
-            <h2 id="about-cta-heading">Come See the Difference.</h2>
-            <p class="section-subtitle">The best way to understand The Pardes Way is to see it in action. Walk through our classrooms, meet our educators, and experience what makes us different.</p>
-          </div>
-          <div class="btn-row" data-reveal>
-            <a class="btn btn-primary btn-lg" href="admissions.html#schedule-tour">Schedule a Tour</a>
-            <a class="btn btn-outline btn-lg" href="contact.html">Get in Touch</a>
-          </div>
+      <section class="about-cta" aria-labelledby="about-cta-heading">
+        <div class="container" data-reveal>
+          <span class="section-label">Get in Touch</span>
+          <h2 id="about-cta-heading">Want to get to know the people behind Pardes?</h2>
+          <p>We would be glad to answer questions.<br>Introduce the school.<br>Help you get a feel for our community.</p>
+          <a class="btn btn-primary btn-lg" href="contact.html">Get in Touch</a>
         </div>
       </section>
 

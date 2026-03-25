@@ -1,0 +1,353 @@
+:root {
+  --about-cream: #f8f4ed;
+  --about-sage: #f0f4ee;
+  --about-line: rgba(16, 101, 60, 0.12);
+}
+
+.about-main {
+  background: #ffffff;
+}
+
+.about-main .section-label,
+.about-main .about-cta .section-label {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--forest);
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.about-main .section-label::before {
+  display: none;
+}
+
+.about-hero {
+  position: relative;
+  min-height: clamp(560px, 84svh, 820px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #10251a;
+}
+
+.about-hero__media,
+.about-hero__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.about-hero__media {
+  background-image: url('../assets/images/elementary/20251205_090913.jpg');
+  background-size: cover;
+  background-position: center 32%;
+  transform: scale(1.02);
+}
+
+.about-hero__overlay {
+  background:
+    linear-gradient(180deg, rgba(10, 34, 20, 0.22) 0%, rgba(10, 34, 20, 0.52) 55%, rgba(10, 34, 20, 0.82) 100%),
+    linear-gradient(90deg, rgba(12, 35, 22, 0.72) 0%, rgba(12, 35, 22, 0.2) 65%);
+}
+
+.about-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 132px 0 96px;
+}
+
+.about-hero__content .section-label {
+  color: #b7dfc1;
+}
+
+.about-hero__content h1 {
+  max-width: 11ch;
+  color: #ffffff;
+  font-size: clamp(46px, 6vw, 86px);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -2px;
+  text-shadow: 0 12px 42px rgba(0, 0, 0, 0.24);
+}
+
+.about-hero__content p {
+  max-width: 36rem;
+  margin-top: 26px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.about-story {
+  padding: 88px 0 80px;
+  background: #ffffff;
+}
+
+.about-story__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.about-story__copy h2,
+.about-section-intro h2 {
+  color: #1d1d1f;
+  font-size: clamp(34px, 4.6vw, 58px);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -1.4px;
+}
+
+.about-story__copy p,
+.about-section-intro p,
+.belief p,
+.about-proof__item p,
+.about-cta p {
+  color: #424245;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.about-story__copy p + p {
+  margin-top: 18px;
+}
+
+.about-milestones {
+  display: grid;
+  gap: 26px;
+  padding: 4px 0 4px 28px;
+  border-left: 1px solid var(--about-line);
+}
+
+.about-milestone strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--forest-dark);
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-milestone p {
+  color: #424245;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.about-beliefs {
+  padding: 80px 0;
+  background: var(--about-sage);
+}
+
+.about-section-intro {
+  max-width: 760px;
+}
+
+.belief-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 52px;
+}
+
+.belief {
+  padding-right: 20px;
+  border-right: 1px solid rgba(16, 101, 60, 0.16);
+}
+
+.belief:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.belief h3 {
+  margin-bottom: 16px;
+  color: #1d1d1f;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.belief p strong,
+.about-proof__item p strong {
+  color: var(--forest-dark);
+  font-weight: 700;
+}
+
+.about-leadership {
+  padding: 84px 0;
+  background: #ffffff;
+}
+
+.about-leadership .about-section-intro {
+  margin-bottom: 42px;
+}
+
+.about-leadership .staff-grid--leadership {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.about-leadership .staff-card {
+  min-height: 100%;
+  padding: 28px 24px;
+  border: 1px solid rgba(16, 101, 60, 0.1);
+  border-radius: 22px;
+  box-shadow: none;
+}
+
+.about-leadership .staff-card--featured {
+  border-width: 1px;
+  border-color: rgba(16, 101, 60, 0.16);
+}
+
+.about-proof {
+  padding: 8px 0 88px;
+  background: #ffffff;
+}
+
+.about-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.about-proof__item {
+  padding: 34px 36px;
+  border: 1px solid rgba(16, 101, 60, 0.12);
+  border-radius: 22px;
+  background: linear-gradient(180deg, #ffffff 0%, var(--about-cream) 100%);
+}
+
+.about-proof__eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about-proof__item h3 {
+  margin-bottom: 14px;
+  color: #1d1d1f;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.about-cta {
+  padding: 84px 0;
+  background: var(--forest-dark);
+  text-align: center;
+}
+
+.about-cta .section-label {
+  color: #b7dfc1;
+}
+
+.about-cta h2 {
+  max-width: 12ch;
+  margin: 0 auto 22px;
+  color: #ffffff;
+  font-size: clamp(34px, 4.2vw, 58px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1px;
+}
+
+.about-cta p {
+  max-width: 34rem;
+  margin: 0 auto 34px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 1024px) {
+  .about-story__grid,
+  .belief-grid,
+  .about-proof__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .belief {
+    padding-right: 0;
+    padding-bottom: 22px;
+    border-right: none;
+    border-bottom: 1px solid rgba(16, 101, 60, 0.16);
+  }
+
+  .belief:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .about-leadership .staff-grid--leadership {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    min-height: 520px;
+    align-items: flex-end;
+  }
+
+  .about-hero__content {
+    padding: 108px 0 62px;
+  }
+
+  .about-hero__content h1 {
+    max-width: 10ch;
+    font-size: 46px;
+    letter-spacing: -1px;
+  }
+
+  .about-hero__content p,
+  .about-story__copy p,
+  .about-section-intro p,
+  .belief p,
+  .about-proof__item p,
+  .about-cta p,
+  .about-milestone p {
+    font-size: 16px;
+  }
+
+  .about-story {
+    padding: 64px 0;
+  }
+
+  .about-story__grid {
+    gap: 40px;
+  }
+
+  .about-story__copy h2,
+  .about-section-intro h2,
+  .about-proof__item h3,
+  .about-cta h2 {
+    font-size: 32px;
+    letter-spacing: -0.6px;
+  }
+
+  .about-milestones {
+    padding-left: 18px;
+  }
+
+  .about-beliefs,
+  .about-leadership,
+  .about-proof,
+  .about-cta {
+    padding: 64px 0;
+  }
+
+  .about-leadership .staff-grid--leadership {
+    grid-template-columns: 1fr;
+  }
+
+  .about-proof__item {
+    padding: 28px 24px;
+  }
+}
