@@ -26,7 +26,7 @@
 
 .about-hero {
   position: relative;
-  min-height: clamp(500px, 72svh, 720px);
+  min-height: clamp(360px, 50svh, 540px);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -55,7 +55,7 @@
 .about-hero__content {
   position: relative;
   z-index: 1;
-  padding: 116px 0 74px;
+  padding: 88px 0 28px;
 }
 
 .about-hero__content .section-label {
@@ -63,26 +63,31 @@
 }
 
 .about-hero__content h1 {
-  max-width: 11ch;
+  max-width: 9ch;
   color: #ffffff;
-  font-size: clamp(46px, 6vw, 86px);
+  font-size: clamp(38px, 4.8vw, 64px);
   font-weight: 800;
-  line-height: 1.02;
-  letter-spacing: -2px;
+  line-height: 0.98;
+  letter-spacing: -1.4px;
   text-shadow: 0 12px 42px rgba(0, 0, 0, 0.24);
 }
 
 .about-hero__content p {
-  max-width: 36rem;
-  margin-top: 26px;
+  max-width: 31rem;
+  margin-top: 14px;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 19px;
-  line-height: 1.7;
+  font-size: 17px;
+  line-height: 1.55;
 }
 
 .about-story {
-  padding: 76px 0 80px;
+  position: relative;
+  z-index: 2;
+  margin-top: -34px;
+  padding: 58px 0 80px;
   background: #ffffff;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -14px 36px rgba(18, 43, 28, 0.08);
 }
 
 .about-story__grid {
@@ -241,13 +246,13 @@
 }
 
 .about-cta {
-  padding: 84px 0;
+  padding: 72px 0;
   background: var(--forest-dark);
   text-align: center;
 }
 
 .about-cta .section-label {
-  color: #b7dfc1;
+  color: rgba(192, 230, 203, 0.78);
 }
 
 .about-cta h2 {
@@ -263,7 +268,21 @@
 .about-cta p {
   max-width: 34rem;
   margin: 0 auto 34px;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.about-cta .btn-primary {
+  background: #ffffff;
+  color: var(--forest-dark);
+  border-color: #ffffff;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+}
+
+.about-cta .btn-primary:hover {
+  background: var(--about-cream);
+  border-color: var(--about-cream);
+  color: var(--forest-dark);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
 }
 
 @media (max-width: 1024px) {
@@ -292,18 +311,18 @@
 
 @media (max-width: 768px) {
   .about-hero {
-    min-height: 500px;
+    min-height: 420px;
     align-items: flex-end;
   }
 
   .about-hero__content {
-    padding: 96px 0 56px;
+    padding: 80px 0 28px;
   }
 
   .about-hero__content h1 {
-    max-width: 10ch;
-    font-size: 46px;
-    letter-spacing: -1px;
+    max-width: 8ch;
+    font-size: 40px;
+    letter-spacing: -0.8px;
   }
 
   .about-hero__content p,
@@ -317,7 +336,8 @@
   }
 
   .about-story {
-    padding: 64px 0;
+    margin-top: -22px;
+    padding: 44px 0 64px;
   }
 
   .about-story__grid {
