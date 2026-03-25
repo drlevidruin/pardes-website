@@ -212,6 +212,29 @@ main p + p {
   flex-shrink: 0;
 }
 
+/* --- Shared footer campus blocks --- */
+.footer-campus + .footer-campus {
+  margin-top: 1rem;
+}
+
+.footer-campus__name,
+.footer-campus__address,
+.footer-campus__contact {
+  margin: 0;
+}
+
+.footer-campus__name {
+  margin-bottom: 0.35rem;
+}
+
+.footer-campus__address {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-campus__contact a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* Desktop: constrain card image height and grid */
 @media (min-width: 761px) {
   .panel--card .panel__image {

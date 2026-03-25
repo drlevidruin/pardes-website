@@ -113,12 +113,18 @@
       '  <div class="container footer-grid">' +
       '    <section>' +
       '      <h3 class="footer-title">Pardes Day School</h3>' +
-      '      <p><strong>Preschool &amp; Elementary Campus</strong></p>' +
-      '      <p>1211 Marseille Dr</p>' +
-      '      <p>Miami Beach, FL 33141</p>' +
-      '      <p><a href="tel:+13056902548">(305) 690-2548</a></p>' +
-      '      <p><a href="mailto:office@pardesdayschool.org">office@pardesdayschool.org</a></p>' +
-      '      <p style="margin-top: 1rem; font-size: .82rem; color: rgba(255,255,255,0.6);"><strong style="color: rgba(255,255,255,0.8);">MSAP Campus (Middle School)</strong><br>7055 Bonita Dr, Miami Beach, FL 33141<br><a href="tel:+17867908662">(786) 790-8662</a><br><a href="mailto:msapoffice@pardesdayschool.org">msapoffice@pardesdayschool.org</a></p>' +
+      '      <div class="footer-campus">' +
+      '        <p class="footer-campus__name"><strong>Preschool &amp; Elementary Campus</strong></p>' +
+      '        <p class="footer-campus__address">1211 Marseille Dr<br>Miami Beach, FL 33141</p>' +
+      '        <p class="footer-campus__contact"><a href="tel:+13056902548">(305) 690-2548</a></p>' +
+      '        <p class="footer-campus__contact"><a href="mailto:office@pardesdayschool.org">office@pardesdayschool.org</a></p>' +
+      '      </div>' +
+      '      <div class="footer-campus">' +
+      '        <p class="footer-campus__name"><strong>MSAP Campus (Middle School)</strong></p>' +
+      '        <p class="footer-campus__address">7055 Bonita Dr<br>Miami Beach, FL 33141</p>' +
+      '        <p class="footer-campus__contact"><a href="tel:+17867908662">(786) 790-8662</a></p>' +
+      '        <p class="footer-campus__contact"><a href="mailto:msapoffice@pardesdayschool.org">msapoffice@pardesdayschool.org</a></p>' +
+      '      </div>' +
       '    </section>' +
       '    <section>' +
       '      <h3 class="footer-title">Quick Links</h3>' +

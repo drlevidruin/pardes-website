@@ -30,7 +30,7 @@ span.section-label {
 
 /* ===== HERO ===== */
 .hero-immersive {
-  min-height: 85vh !important;
+  min-height: clamp(500px, 78svh, 760px) !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
@@ -95,9 +95,28 @@ span.section-label {
 
 /* ===== PROOF BAR ===== */
 .proof-bar {
-  padding: 72px 0;
-  background: var(--white);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  margin-top: -88px;
+  padding: 0 0 64px;
+  background: transparent;
+  position: relative;
+  z-index: 3;
+}
+
+.proof-bar .container {
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(248,244,237,0.98) 100%);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 28px;
+  box-shadow: 0 22px 60px rgba(0,0,0,0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.proof-bar .container::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: linear-gradient(90deg, var(--forest) 0%, #8fb79d 38%, var(--navy) 100%);
 }
 
 .proof-grid {
@@ -108,7 +127,7 @@ span.section-label {
 
 .proof-item {
   text-align: center;
-  padding: 20px;
+  padding: 28px 24px 24px;
   border-right: 1px solid rgba(0,0,0,0.08);
 }
 
@@ -118,23 +137,24 @@ span.section-label {
 
 .proof-item strong {
   display: block;
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 800;
-  color: var(--forest);
+  color: var(--forest-dark);
   letter-spacing: -1.5px;
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .proof-item span {
   display: block;
-  max-width: 12ch;
+  max-width: 11ch;
   margin: 0 auto;
-  font-size: 15px;
-  color: var(--text-light);
-  font-weight: 600;
+  font-size: 14px;
+  color: #55575c;
+  font-weight: 700;
   letter-spacing: 0.2px;
   line-height: 1.4;
+  text-transform: uppercase;
 }
 
 /* ===== PARDES WAY INTRO ===== */
@@ -499,7 +519,7 @@ details[open] .faq-question::after {
 @media (max-width: 768px) {
   /* Hero - must override bundle's 760px breakpoint that adds cream bg */
   .hero-immersive {
-    min-height: 65vh !important;
+    min-height: clamp(420px, 60svh, 520px) !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
@@ -527,16 +547,20 @@ details[open] .faq-question::after {
 
   /* Proof bar */
   .proof-bar {
-    padding: 48px 0;
+    margin-top: -56px;
+    padding: 0 0 48px;
+  }
+  .proof-bar .container {
+    border-radius: 24px;
   }
   .proof-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .proof-item {
-    padding: 16px 12px;
+    padding: 24px 12px 18px;
   }
   .proof-item strong {
-    font-size: 32px;
+    font-size: 34px;
   }
   .proof-item span {
     font-size: 13px;
