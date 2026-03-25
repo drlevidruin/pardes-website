@@ -97,6 +97,8 @@ function scanHtmlFile(filePath) {
 
     checkImageDirectoryReference(filePath, line, ref);
   }
+
+  scanPublicPageShell(filePath, text, lineStarts);
 }
 
 function scanManifest(filePath) {
@@ -250,6 +252,144 @@ function resolveReference(fromFilePath, ref) {
     absolutePath,
     repoRelative,
   };
+}
+
+function scanPublicPageShell(filePath, text, lineStarts) {
+  const relativePath = toPosix(path.relative(ROOT, filePath));
+  if (!isPublicPage(relativePath)) {
+    return;
+  }
+
+  const expectedContext = relativePath === 'index.html' ? 'root' : 'subpage';
+  const expectedScript = expectedContext === 'root' ? 'js/site-shell.js' : '../js/site-shell.js';
+  const expectedCta = expectedContext === 'root' ? 'team' : 'tour';
+  const shellScriptMatches = [...text.matchAll(/<script\b[^>]*\bsrc=(["'])([^"']+site-shell\.js)\1[^>]*><\/script>/gi)];
+  const shellScriptMatch = shellScriptMatches[0] || null;
+  const mainBundleIndex = text.indexOf('main-cpapzbpt.js');
+
+  if (!shellScriptMatch) {
+    addFinding({
+      code: 'shell',
+      file: filePath,
+      line: 1,
+      message: 'Missing required site-shell.js include on public page.',
+    });
+  } else {
+    if (shellScriptMatches.length !== 1) {
+      addFinding({
+        code: 'shell',
+        file: filePath,
+        line: getLineNumber(lineStarts, shellScriptMatch.index),
+        message: 'Expected exactly one site-shell.js include on public page.',
+      });
+    }
+
+    const shellPath = shellScriptMatch[2];
+    if (shellPath !== expectedScript) {
+      addFinding({
+        code: 'shell',
+        file: filePath,
+        line: getLineNumber(lineStarts, shellScriptMatch.index),
+        message: `site-shell.js include should be "${expectedScript}", found "${shellPath}".`,
+      });
+    }
+
+    if (mainBundleIndex !== -1 && shellScriptMatch.index > mainBundleIndex) {
+      addFinding({
+        code: 'shell',
+        file: filePath,
+        line: getLineNumber(lineStarts, shellScriptMatch.index),
+        message: 'site-shell.js must load before the main bundle.',
+      });
+    }
+  }
+
+  validateShellElement({
+    filePath,
+    text,
+    lineStarts,
+    tagName: 'site-header',
+    requiredAttributes: {
+      'data-context': expectedContext,
+      'data-cta': expectedCta,
+    },
+  });
+
+  validateShellElement({
+    filePath,
+    text,
+    lineStarts,
+    tagName: 'site-footer',
+    requiredAttributes: {
+      'data-context': expectedContext,
+    },
+  });
+
+  const legacyHeader = text.match(/<header\s+class=(["'])site-header\1/i);
+  if (legacyHeader) {
+    addFinding({
+      code: 'shell',
+      file: filePath,
+      line: getLineNumber(lineStarts, legacyHeader.index),
+      message: 'Legacy static site-header markup should be replaced by <site-header>.',
+    });
+  }
+
+  const legacyFooter = text.match(/<footer\s+class=(["'])site-footer\1/i);
+  if (legacyFooter) {
+    addFinding({
+      code: 'shell',
+      file: filePath,
+      line: getLineNumber(lineStarts, legacyFooter.index),
+      message: 'Legacy static site-footer markup should be replaced by <site-footer>.',
+    });
+  }
+}
+
+function isPublicPage(relativePath) {
+  return relativePath === 'index.html' || /^pages\/[^/]+\.html$/.test(relativePath);
+}
+
+function validateShellElement({ filePath, text, lineStarts, tagName, requiredAttributes }) {
+  const matches = [...text.matchAll(new RegExp(`<${tagName}\\b([^>]*)><\\/${tagName}>`, 'gi'))];
+  if (matches.length !== 1) {
+    addFinding({
+      code: 'shell',
+      file: filePath,
+      line: 1,
+      message: `Expected exactly one <${tagName}></${tagName}> placeholder.`,
+    });
+    return;
+  }
+
+  const match = matches[0];
+  const attributesSource = match[1];
+  for (const [name, expectedValue] of Object.entries(requiredAttributes)) {
+    const actualValue = getAttributeValue(attributesSource, name);
+    if (!actualValue) {
+      addFinding({
+        code: 'shell',
+        file: filePath,
+        line: getLineNumber(lineStarts, match.index),
+        message: `<${tagName}> is missing required ${name}.`,
+      });
+      continue;
+    }
+
+    if (actualValue !== expectedValue) {
+      addFinding({
+        code: 'shell',
+        file: filePath,
+        line: getLineNumber(lineStarts, match.index),
+        message: `<${tagName}> has ${name}="${actualValue}", expected "${expectedValue}".`,
+      });
+    }
+  }
+}
+
+function getAttributeValue(attributesSource, attributeName) {
+  const match = attributesSource.match(new RegExp(`\\b${attributeName}=(["'])([^"']+)\\1`, 'i'));
+  return match ? match[2] : null;
 }
 
 function stripQueryAndHash(ref) {

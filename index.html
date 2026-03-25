@@ -48,6 +48,7 @@
         "educationalLevel": "Pre-K through 8th grade"
       }
     </script>
+    <script src="js/site-shell.js"></script>
     <script type="module" crossorigin src="assets/main-cpapzbpt.js"></script>
     <link rel="stylesheet" crossorigin href="assets/main-b2rpzzoh.css">
       <link rel="stylesheet" href="css/mobile-fixes.css">
@@ -61,48 +62,23 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Pardes Day School home">
-          <img data-logo src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%20role='img'%20aria-label='Pardes%20Day%20School'%3e%3crect%20width='64'%20height='64'%20rx='14'%20fill='%23343e85'/%3e%3cpath%20d='M20%2014h16c8.837%200%2016%207.163%2016%2016s-7.163%2016-16%2016h-8v12h-8V14zm8%208v16h8c4.418%200%208-3.582%208-8s-3.582-8-8-8h-8z'%20fill='%23fefefe'/%3e%3c/svg%3e" alt="Pardes Day School logo" />
-          <span class="brand__text">Pardes Day School</span>
-        </a>
-
-        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">
-          <span aria-hidden="true">Menu</span>
-        </button>
-
-        <nav class="site-nav" data-site-nav aria-label="Primary navigation">
-          <ul class="nav-list">
-            <li><a data-nav-link href="index.html">Home</a></li>
-            <li class="nav-group">
-              <span class="nav-group__label">About Us</span>
-              <div class="nav-dropdown">
-                <a data-nav-link href="pages/preschool.html">Preschool</a>
-                <a data-nav-link href="pages/elementary.html">Elementary</a>
-                <a data-nav-link href="pages/middle-school.html">Middle School</a>
-                <a data-nav-link href="pages/staff.html">Our Team</a>
-              </div>
-            </li>
-            <li><a data-nav-link href="pages/admissions.html">Admissions</a></li>
-            <li><a data-nav-link href="pages/student-life.html">Student Life</a></li>
-            <li class="nav-group">
-              <span class="nav-group__label">Community</span>
-              <div class="nav-dropdown">
-                <a data-nav-link href="pages/parents.html">Parents</a>
-                <a data-nav-link href="pages/support.html">Support Pardes</a>
-                <a data-nav-link href="pages/contact.html">Contact</a>
-              </div>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="header-actions">
-          <a class="btn btn-primary" href="pages/staff.html">Meet the Team</a>
+    <noscript>
+      <div class="site-noscript">
+        <div class="container site-noscript__inner">
+          <p class="site-noscript__copy"><strong>Pardes Day School:</strong> JavaScript is off, so this simplified navigation is shown instead of the full site menu.</p>
+          <div class="site-noscript__links" aria-label="Simplified site navigation">
+            <a href="index.html">Home</a>
+            <a href="pages/preschool.html">Preschool</a>
+            <a href="pages/elementary.html">Elementary</a>
+            <a href="pages/middle-school.html">Middle School</a>
+            <a href="pages/admissions.html">Admissions</a>
+            <a href="pages/contact.html">Contact</a>
+          </div>
+          <p class="site-noscript__contact"><a href="tel:+13056902548">(305) 690-2548</a> | <a href="mailto:office@pardesdayschool.org">office@pardesdayschool.org</a></p>
         </div>
       </div>
-    </header>
+    </noscript>
+    <site-header data-context="root" data-cta="team"></site-header>
 
     <main id="main-content">
       <!-- ── Hero ──────────────────────────────────────────────── -->
@@ -290,48 +266,6 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <section>
-          <h3 class="footer-title">Pardes Day School</h3>
-          <p>1211 Marseille Dr</p>
-          <p>Miami Beach, FL 33141</p>
-          <p><a href="tel:+13056902548">(305) 690-2548</a></p>
-          <p><a href="mailto:office@pardesdayschool.org">office@pardesdayschool.org</a></p>
-          <p style="margin-top: 1rem; font-size: .82rem; color: rgba(255,255,255,0.6);"><strong style="color: rgba(255,255,255,0.8);">MSAP Campus (Middle School)</strong><br>7055 Bonita Dr, Miami Beach, FL 33141<br><a href="tel:+17867908662">(786) 790-8662</a><br><a href="mailto:msapoffice@pardesdayschool.org">msapoffice@pardesdayschool.org</a></p>
-        </section>
-
-        <section>
-          <h3 class="footer-title">Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="pages/admissions.html">Admissions</a></li>
-            <li><a href="pages/student-life.html">Student Life</a></li>
-            <li><a href="pages/parents.html">Parents</a></li>
-            <li><a href="pages/support.html">Support Pardes</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
-          </ul>
-        </section>
-
-        <section>
-          <h3 class="footer-title">Divisions</h3>
-          <ul class="footer-links">
-            <li><a href="pages/preschool.html">Preschool (Gan Katan)</a></li>
-            <li><a href="pages/elementary.html">Elementary (K-5)</a></li>
-            <li><a href="pages/middle-school.html">Middle School (6-8)</a></li>
-          </ul>
-        </section>
-
-        <section>
-          <h3 class="footer-title">Follow Us</h3>
-          <p style="font-size: .85rem; color: rgba(255,255,255,0.6); margin-bottom: .8rem;">Stay connected with our community.</p>
-          <div class="social-row" aria-label="Social media links">
-            <a class="social-dot" href="https://www.instagram.com/pardesdayschool/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
-          </div>
-        </section>
-      </div>
-      <div class="container legal-line">
-        <p>&copy; 2026 Pardes Day School. All rights reserved.</p>
-      </div>
-    </footer>
+    <site-footer data-context="root"></site-footer>
   </body>
 </html>

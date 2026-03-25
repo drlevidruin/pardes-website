@@ -345,3 +345,48 @@ main p + p {
     height: 160px;
   }
 }
+
+/* --- Noscript fallback shell --- */
+.site-noscript {
+  background: #f3ede4;
+  border-bottom: 1px solid rgba(52, 62, 133, 0.12);
+  color: #374151;
+  padding: 0.9rem 0;
+}
+
+.site-noscript__inner {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.site-noscript__copy,
+.site-noscript__contact {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.site-noscript__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.site-noscript__links a,
+.site-noscript__contact a {
+  color: #343e85;
+  font-weight: 600;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.12em;
+}
+
+@media (max-width: 760px) {
+  .site-noscript {
+    padding: 0.75rem 0;
+  }
+
+  .site-noscript__copy,
+  .site-noscript__contact {
+    font-size: 0.85rem;
+  }
+}
