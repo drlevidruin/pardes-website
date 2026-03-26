@@ -392,3 +392,14 @@
     padding: 28px 24px;
   }
 }
+
+/* Staff photos on about page */
+.about-leadership .staff-card__photo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 3px solid rgba(16, 101, 60, 0.2);
+}
