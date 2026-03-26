@@ -413,14 +413,7 @@
   display: block;
 }
 
-/* ===== STAFF CARDS (override bundle) ===== */
-.staff-section .staff-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-  margin-top: 32px;
-}
-
+/* ===== STAFF CARDS ===== */
 .staff-section .staff-card {
   text-align: center;
   padding: 24px 16px;
@@ -429,18 +422,29 @@
   background: white;
 }
 
+.staff-section .staff-card__photo {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 3px solid var(--sage-light);
+}
+
 .staff-section .staff-card__avatar {
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 96px;
   margin: 0 auto 14px;
   border-radius: 50%;
   background: var(--sage-light);
   color: var(--forest-dark);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 3px solid rgba(0, 0, 0, 0.04);
 }
 
 .staff-section .staff-card__name {
@@ -459,6 +463,13 @@
 .staff-section .staff-card--featured {
   border-color: rgba(16, 101, 60, 0.15);
   background: linear-gradient(180deg, white 0%, var(--sage-light) 100%);
+}
+
+.staff-section .staff-card--featured .staff-card__photo {
+  width: 112px;
+  height: 112px;
+  border-color: var(--forest);
+  border-width: 3px;
 }
 
 .staff-division__title {
