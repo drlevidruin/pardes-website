@@ -416,47 +416,50 @@
 /* ===== STAFF GRID ===== */
 .staff-grid-uniform {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-  margin-top: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ===== STAFF CARDS (all same style) ===== */
+/* ===== STAFF CARDS ===== */
 .staff-section .staff-card {
   text-align: center;
-  padding: 28px 20px 24px;
-  border: 1px solid rgba(16, 101, 60, 0.12);
+  padding: 32px 16px 28px;
   border-radius: 16px;
   background: linear-gradient(180deg, white 0%, var(--sage-light) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .staff-section .staff-card__photo {
-  width: 110px;
-  height: 110px;
+  width: 140px;
+  height: 140px;
   margin: 0 auto 16px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  border: 3px solid var(--forest);
+  border: 4px solid var(--forest);
 }
 
 .staff-section .staff-card__avatar {
-  width: 110px;
-  height: 110px;
+  width: 140px;
+  height: 140px;
   margin: 0 auto 16px;
   border-radius: 50%;
   background: var(--sage-light);
   color: var(--forest-dark);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid rgba(16, 101, 60, 0.15);
+  border: 4px solid rgba(0, 0, 0, 0.08);
 }
 
 .staff-section .staff-card__name {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 4px;
@@ -465,37 +468,62 @@
 .staff-section .staff-card__role {
   font-size: 14px;
   color: var(--text-body);
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
-@media (min-width: 1200px) {
-  .staff-grid-uniform {
-    grid-template-columns: repeat(5, 1fr);
-  }
+/* Division color borders */
+.staff-card--leadership .staff-card__photo,
+.staff-card--leadership .staff-card__avatar {
+  border-image: conic-gradient(var(--navy) 0% 33%, var(--forest) 33% 66%, #5e3b1d 66% 100%) 1;
+  border-image-slice: 1;
+  /* border-image doesn't work on border-radius, use gradient border trick */
+  border-color: transparent;
+  background-clip: padding-box;
+  position: relative;
 }
 
-@media (max-width: 480px) {
+/* Gradient border workaround for circles */
+.staff-card--leadership .staff-card__photo,
+.staff-card--leadership .staff-card__avatar {
+  border: none;
+  outline: 4px solid var(--navy);
+  outline-offset: 0px;
+  box-shadow: 0 0 0 2px var(--forest), 0 0 0 4px var(--navy);
+}
+
+.staff-card--preschool .staff-card__photo,
+.staff-card--preschool .staff-card__avatar {
+  border-color: var(--navy);
+}
+
+.staff-card--elementary .staff-card__photo,
+.staff-card--elementary .staff-card__avatar {
+  border-color: var(--forest);
+}
+
+.staff-card--middle .staff-card__photo,
+.staff-card--middle .staff-card__avatar {
+  border-color: #5e3b1d;
+}
+
+@media (max-width: 600px) {
   .staff-grid-uniform {
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    gap: 16px;
   }
 
   .staff-section .staff-card {
-    padding: 20px 12px 18px;
+    padding: 24px 12px 20px;
   }
 
   .staff-section .staff-card__photo,
   .staff-section .staff-card__avatar {
-    width: 90px;
-    height: 90px;
+    width: 110px;
+    height: 110px;
   }
 
   .staff-section .staff-card__name {
-    font-size: 14px;
-  }
-
-  .staff-section .staff-card__role {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
