@@ -265,6 +265,7 @@ function scanPublicPageShell(filePath, text, lineStarts) {
   const expectedCta = ({
     'index.html': 'team',
     'pages/about.html': 'team',
+    'pages/preschool.html': 'team',
   })[relativePath] || (expectedContext === 'root' ? 'team' : 'tour');
   const shellScriptMatches = [...text.matchAll(/<script\b[^>]*\bsrc=(["'])([^"']+site-shell\.js)\1[^>]*><\/script>/gi)];
   const shellScriptMatch = shellScriptMatches[0] || null;
