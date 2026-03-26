@@ -1,6 +1,7 @@
 :root {
+  --preschool-cream: #fbf7ef;
+  --preschool-sand: #f4ead8;
   --preschool-sage: #f0f4ee;
-  --preschool-cream: #f8f4ed;
   --preschool-line: rgba(16, 101, 60, 0.12);
 }
 
@@ -11,7 +12,7 @@
 
 .preschool-main .section-label {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: var(--forest);
   font-family: "Caveat", cursive;
   font-size: 28px;
@@ -29,184 +30,353 @@
 }
 
 .preschool-main .section-intro h2,
-.preschool-story__copy h2 {
-  color: #1d1d1f;
-  font-size: clamp(32px, 4.2vw, 52px);
+.preschool-reasons__copy h2 {
+  color: var(--forest-dark);
+  font-size: clamp(32px, 4.1vw, 52px);
   font-weight: 800;
-  line-height: 1.03;
+  line-height: 1.02;
   letter-spacing: -1px;
 }
 
 .preschool-main .section-intro p,
-.preschool-story__copy p,
-.why-card p,
-.detail-card p,
-.story-note p,
+.preschool-hero__copy p,
+.reason-item p,
+.room-card p,
+.day-card figcaption,
 .preschool-cta p {
   color: #424245;
   font-size: 17px;
-  line-height: 1.75;
+  line-height: 1.72;
 }
 
 .preschool-main .section-intro p {
-  max-width: 620px;
-  margin-top: 24px;
+  max-width: 40rem;
+  margin-top: 22px;
 }
 
 .preschool-hero {
   position: relative;
-  min-height: clamp(420px, 58svh, 620px);
-  display: flex;
-  align-items: center;
   overflow: hidden;
-  background: #10251a;
-}
-
-.preschool-hero__media,
-.preschool-hero__overlay {
-  position: absolute;
-  inset: 0;
-}
-
-.preschool-hero__media {
-  background-image: url("../assets/images/preschool/whatsapp-image-2026-03-04-at-11.46.31-am.jpeg");
-  background-size: cover;
-  background-position: center 40%;
-  transform: scale(1.04);
-}
-
-.preschool-hero__overlay {
+  padding: 36px 0 54px;
   background:
-    linear-gradient(180deg, rgba(10, 34, 20, 0.18) 0%, rgba(10, 34, 20, 0.5) 54%, rgba(10, 34, 20, 0.76) 100%),
-    linear-gradient(90deg, rgba(10, 34, 20, 0.84) 0%, rgba(10, 34, 20, 0.44) 46%, rgba(10, 34, 20, 0.1) 76%);
+    radial-gradient(circle at 12% 18%, rgba(212, 148, 10, 0.11), transparent 24%),
+    radial-gradient(circle at 88% 14%, rgba(16, 101, 60, 0.1), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, var(--preschool-cream) 100%);
 }
 
-.preschool-hero__content {
+.preschool-hero::before {
+  content: "";
+  position: absolute;
+  right: -72px;
+  bottom: -88px;
+  width: 250px;
+  height: 250px;
+  border-radius: 46% 54% 58% 42% / 46% 43% 57% 54%;
+  background: rgba(16, 101, 60, 0.05);
+}
+
+.preschool-hero__grid {
   position: relative;
   z-index: 1;
-  padding: 36px 0 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  gap: clamp(28px, 4vw, 54px);
+  align-items: center;
 }
 
-.preschool-hero__content h1 {
-  max-width: 9ch;
-  color: #ffffff;
-  font-size: clamp(42px, 5vw, 66px);
+.preschool-hero__mark {
+  width: clamp(170px, 20vw, 220px);
+  margin-bottom: 16px;
+}
+
+.preschool-hero__copy h1 {
+  max-width: 9.5ch;
+  margin-bottom: 20px;
+  color: var(--forest-dark);
+  font-size: clamp(42px, 5.4vw, 68px);
   font-weight: 800;
   line-height: 0.98;
-  letter-spacing: -1.2px;
-  text-shadow: 0 12px 42px rgba(0, 0, 0, 0.24);
+  letter-spacing: -1.25px;
 }
 
-.preschool-story {
-  position: relative;
-  z-index: 2;
-  margin-top: -10px;
-  padding: 38px 0 84px;
-  background: #ffffff;
-  border-radius: 22px 22px 0 0;
-  box-shadow: 0 -10px 24px rgba(18, 43, 28, 0.05);
+.preschool-hero__copy p {
+  max-width: 35rem;
 }
 
-.preschool-story__grid {
+.preschool-facts {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
-  gap: clamp(24px, 3vw, 44px);
-  align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
 }
 
-.preschool-story__copy h2 {
-  max-width: 15ch;
-  margin-bottom: 34px;
-}
-
-.preschool-story__copy p + p {
-  margin-top: 20px;
-}
-
-.preschool-story__highlights {
-  display: grid;
-  gap: 18px;
-  max-width: 430px;
-  width: 100%;
-  justify-self: end;
-  margin-top: 78px;
-}
-
-.story-note {
-  padding: 22px 22px 20px;
-  border: 1px solid var(--preschool-line);
-  border-radius: 18px;
-  background: linear-gradient(180deg, #ffffff 0%, var(--preschool-cream) 100%);
-}
-
-.story-note strong {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--forest-dark);
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-.preschool-why {
-  padding: 80px 0;
-  background: var(--preschool-sage);
-}
-
-.preschool-why__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 26px;
-  margin-top: 48px;
-}
-
-.why-card {
-  min-height: 100%;
-  padding: 30px 28px;
+.preschool-fact {
+  padding: 18px 18px 16px;
   border: 1px solid rgba(16, 101, 60, 0.12);
-  border-radius: 22px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 12px 32px rgba(18, 43, 28, 0.04);
+  box-shadow: 0 12px 28px rgba(18, 43, 28, 0.05);
 }
 
-.why-card h3,
-.detail-card h3 {
-  margin-bottom: 14px;
+.preschool-fact strong {
+  display: block;
+  margin-bottom: 6px;
   color: #1d1d1f;
-  font-size: 28px;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.preschool-fact span {
+  display: block;
+  color: #5d6066;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.preschool-hero__collage {
+  position: relative;
+  min-height: 560px;
+}
+
+.hero-shot {
+  position: absolute;
+  overflow: hidden;
+  padding: 12px;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 22px 52px rgba(18, 43, 28, 0.14);
+}
+
+.hero-shot img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero-shot--main {
+  left: 0;
+  top: 36px;
+  width: min(58%, 348px);
+  height: 470px;
+  transform: rotate(-3deg);
+}
+
+.hero-shot--top {
+  right: 8px;
+  top: 0;
+  width: min(45%, 266px);
+  height: 220px;
+  transform: rotate(3deg);
+}
+
+.hero-shot--bottom {
+  right: 34px;
+  bottom: 12px;
+  width: min(44%, 250px);
+  height: 260px;
+  transform: rotate(-5deg);
+}
+
+.preschool-reasons {
+  padding: 64px 0 72px;
+  background: #ffffff;
+}
+
+.preschool-reasons__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: clamp(28px, 3.5vw, 52px);
+  align-items: center;
+}
+
+.preschool-reasons__media {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr);
+  gap: 16px;
+  align-items: end;
+}
+
+.preschool-reasons__photo {
+  margin: 0;
+  padding: 10px;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 20px 46px rgba(18, 43, 28, 0.08);
+}
+
+.preschool-reasons__photo img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.preschool-reasons__photo--main {
+  grid-row: 1 / span 2;
+  transform: rotate(-2.2deg);
+}
+
+.preschool-reasons__photo--main img {
+  aspect-ratio: 4 / 5.25;
+}
+
+.preschool-reasons__photo--accent {
+  transform: rotate(3deg);
+}
+
+.preschool-reasons__photo--accent img {
+  aspect-ratio: 4 / 3.4;
+}
+
+.preschool-reasons__photo--accent-b {
+  margin-top: 14px;
+  transform: rotate(-3deg);
+}
+
+.reason-list {
+  margin-top: 10px;
+}
+
+.reason-item {
+  padding: 22px 0;
+  border-top: 1px solid rgba(16, 101, 60, 0.14);
+}
+
+.reason-item:last-child {
+  border-bottom: 1px solid rgba(16, 101, 60, 0.14);
+}
+
+.reason-item h3 {
+  margin-bottom: 10px;
+  color: var(--forest-dark);
+  font-size: 27px;
   font-weight: 800;
   line-height: 1.12;
 }
 
-.why-card strong,
-.detail-card strong {
+.reason-item strong,
+.preschool-hours strong {
   color: var(--forest-dark);
   font-weight: 700;
 }
 
-.preschool-practical {
-  padding: 84px 0;
+.preschool-day {
+  position: relative;
+  padding: 72px 0;
+  background: var(--preschool-sage);
+  overflow: hidden;
+}
+
+.preschool-day::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 60px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(212, 148, 10, 0.08);
+}
+
+.day-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 42px;
+}
+
+.day-card {
+  margin: 0;
+  padding: 10px 10px 14px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 16px 38px rgba(18, 43, 28, 0.06);
+}
+
+.day-card:nth-child(odd) {
+  transform: rotate(-1.1deg);
+}
+
+.day-card:nth-child(even) {
+  transform: rotate(1.1deg);
+}
+
+.day-card:nth-child(2),
+.day-card:nth-child(4) {
+  margin-top: 24px;
+}
+
+.day-card img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.day-card figcaption {
+  margin-top: 12px;
+  padding: 0 4px;
+}
+
+.preschool-rooms {
+  padding: 76px 0 80px;
   background: #ffffff;
 }
 
-.preschool-practical__grid {
+.rooms-heading {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 26px;
-  margin-top: 48px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+  gap: clamp(24px, 4vw, 52px);
+  align-items: center;
 }
 
-.detail-card {
-  min-height: 100%;
-  padding: 32px 30px;
-  border: 1px solid rgba(16, 101, 60, 0.12);
-  border-radius: 22px;
+.rooms-heading__photo {
+  margin: 0;
+  padding: 10px;
+  border-radius: 28px;
   background: linear-gradient(180deg, #ffffff 0%, var(--preschool-cream) 100%);
+  box-shadow: 0 18px 40px rgba(18, 43, 28, 0.08);
 }
 
-.detail-card__eyebrow {
+.rooms-heading__photo img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  aspect-ratio: 4 / 3.2;
+  object-fit: cover;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 42px;
+}
+
+.room-card {
+  position: relative;
+  min-height: 100%;
+  padding: 24px 22px 22px;
+  border: 1px solid rgba(16, 101, 60, 0.12);
+  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, var(--preschool-cream) 100%);
+  box-shadow: 0 12px 28px rgba(18, 43, 28, 0.04);
+}
+
+.room-card:nth-child(2),
+.room-card:nth-child(4) {
+  margin-top: 18px;
+}
+
+.room-card__age {
   display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   color: var(--forest);
   font-size: 12px;
   font-weight: 700;
@@ -214,34 +384,74 @@
   text-transform: uppercase;
 }
 
+.room-card h3 {
+  margin-bottom: 10px;
+  color: var(--forest-dark);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.preschool-hours {
+  margin-top: 24px;
+  color: #424245;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
 .preschool-gallery {
-  padding: 0 0 84px;
+  padding: 0 0 88px;
   background: #ffffff;
 }
 
-.preschool-photo-grid {
+.preschool-gallery__mosaic {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1.15fr 0.85fr 0.85fr;
+  grid-auto-rows: 180px;
   gap: 16px;
-  margin-top: 48px;
+  margin-top: 42px;
 }
 
-.preschool-photo-grid .photo {
-  border-radius: 16px;
-  overflow: hidden;
-  aspect-ratio: 3 / 4;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.4s ease;
+.gallery-shot {
+  margin: 0;
+  padding: 10px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 16px 38px rgba(18, 43, 28, 0.08);
 }
 
-.preschool-photo-grid .photo:hover {
-  transform: scale(1.02);
+.gallery-shot img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover;
 }
 
-.preschool-photo-grid .photo:nth-child(2),
-.preschool-photo-grid .photo:nth-child(4) {
-  margin-top: 40px;
+.gallery-shot--a {
+  grid-row: span 2;
+  transform: rotate(-1.5deg);
+}
+
+.gallery-shot--b {
+  transform: rotate(1.4deg);
+}
+
+.gallery-shot--c {
+  transform: rotate(-1deg);
+}
+
+.gallery-shot--d {
+  grid-column: 2 / span 2;
+  transform: rotate(1deg);
+}
+
+.gallery-shot--e {
+  transform: rotate(-1.8deg);
+}
+
+.gallery-shot--f {
+  transform: rotate(1.6deg);
 }
 
 .soft-cta {
@@ -277,7 +487,7 @@
 .preschool-cta h2 {
   font-size: clamp(32px, 4vw, 52px);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.08;
   letter-spacing: -1px;
   margin-bottom: 20px;
   color: #ffffff;
@@ -306,75 +516,196 @@
   transform: scale(1.04);
 }
 
+@media (max-width: 1180px) {
+  .rooms-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .room-card:nth-child(2),
+  .room-card:nth-child(4) {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 1024px) {
-  .preschool-story__grid,
-  .preschool-why__grid,
-  .preschool-practical__grid {
+  .preschool-hero__grid,
+  .preschool-reasons__grid {
     grid-template-columns: 1fr;
   }
 
-  .preschool-story__highlights {
-    justify-self: stretch;
-    max-width: none;
-    margin-top: 0;
+  .preschool-reasons__media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .preschool-reasons__photo--main {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .rooms-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .preschool-hero {
+    padding-top: 24px;
+  }
+
+  .preschool-hero__collage {
+    order: -1;
+    min-height: 400px;
+  }
+
+  .hero-shot--main {
+    top: 24px;
+    height: 330px;
+  }
+
+  .hero-shot--top {
+    height: 180px;
+  }
+
+  .hero-shot--bottom {
+    bottom: 0;
+    height: 200px;
+  }
+
+  .day-grid,
+  .preschool-gallery__mosaic {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .preschool-gallery__mosaic {
+    grid-auto-rows: 220px;
+  }
+
+  .gallery-shot--a,
+  .gallery-shot--d {
+    grid-column: auto;
+    grid-row: auto;
   }
 }
 
 @media (max-width: 768px) {
   .preschool-main .section-intro h2,
-  .preschool-story__copy h2,
-  .why-card h3,
-  .detail-card h3,
+  .preschool-reasons__copy h2,
+  .preschool-hero__copy h1,
+  .reason-item h3,
+  .room-card h3,
   .preschool-cta h2 {
-    font-size: 32px;
     letter-spacing: -0.6px;
   }
 
+  .preschool-main .section-intro h2,
+  .preschool-reasons__copy h2,
+  .reason-item h3,
+  .room-card h3,
+  .preschool-cta h2 {
+    font-size: 32px;
+  }
+
   .preschool-main .section-intro p,
-  .preschool-story__copy p,
-  .why-card p,
-  .detail-card p,
-  .story-note p,
+  .preschool-hero__copy p,
+  .reason-item p,
+  .room-card p,
+  .day-card figcaption,
   .preschool-cta p {
     font-size: 16px;
   }
 
   .preschool-hero {
-    min-height: 430px;
+    padding: 18px 0 40px;
   }
 
-  .preschool-hero__content {
-    padding: 32px 0 36px;
+  .preschool-hero__mark {
+    width: 170px;
   }
 
-  .preschool-hero__content h1 {
-    max-width: 8.5ch;
+  .preschool-hero__copy h1 {
+    max-width: 10ch;
     font-size: 40px;
-    letter-spacing: -0.7px;
+    line-height: 1;
   }
 
-  .preschool-story {
-    padding: 34px 0 64px;
+  .preschool-facts,
+  .day-grid,
+  .rooms-grid,
+  .preschool-gallery__mosaic {
+    grid-template-columns: 1fr;
   }
 
-  .preschool-why,
-  .preschool-practical,
+  .preschool-reasons__media {
+    grid-template-columns: 1fr;
+  }
+
+  .preschool-reasons__photo--main,
+  .preschool-reasons__photo--accent,
+  .preschool-reasons__photo--accent-b,
+  .day-card,
+  .gallery-shot--a,
+  .gallery-shot--b,
+  .gallery-shot--c,
+  .gallery-shot--d,
+  .gallery-shot--e,
+  .gallery-shot--f {
+    transform: none;
+  }
+
+  .preschool-hero__collage {
+    min-height: 360px;
+  }
+
+  .hero-shot {
+    padding: 8px;
+    border-radius: 22px;
+  }
+
+  .hero-shot img {
+    border-radius: 16px;
+  }
+
+  .hero-shot--main {
+    left: 0;
+    top: 34px;
+    width: 58%;
+    height: 260px;
+  }
+
+  .hero-shot--top {
+    right: 0;
+    width: 42%;
+    height: 148px;
+  }
+
+  .hero-shot--bottom {
+    right: 18px;
+    width: 40%;
+    height: 158px;
+    bottom: 12px;
+  }
+
+  .preschool-reasons,
+  .preschool-day,
+  .preschool-rooms,
   .preschool-gallery,
   .preschool-cta {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
   .preschool-gallery {
     padding-top: 0;
   }
 
-  .preschool-photo-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .day-card:nth-child(2),
+  .day-card:nth-child(4) {
+    margin-top: 0;
   }
 
-  .preschool-photo-grid .photo:nth-child(2),
-  .preschool-photo-grid .photo:nth-child(4) {
-    margin-top: 0;
+  .preschool-gallery__mosaic {
+    grid-auto-rows: auto;
+  }
+
+  .gallery-shot img {
+    aspect-ratio: 4 / 5;
   }
 }
