@@ -7,13 +7,12 @@
 (function () {
   'use strict';
 
-  /* ---- Build the lightbox DOM using safe DOM methods ---- */
+  /* ---- Build the lightbox DOM ---- */
   var overlay = document.createElement('div');
   overlay.className = 'staff-lightbox';
   overlay.setAttribute('role', 'dialog');
   overlay.setAttribute('aria-modal', 'true');
   overlay.setAttribute('aria-label', 'Staff photo viewer');
-  overlay.hidden = true;
 
   var inner = document.createElement('div');
   inner.className = 'staff-lightbox__inner';
@@ -61,9 +60,8 @@
     roleEl.textContent  = role ? role.textContent : '';
 
     previousFocus = document.activeElement;
-    overlay.hidden = false;
 
-    // Force reflow so the fade-in transition triggers
+    // Force reflow, then add open class for transition
     void overlay.offsetHeight;
     overlay.classList.add('staff-lightbox--open');
 
@@ -74,12 +72,6 @@
   /* ---- Close ---- */
   function close() {
     overlay.classList.remove('staff-lightbox--open');
-    var handler = function () {
-      overlay.hidden = true;
-      overlay.removeEventListener('transitionend', handler);
-    };
-    overlay.addEventListener('transitionend', handler);
-
     document.body.style.overflow = '';
     if (previousFocus) {
       previousFocus.focus();
@@ -95,7 +87,7 @@
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !overlay.hidden) {
+    if (e.key === 'Escape' && overlay.classList.contains('staff-lightbox--open')) {
       close();
     }
   });
