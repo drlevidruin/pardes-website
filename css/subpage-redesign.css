@@ -59,15 +59,19 @@
 }
 
 /* Center grids with fewer than 4 items */
-.staff-grid-uniform--center {
+.staff-grid-uniform.staff-grid-uniform--center {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .staff-grid-uniform--center .staff-card {
-  width: 200px;
+  width: 210px;
+  flex-shrink: 0;
 }
 
 /* ===== INFO CARDS ===== */
