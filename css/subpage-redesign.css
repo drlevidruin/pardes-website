@@ -74,6 +74,12 @@
   flex-shrink: 0;
 }
 
+@media (max-width: 700px) {
+  .staff-grid-uniform--center .staff-card {
+    width: calc(50% - 10px);
+  }
+}
+
 /* ===== INFO CARDS ===== */
 .info-cards {
   display: grid;
