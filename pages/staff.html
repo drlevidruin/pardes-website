@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Team and Leadership | Pardes Day School</title>
-    <meta name="description" content="Meet the teachers and leaders behind Pardes Day School in Miami Beach. Get to know the team guiding every child." />
-    <meta property="og:title" content="Our Team and Leadership | Pardes Day School" />
-    <meta property="og:description" content="Meet the teachers and leaders behind Pardes Day School in Miami Beach. Get to know the team guiding every child." />
+    <title>Our Team | Pardes Day School</title>
+    <meta name="description" content="Meet the teachers and leaders behind Pardes Day School in Miami Beach. The people who know every child by name." />
+    <meta property="og:title" content="Our Team | Pardes Day School" />
+    <meta property="og:description" content="Meet the teachers and leaders behind Pardes Day School in Miami Beach. The people who know every child by name." />
     <meta property="og:url" content="https://drlevidruin.github.io/pardes-website/pages/staff.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Pardes Day School" />
@@ -15,12 +15,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
     <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
     <script src="../js/site-shell.js"></script>
     <script type="module" crossorigin src="../assets/main-cpapzbpt.js"></script>
     <link rel="stylesheet" crossorigin href="../assets/main-b2rpzzoh.css">
-      <link rel="stylesheet" href="../css/mobile-fixes.css">
+    <link rel="stylesheet" href="../css/mobile-fixes.css">
     <link rel="stylesheet" href="../css/alerts.css">
     <link rel="stylesheet" href="../css/features.css">
+    <link rel="stylesheet" href="../css/homepage-redesign.css">
+    <link rel="stylesheet" href="../css/subpage-redesign.css">
     <script src="../js/alerts.js" defer></script>
     <script src="../js/share.js" defer></script>
   </head>
@@ -42,25 +46,26 @@
         </div>
       </div>
     </noscript>
-    <site-header data-context="subpage" data-cta="tour"></site-header>
+    <site-header data-context="subpage" data-cta="team"></site-header>
 
-    <main id="main-content">
-      <section class="page-hero">
-        <div class="page-hero__text">
-          <h1>Our Team</h1>
-          <p class="lead">Educators and leaders who deliver The Pardes Way. They know every child by name and guide them with precision, intentionality, and expertise.</p>
+    <main id="main-content" class="staff-section">
+      <section class="subpage-hero">
+        <div class="subpage-hero__bg" style="background-image: url('../assets/images/elementary/20251204_095445.jpg')"></div>
+        <div class="subpage-hero__overlay"></div>
+        <div class="subpage-hero__content">
+          <h1>The people who know every child by name.</h1>
+          <p>Educators and leaders who deliver The Pardes Way with precision, warmth, and intention.</p>
         </div>
-        <div class="page-hero__image" data-hero-image style="background-image: url('../assets/images/elementary/20251204_095445.jpg'); background-size: cover; background-position: center;"></div>
       </section>
 
       <!-- Leadership -->
-      <section class="section" aria-labelledby="leadership-heading">
+      <section class="sub-section" aria-labelledby="leadership-heading">
         <div class="container">
-          <div class="section-heading" data-reveal>
+          <div class="section-intro" data-reveal>
             <span class="section-label">Leadership</span>
             <h2 id="leadership-heading">Guiding our school with heart and vision.</h2>
           </div>
-          <div class="staff-grid staff-grid--leadership reveal-stagger" data-reveal>
+          <div class="staff-grid staff-grid--leadership" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px,1fr)); gap:20px; margin-top:32px;" data-reveal>
             <article class="staff-card staff-card--featured" data-reveal>
               <div class="staff-card__avatar">KH</div>
               <h3 class="staff-card__name">Katy Horowitz</h3>
@@ -76,14 +81,14 @@
       </section>
 
       <!-- Preschool (Gan Katan) -->
-      <section class="section section--sage" aria-labelledby="preschool-staff-heading">
+      <section class="sub-section sub-section--sage" aria-labelledby="preschool-staff-heading">
         <div class="container">
-          <div class="section-heading" data-reveal>
+          <div class="section-intro" data-reveal>
             <span class="section-label">Preschool (Gan Katan)</span>
             <h2 id="preschool-staff-heading">Our Preschool team.</h2>
           </div>
 
-          <div class="staff-grid reveal-stagger" style="margin-bottom: var(--space-6);">
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px; margin-top:32px;" data-reveal>
             <article class="staff-card staff-card--featured" data-reveal>
               <div class="staff-card__avatar">CS</div>
               <h3 class="staff-card__name">Chani Sharvit</h3>
@@ -91,349 +96,142 @@
             </article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">Daisies</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">FH</div>
-                <h3 class="staff-card__name">Fay Hertzel</h3>
-                <p class="staff-card__role">Lead Teacher</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">LG</div>
-                <h3 class="staff-card__name">Lia Garcia</h3>
-                <p class="staff-card__role">Assistant Teacher</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">LT</div>
-                <h3 class="staff-card__name">Lilly Tyagney</h3>
-                <p class="staff-card__role">Assistant Teacher</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>Daisies</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">FH</div><h3 class="staff-card__name">Fay Hertzel</h3><p class="staff-card__role">Lead Teacher</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">LG</div><h3 class="staff-card__name">Lia Garcia</h3><p class="staff-card__role">Assistant Teacher</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">LT</div><h3 class="staff-card__name">Lilly Tyagney</h3><p class="staff-card__role">Assistant Teacher</p></article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">Sunflowers</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">MH</div>
-                <h3 class="staff-card__name">Michal Hen</h3>
-                <p class="staff-card__role">Lead Teacher</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">MV</div>
-                <h3 class="staff-card__name">Marlene Villota</h3>
-                <p class="staff-card__role">Assistant Teacher</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">PA</div>
-                <h3 class="staff-card__name">Pnina Amir</h3>
-                <p class="staff-card__role">Assistant Teacher</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">TE</div>
-                <h3 class="staff-card__name">Tali Epelbaum</h3>
-                <p class="staff-card__role">Assistant Teacher</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>Sunflowers</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">MH</div><h3 class="staff-card__name">Michal Hen</h3><p class="staff-card__role">Lead Teacher</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">MV</div><h3 class="staff-card__name">Marlene Villota</h3><p class="staff-card__role">Assistant Teacher</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">PA</div><h3 class="staff-card__name">Pnina Amir</h3><p class="staff-card__role">Assistant Teacher</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">TE</div><h3 class="staff-card__name">Tali Epelbaum</h3><p class="staff-card__role">Assistant Teacher</p></article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">Caterpillars</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">SW</div>
-                <h3 class="staff-card__name">Sarah Wachtel</h3>
-                <p class="staff-card__role">Lead Teacher</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">SH</div>
-                <h3 class="staff-card__name">Sarah Hecht</h3>
-                <p class="staff-card__role">Assistant Teacher</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">YG</div>
-                <h3 class="staff-card__name">Yennifer Guzman</h3>
-                <p class="staff-card__role">Assistant Teacher</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>Caterpillars</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">SW</div><h3 class="staff-card__name">Sarah Wachtel</h3><p class="staff-card__role">Lead Teacher</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">SH</div><h3 class="staff-card__name">Sarah Hecht</h3><p class="staff-card__role">Assistant Teacher</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">YG</div><h3 class="staff-card__name">Yennifer Guzman</h3><p class="staff-card__role">Assistant Teacher</p></article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">Butterflies</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">LR</div>
-                <h3 class="staff-card__name">Lieba Rosenberg-Costello</h3>
-                <p class="staff-card__role">Lead Teacher</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">BT</div>
-                <h3 class="staff-card__name">Betty Torres</h3>
-                <p class="staff-card__role">Assistant Teacher</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">MS</div>
-                <h3 class="staff-card__name">Mary Sanchez</h3>
-                <p class="staff-card__role">Assistant Teacher</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">MB</div>
-                <h3 class="staff-card__name">Menucha Birenbaum</h3>
-                <p class="staff-card__role">Assistant Teacher</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>Butterflies</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">LR</div><h3 class="staff-card__name">Lieba Rosenberg-Costello</h3><p class="staff-card__role">Lead Teacher</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">BT</div><h3 class="staff-card__name">Betty Torres</h3><p class="staff-card__role">Assistant Teacher</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">MS</div><h3 class="staff-card__name">Mary Sanchez</h3><p class="staff-card__role">Assistant Teacher</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">MB</div><h3 class="staff-card__name">Menucha Birenbaum</h3><p class="staff-card__role">Assistant Teacher</p></article>
           </div>
         </div>
       </section>
 
       <!-- Elementary -->
-      <section class="section" aria-labelledby="elementary-staff-heading">
+      <section class="sub-section" aria-labelledby="elementary-staff-heading">
         <div class="container">
-          <div class="section-heading" data-reveal>
+          <div class="section-intro" data-reveal>
             <span class="section-label">Elementary</span>
             <h2 id="elementary-staff-heading">Our Elementary team.</h2>
           </div>
 
-          <div class="staff-grid reveal-stagger" style="margin-bottom: var(--space-6);">
-            <article class="staff-card staff-card--featured" data-reveal>
-              <div class="staff-card__avatar">LD</div>
-              <h3 class="staff-card__name">Rabbi Dr. Levi Druin</h3>
-              <p class="staff-card__role">Principal, Elementary (K-5)</p>
-            </article>
-            <article class="staff-card staff-card--featured" data-reveal>
-              <div class="staff-card__avatar">AE</div>
-              <h3 class="staff-card__name">Adam Eshel</h3>
-              <p class="staff-card__role">Dean of Students &amp; LeHashlim Director</p>
-            </article>
-            <article class="staff-card staff-card--featured" data-reveal>
-              <div class="staff-card__avatar">YB</div>
-              <h3 class="staff-card__name">Yossi Brock</h3>
-              <p class="staff-card__role">Principal Assistant</p>
-            </article>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px; margin-top:32px;" data-reveal>
+            <article class="staff-card staff-card--featured"><div class="staff-card__avatar">LD</div><h3 class="staff-card__name">Rabbi Dr. Levi Druin</h3><p class="staff-card__role">Principal, Elementary (K-5)</p></article>
+            <article class="staff-card staff-card--featured"><div class="staff-card__avatar">AE</div><h3 class="staff-card__name">Adam Eshel</h3><p class="staff-card__role">Dean of Students &amp; LeHashlim Director</p></article>
+            <article class="staff-card staff-card--featured"><div class="staff-card__avatar">YB</div><h3 class="staff-card__name">Yossi Brock</h3><p class="staff-card__role">Principal Assistant</p></article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">Kindergarten</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">CW</div>
-                <h3 class="staff-card__name">Camryn Winograd</h3>
-                <p class="staff-card__role">General Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">SM</div>
-                <h3 class="staff-card__name">Sima Masarano</h3>
-                <p class="staff-card__role">Judaic Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">CG</div>
-                <h3 class="staff-card__name">Chaya Gerber-Katz</h3>
-                <p class="staff-card__role">Assistant</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>Kindergarten</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">CW</div><h3 class="staff-card__name">Camryn Winograd</h3><p class="staff-card__role">General Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">SM</div><h3 class="staff-card__name">Sima Masarano</h3><p class="staff-card__role">Judaic Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">CG</div><h3 class="staff-card__name">Chaya Gerber-Katz</h3><p class="staff-card__role">Assistant</p></article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">1st Grade</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">JE</div>
-                <h3 class="staff-card__name">Jenny Emsalem</h3>
-                <p class="staff-card__role">General Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">SN</div>
-                <h3 class="staff-card__name">Stephanie Nigri</h3>
-                <p class="staff-card__role">Judaic Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">NC</div>
-                <h3 class="staff-card__name">Noa Castro</h3>
-                <p class="staff-card__role">Assistant</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>1st Grade</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">JE</div><h3 class="staff-card__name">Jenny Emsalem</h3><p class="staff-card__role">General Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">SN</div><h3 class="staff-card__name">Stephanie Nigri</h3><p class="staff-card__role">Judaic Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">NC</div><h3 class="staff-card__name">Noa Castro</h3><p class="staff-card__role">Assistant</p></article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">2nd Grade</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">CB</div>
-                <h3 class="staff-card__name">Chaya Sara Barrocas</h3>
-                <p class="staff-card__role">General Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">MD</div>
-                <h3 class="staff-card__name">Mushky Druin</h3>
-                <p class="staff-card__role">Judaic Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">CF</div>
-                <h3 class="staff-card__name">Chaya Mushka Fuchs</h3>
-                <p class="staff-card__role">Assistant</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>2nd Grade</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">CB</div><h3 class="staff-card__name">Chaya Sara Barrocas</h3><p class="staff-card__role">General Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">MD</div><h3 class="staff-card__name">Mushky Druin</h3><p class="staff-card__role">Judaic Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">CF</div><h3 class="staff-card__name">Chaya Mushka Fuchs</h3><p class="staff-card__role">Assistant</p></article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">3rd Grade</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">HG</div>
-                <h3 class="staff-card__name">Henya Gutnick</h3>
-                <p class="staff-card__role">Judaic Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">ZS</div>
-                <h3 class="staff-card__name">Zahava Stilman</h3>
-                <p class="staff-card__role">General Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">SG</div>
-                <h3 class="staff-card__name">Shoshana Gertz</h3>
-                <p class="staff-card__role">Assistant</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>3rd Grade</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">HG</div><h3 class="staff-card__name">Henya Gutnick</h3><p class="staff-card__role">Judaic Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">ZS</div><h3 class="staff-card__name">Zahava Stilman</h3><p class="staff-card__role">General Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">SG</div><h3 class="staff-card__name">Shoshana Gertz</h3><p class="staff-card__role">Assistant</p></article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">4th Grade</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">FJ</div>
-                <h3 class="staff-card__name">Felicia John</h3>
-                <p class="staff-card__role">General Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">YH</div>
-                <h3 class="staff-card__name">Yehudis Herrman</h3>
-                <p class="staff-card__role">Judaic Studies</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>4th Grade</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">FJ</div><h3 class="staff-card__name">Felicia John</h3><p class="staff-card__role">General Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">YH</div><h3 class="staff-card__name">Yehudis Herrman</h3><p class="staff-card__role">Judaic Studies</p></article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">5th Grade</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">AW</div>
-                <h3 class="staff-card__name">Aniaha Wesley</h3>
-                <p class="staff-card__role">General Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">MJ</div>
-                <h3 class="staff-card__name">Maytar Jerufi</h3>
-                <p class="staff-card__role">Judaic Studies</p>
-              </article>
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">MB</div>
-                <h3 class="staff-card__name">Moshe Barrocas</h3>
-                <p class="staff-card__role">Judaic Studies</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>5th Grade</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">AW</div><h3 class="staff-card__name">Aniaha Wesley</h3><p class="staff-card__role">General Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">MJ</div><h3 class="staff-card__name">Maytar Jerufi</h3><p class="staff-card__role">Judaic Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">MB</div><h3 class="staff-card__name">Moshe Barrocas</h3><p class="staff-card__role">Judaic Studies</p></article>
           </div>
 
-          <div class="staff-division" data-reveal>
-            <h3 class="staff-division__title">Office</h3>
-            <div class="staff-grid reveal-stagger">
-              <article class="staff-card" data-reveal>
-                <div class="staff-card__avatar">SS</div>
-                <h3 class="staff-card__name">Sabrina Sole</h3>
-                <p class="staff-card__role">Office Admin</p>
-              </article>
-            </div>
+          <h3 class="staff-division__title" data-reveal>Office</h3>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">SS</div><h3 class="staff-card__name">Sabrina Sole</h3><p class="staff-card__role">Office Admin</p></article>
           </div>
         </div>
       </section>
 
       <!-- Middle School -->
-      <section class="section section--sage" aria-labelledby="middle-staff-heading">
+      <section class="sub-section sub-section--sage" aria-labelledby="middle-staff-heading">
         <div class="container">
-          <div class="section-heading" data-reveal>
+          <div class="section-intro" data-reveal>
             <span class="section-label">Middle School</span>
             <h2 id="middle-staff-heading">Our Middle School team.</h2>
           </div>
-          <div class="staff-grid reveal-stagger" style="margin-bottom: var(--space-6);">
-            <article class="staff-card staff-card--featured" data-reveal>
-              <div class="staff-card__avatar">ME</div>
-              <h3 class="staff-card__name">Mimi Edwards</h3>
-              <p class="staff-card__role">Principal, Middle School (MSAP)</p>
-            </article>
-            <article class="staff-card staff-card--featured" data-reveal>
-              <div class="staff-card__avatar">DK</div>
-              <h3 class="staff-card__name">Dina Kranz</h3>
-              <p class="staff-card__role">Educational Consultant &amp; Board Member</p>
-            </article>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px; margin-top:32px;" data-reveal>
+            <article class="staff-card staff-card--featured"><div class="staff-card__avatar">ME</div><h3 class="staff-card__name">Mimi Edwards</h3><p class="staff-card__role">Principal, Middle School (MSAP)</p></article>
+            <article class="staff-card staff-card--featured"><div class="staff-card__avatar">DK</div><h3 class="staff-card__name">Dina Kranz</h3><p class="staff-card__role">Educational Consultant &amp; Board Member</p></article>
           </div>
-
-          <div class="staff-grid reveal-stagger" data-reveal>
-            <article class="staff-card" data-reveal>
-              <div class="staff-card__avatar">DH</div>
-              <h3 class="staff-card__name">Desbe Hafif</h3>
-              <p class="staff-card__role">Office Admin</p>
-            </article>
-            <article class="staff-card" data-reveal>
-              <div class="staff-card__avatar">JR</div>
-              <h3 class="staff-card__name">Jared Ruffin</h3>
-              <p class="staff-card__role">General Studies</p>
-            </article>
-            <article class="staff-card" data-reveal>
-              <div class="staff-card__avatar">NT</div>
-              <h3 class="staff-card__name">Nava Taieb</h3>
-              <p class="staff-card__role">General Studies</p>
-            </article>
-            <article class="staff-card" data-reveal>
-              <div class="staff-card__avatar">YK</div>
-              <h3 class="staff-card__name">Yishai Klein</h3>
-              <p class="staff-card__role">Judaic Studies</p>
-            </article>
-            <article class="staff-card" data-reveal>
-              <div class="staff-card__avatar">MM</div>
-              <h3 class="staff-card__name">Malka Meyers</h3>
-              <p class="staff-card__role">Judaic Studies</p>
-            </article>
-            <article class="staff-card" data-reveal>
-              <div class="staff-card__avatar">OR</div>
-              <h3 class="staff-card__name">Ovadya Rogalsky</h3>
-              <p class="staff-card__role">Judaic Studies</p>
-            </article>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px; margin-top:20px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">DH</div><h3 class="staff-card__name">Desbe Hafif</h3><p class="staff-card__role">Office Admin</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">JR</div><h3 class="staff-card__name">Jared Ruffin</h3><p class="staff-card__role">General Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">NT</div><h3 class="staff-card__name">Nava Taieb</h3><p class="staff-card__role">General Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">YK</div><h3 class="staff-card__name">Yishai Klein</h3><p class="staff-card__role">Judaic Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">MM</div><h3 class="staff-card__name">Malka Meyers</h3><p class="staff-card__role">Judaic Studies</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">OR</div><h3 class="staff-card__name">Ovadya Rogalsky</h3><p class="staff-card__role">Judaic Studies</p></article>
           </div>
         </div>
       </section>
 
       <!-- PE Coaches -->
-      <section class="section" aria-labelledby="coaches-heading">
+      <section class="sub-section" aria-labelledby="coaches-heading">
         <div class="container">
-          <div class="section-heading" data-reveal>
+          <div class="section-intro" data-reveal>
             <span class="section-label">PE Coaches</span>
             <h2 id="coaches-heading">Our PE Coaches.</h2>
           </div>
-          <div class="staff-grid reveal-stagger" data-reveal>
-            <article class="staff-card" data-reveal>
-              <div class="staff-card__avatar">GC</div>
-              <h3 class="staff-card__name">Geoff Campbell</h3>
-              <p class="staff-card__role">P.E. Teacher (2nd-5th)</p>
-            </article>
-            <article class="staff-card" data-reveal>
-              <div class="staff-card__avatar">A</div>
-              <h3 class="staff-card__name">Coach Ariel</h3>
-              <p class="staff-card__role">P.E. Teacher (Daisies-1st)</p>
-            </article>
+          <div class="staff-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:20px; margin-top:32px;" data-reveal>
+            <article class="staff-card"><div class="staff-card__avatar">GC</div><h3 class="staff-card__name">Geoff Campbell</h3><p class="staff-card__role">P.E. Teacher (2nd-5th)</p></article>
+            <article class="staff-card"><div class="staff-card__avatar">A</div><h3 class="staff-card__name">Coach Ariel</h3><p class="staff-card__role">P.E. Teacher (Daisies-1st)</p></article>
           </div>
         </div>
       </section>
 
-      <!-- CTA -->
-      <section class="section">
-        <div class="container">
-          <div class="cta-band" style="max-width: 760px; margin: 0 auto; text-align: center; overflow: hidden;">
-            <h2>Want to join our team?</h2>
-            <p>We're always looking for passionate educators who want to make a difference.</p>
-            <div class="btn-row" style="justify-content: center;">
-              <a class="btn btn-primary btn-lg" href="contact.html">Get in Touch</a>
-            </div>
-          </div>
+      <!-- Soft CTA -->
+      <section class="soft-cta">
+        <div class="container" data-reveal>
+          <h2>Want to join our team?</h2>
+          <p>We are always looking for passionate educators<br>who want to make a difference.</p>
+          <a class="btn-cta-light" href="contact.html">Get in Touch</a>
         </div>
       </section>
     </main>

@@ -262,11 +262,7 @@ function scanPublicPageShell(filePath, text, lineStarts) {
 
   const expectedContext = relativePath === 'index.html' ? 'root' : 'subpage';
   const expectedScript = expectedContext === 'root' ? 'js/site-shell.js' : '../js/site-shell.js';
-  const expectedCta = ({
-    'index.html': 'team',
-    'pages/about.html': 'team',
-    'pages/preschool.html': 'team',
-  })[relativePath] || (expectedContext === 'root' ? 'team' : 'tour');
+  const expectedCta = 'team';
   const shellScriptMatches = [...text.matchAll(/<script\b[^>]*\bsrc=(["'])([^"']+site-shell\.js)\1[^>]*><\/script>/gi)];
   const shellScriptMatch = shellScriptMatches[0] || null;
   const mainBundleIndex = text.indexOf('main-cpapzbpt.js');

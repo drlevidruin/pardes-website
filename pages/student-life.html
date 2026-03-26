@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Life and Community | Pardes Day School</title>
-    <meta name="description" content="See student life at Pardes Day School in Miami Beach, from celebrations to enrichment and hands-on learning. Explore more." />
-    <meta property="og:title" content="Student Life and Community | Pardes Day School" />
-    <meta property="og:description" content="See student life at Pardes Day School in Miami Beach, from celebrations to enrichment and hands-on learning. Explore more." />
+    <title>Student Life | Pardes Day School</title>
+    <meta name="description" content="Student life at Pardes Day School in Miami Beach. Clubs, athletics, events, and the moments families remember." />
+    <meta property="og:title" content="Student Life | Pardes Day School" />
+    <meta property="og:description" content="Student life at Pardes Day School in Miami Beach. Clubs, athletics, events, and the moments families remember." />
     <meta property="og:url" content="https://drlevidruin.github.io/pardes-website/pages/student-life.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Pardes Day School" />
@@ -15,12 +15,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
     <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
     <script src="../js/site-shell.js"></script>
     <script type="module" crossorigin src="../assets/main-cpapzbpt.js"></script>
     <link rel="stylesheet" crossorigin href="../assets/main-b2rpzzoh.css">
-      <link rel="stylesheet" href="../css/mobile-fixes.css">
+    <link rel="stylesheet" href="../css/mobile-fixes.css">
     <link rel="stylesheet" href="../css/alerts.css">
     <link rel="stylesheet" href="../css/features.css">
+    <link rel="stylesheet" href="../css/homepage-redesign.css">
+    <link rel="stylesheet" href="../css/subpage-redesign.css">
     <script src="../js/alerts.js" defer></script>
     <script src="../js/share.js" defer></script>
   </head>
@@ -42,150 +46,130 @@
         </div>
       </div>
     </noscript>
-    <site-header data-context="subpage" data-cta="tour"></site-header>
+    <site-header data-context="subpage" data-cta="team"></site-header>
 
     <main id="main-content">
-      <section class="page-hero">
-        <div class="page-hero__text">
-          <h1>Student Life</h1>
-          <p class="lead">Where learning extends beyond the classroom. Every student discovers their voice, their talents, their place.</p>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="admissions.html#schedule-tour">Schedule a Tour</a>
-            <a class="btn btn-outline" href="elementary.html">Explore Academics</a>
-          </div>
+      <section class="subpage-hero">
+        <div class="subpage-hero__bg" style="background-image: url('../assets/images/elementary/pxl_20260210_163548028.jpg')"></div>
+        <div class="subpage-hero__overlay"></div>
+        <div class="subpage-hero__content">
+          <h1>Beyond the classroom, inside the community.</h1>
+          <p>Clubs, athletics, events, and the moments that shape who students become.</p>
         </div>
-        <div class="page-hero__image" data-hero-image style="background-image: url('../assets/images/elementary/pxl_20260210_163548028.jpg'); background-size: cover; background-position: center;"></div>
       </section>
 
       <!-- Clubs & Enrichment -->
-      <section class="section" aria-labelledby="clubs-heading">
+      <section class="sub-section">
         <div class="container">
-          <div class="section-heading" data-reveal>
+          <div class="section-intro" data-reveal>
             <span class="section-label">After School</span>
-            <h2 id="clubs-heading">Clubs and enrichment programs.</h2>
-            <p class="section-subtitle">We build programs based on what students and families actually want. Here is what is running now.</p>
+            <h2>Clubs and enrichment programs.</h2>
+            <p>We build programs based on what students and families actually want. Here is what is running now.</p>
           </div>
-          <div class="highlight-grid reveal-stagger">
-            <article class="highlight-card" data-reveal>
+          <div class="highlights-grid" data-reveal>
+            <article class="highlight">
               <h3>Chess</h3>
               <p>Strategic thinking, patience, and problem-solving through competitive and recreational chess.</p>
             </article>
-            <article class="highlight-card" data-reveal>
+            <article class="highlight">
               <h3>LEGO Robotics</h3>
               <p>Hands-on engineering, coding, and teamwork through building and programming robots.</p>
             </article>
-            <article class="highlight-card" data-reveal>
+            <article class="highlight">
               <h3>Ballet</h3>
               <p>Grace, discipline, and creative expression through structured dance instruction.</p>
             </article>
-            <article class="highlight-card" data-reveal>
+            <article class="highlight">
               <h3>Soccer</h3>
               <p>Teamwork, fitness, and sportsmanship on the field.</p>
             </article>
-            <article class="highlight-card" data-reveal>
+            <article class="highlight">
               <h3>Football</h3>
               <p>Coordination, strategy, and team spirit through organized flag football.</p>
             </article>
-            <article class="highlight-card" data-reveal>
+            <article class="highlight">
               <h3>Self-Defense</h3>
               <p>Confidence, awareness, and physical skills that go beyond the classroom.</p>
             </article>
           </div>
-          <p style="text-align:center; margin-top:var(--space-4); color:#6b7280;" data-reveal>Plus teacher-led tutoring clinics and new programs added every semester based on parent and student interest.</p>
+          <p class="detail-note" style="text-align:center;" data-reveal>Plus teacher-led tutoring clinics and new programs added every semester based on parent and student interest.</p>
         </div>
       </section>
 
       <!-- Athletics -->
-      <section class="section section--sage" aria-labelledby="athletics-heading">
-        <div class="container">
-          <div class="section-heading" data-reveal>
-            <span class="section-label">Athletics</span>
-            <h2 id="athletics-heading">Go Pirates.</h2>
-            <p class="section-subtitle">The Pardes Pirates represent our school with pride, teamwork, and sportsmanship.</p>
+      <div class="pillar pillar--sage">
+        <div class="pillar-inner" data-reveal>
+          <div class="pillar-image">
+            <img src="../assets/images/elementary/img_0561.jpg" alt="Pardes Pirates athletics" loading="lazy">
           </div>
-          <div class="content-grid reveal-stagger">
-            <article class="panel" data-reveal>
-              <h3>Physical Education</h3>
-              <p>Every student has <strong>PE built into their week</strong>. Coach Ariel works with our youngest learners from Daisies through 1st grade, and Coach Geoff leads 2nd through 5th grade.</p>
-              <p>Movement, coordination, and a love for being active are part of The Pardes Way.</p>
-            </article>
-            <article class="panel" data-reveal>
-              <h3>Pardes Pirates</h3>
-              <p>Our school sports team competes and represents Pardes with character. Being a Pirate means showing up for your teammates, playing with integrity, and giving your best effort every time.</p>
-            </article>
+          <div class="pillar-text">
+            <h3>Go Pirates.</h3>
+            <p>Every student has <strong>PE built into their week</strong>. Coach Ariel works with our youngest learners from Daisies through 1st grade, and Coach Geoff leads 2nd through 5th grade.</p>
+            <p>The Pardes Pirates represent our school with character. Being a Pirate means showing up for your teammates, playing with integrity, and giving your best effort every time.</p>
+            <div class="pillar-highlight">Movement, coordination, and a love for being active are part of The Pardes Way.</div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Events & Community -->
-      <section class="section" aria-labelledby="events-heading">
+      <!-- Events -->
+      <section class="sub-section">
         <div class="container">
-          <div class="section-heading" data-reveal>
+          <div class="section-intro" data-reveal>
             <span class="section-label">Events</span>
-            <h2 id="events-heading">The moments families remember.</h2>
-            <p class="section-subtitle">Throughout the year, Pardes brings families together through celebrations, milestones, and traditions.</p>
+            <h2>The moments families remember.</h2>
+            <p>Throughout the year, Pardes brings families together through celebrations, milestones, and traditions.</p>
           </div>
-          <div class="highlight-grid reveal-stagger">
-            <article class="highlight-card" data-reveal>
+          <div class="highlights-grid" data-reveal>
+            <article class="highlight">
               <h3>Chanukah Carnival</h3>
               <p>Games, food, music, and community spirit celebrating the Festival of Lights.</p>
             </article>
-            <article class="highlight-card" data-reveal>
+            <article class="highlight">
               <h3>Purim Carnival</h3>
               <p>Costumes, activities, and joy as the whole school celebrates together.</p>
             </article>
-            <article class="highlight-card" data-reveal>
+            <article class="highlight">
               <h3>Grandparent / VIP Day</h3>
               <p>A special day where students welcome their grandparents and VIPs into the classroom to share in their learning.</p>
             </article>
-            <article class="highlight-card" data-reveal>
+            <article class="highlight">
               <h3>Pesach Mock Seder</h3>
               <p>Students lead a hands-on seder experience, bringing the Passover story to life.</p>
             </article>
-            <article class="highlight-card" data-reveal>
+            <article class="highlight">
               <h3>Graduation Celebrations</h3>
-              <p>Butterflies (PreK), 5th grade, and 8th grade each celebrate their milestone with a special graduation trip and ceremony.</p>
+              <p>Butterflies (PreK), 5th grade, and 8th grade each celebrate their milestone with a special trip and ceremony.</p>
             </article>
-            <article class="highlight-card" data-reveal>
+            <article class="highlight">
               <h3>Mom's Night &amp; Dad's Night</h3>
-              <p>Dedicated evenings for parents to connect, celebrate, and be part of the Pardes community beyond the school day.</p>
+              <p>Dedicated evenings for parents to connect, celebrate, and be part of the Pardes community.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Photo Gallery -->
-      <section class="section section--sage" aria-labelledby="gallery-heading">
+      <!-- Photo Grid -->
+      <section class="sub-section sub-section--sage">
         <div class="container">
-          <div class="section-heading" data-reveal>
+          <div class="section-intro" data-reveal>
             <span class="section-label">Moments That Matter</span>
-            <h2 id="gallery-heading">A glimpse into our school community.</h2>
+            <h2>A glimpse into our school community.</h2>
           </div>
-          <div class="gallery-shell" data-reveal>
-            <div class="gallery-grid" data-gallery="student-life-grid" data-alt="Students and teachers at Pardes Day School"></div>
-            <noscript>
-              <div class="gallery-grid" data-gallery="student-life-grid">
-                <img src="../assets/images/elementary/20251209_111346.jpg" alt="Students and teachers learning together at Pardes" loading="lazy">
-                <img src="../assets/images/preschool/preschool-gallery-07.jpeg" alt="Young students exploring their classroom community" loading="lazy">
-                <img src="../assets/images/elementary/img_7426.jpg" alt="Student life in action at Pardes Day School" loading="lazy">
-                <img src="../assets/images/elementary/20251210_132720.jpg" alt="A classroom moment during the Pardes school day" loading="lazy">
-              </div>
-            </noscript>
+          <div class="simple-photos" data-reveal>
+            <img src="../assets/images/elementary/20251209_111346.jpg" alt="Students and teachers learning together" loading="lazy">
+            <img src="../assets/images/preschool/preschool-gallery-07.jpeg" alt="Young students exploring their classroom" loading="lazy">
+            <img src="../assets/images/elementary/img_7426.jpg" alt="Student life in action at Pardes" loading="lazy">
+            <img src="../assets/images/elementary/20251210_132720.jpg" alt="A classroom moment during the school day" loading="lazy">
           </div>
         </div>
       </section>
 
-      <!-- CTA -->
-      <section class="section">
-        <div class="container">
-          <div class="cta-band">
-            <h2>Experience Pardes Day School for yourself.</h2>
-            <p>See how your child thrives academically and grows as a confident member of our community.</p>
-            <div class="btn-row">
-              <a class="btn btn-primary btn-lg" href="admissions.html#schedule-tour">Schedule a Tour</a>
-              <a class="btn btn-outline btn-lg" href="contact.html">Contact Us</a>
-            </div>
-          </div>
+      <!-- Soft CTA -->
+      <section class="soft-cta">
+        <div class="container" data-reveal>
+          <h2>Want to experience Pardes for yourself?</h2>
+          <p>Come see the school in action.<br>Meet the teachers.<br>Get a feel for the community.</p>
+          <a class="btn-cta-light" href="contact.html">Get in Touch</a>
         </div>
       </section>
     </main>

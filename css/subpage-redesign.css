@@ -1,0 +1,656 @@
+/* =============================================
+   Subpage Redesign Styles
+   Shared by all subpages for a consistent
+   warm, story-first design matching the homepage.
+   ============================================= */
+
+/* ===== SUBPAGE HERO ===== */
+.subpage-hero {
+  position: relative;
+  min-height: clamp(300px, 40svh, 420px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: #1a2a1a;
+}
+
+.subpage-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 35%;
+}
+
+.subpage-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 40, 20, 0.38) 0%,
+    rgba(10, 40, 20, 0.58) 100%
+  );
+}
+
+.subpage-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 24px;
+  max-width: 760px;
+}
+
+.subpage-hero h1 {
+  font-size: clamp(36px, 5.5vw, 60px);
+  font-weight: 800;
+  line-height: 1.08;
+  color: white;
+  letter-spacing: -1.5px;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
+}
+
+.subpage-hero p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 16px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== SECTION SPACING ===== */
+.sub-section {
+  padding: 64px 0;
+}
+
+.sub-section--sage {
+  background: var(--sage-light);
+}
+
+/* ===== INFO CARDS ===== */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.info-card {
+  padding: 28px 24px;
+  border: 1px solid rgba(16, 101, 60, 0.12);
+  border-radius: 16px;
+  background: white;
+}
+
+.info-card__label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--forest);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.info-card h3 {
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.info-card p {
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.info-card strong {
+  color: var(--forest-dark);
+  font-weight: 700;
+}
+
+/* ===== SIMPLE PHOTO GRID ===== */
+.simple-photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.simple-photos img {
+  width: 100%;
+  border-radius: 16px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.simple-photos img:nth-child(even) {
+  margin-top: 32px;
+}
+
+/* ===== DETAIL NOTE ===== */
+.detail-note {
+  margin-top: 20px;
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.detail-note strong {
+  color: var(--forest-dark);
+  font-weight: 700;
+}
+
+/* ===== TUITION TABLE ===== */
+.tuition-panel {
+  padding: 32px 28px;
+  border: 1px solid rgba(16, 101, 60, 0.1);
+  border-radius: 16px;
+  background: white;
+}
+
+.tuition-panel h3 {
+  margin-bottom: 16px;
+  color: var(--text-dark);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.tuition-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tuition-table td {
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--text-body);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tuition-table td:last-child {
+  text-align: right;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.tuition-table tr:last-child td {
+  border-bottom: none;
+}
+
+.tuition-note {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* ===== SCHOLARSHIP CALLOUT ===== */
+.scholarship-band {
+  padding: 40px 36px;
+  border-radius: 16px;
+  background: var(--sage-light);
+  border: 1px solid rgba(16, 101, 60, 0.1);
+}
+
+.scholarship-band h3 {
+  margin-bottom: 12px;
+  color: var(--text-dark);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.scholarship-band p {
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.scholarship-band .btn-cta-forest {
+  display: inline-block;
+  background: var(--forest-dark);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.scholarship-band .btn-cta-forest:hover {
+  transform: scale(1.04);
+}
+
+/* ===== FORM PANEL ===== */
+.form-panel {
+  max-width: 720px;
+  margin: 40px auto 0;
+  padding: 36px 32px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background: white;
+}
+
+.form-panel .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-panel label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.form-panel input,
+.form-panel select,
+.form-panel textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--text-dark);
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.form-panel input:focus,
+.form-panel select:focus,
+.form-panel textarea:focus {
+  outline: none;
+  border-color: var(--forest);
+}
+
+.form-panel .btn-submit {
+  display: inline-block;
+  background: var(--forest-dark);
+  color: white;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.form-panel .btn-submit:hover {
+  transform: scale(1.04);
+}
+
+/* ===== FAQ (details/summary) on subpages ===== */
+.faq-list--sub {
+  max-width: 760px;
+  margin: 40px auto 0;
+}
+
+.faq-list--sub .faq-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.faq-list--sub .faq-question {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  padding: 24px 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.faq-list--sub .faq-question:hover {
+  color: var(--forest);
+}
+
+.faq-list--sub .faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list--sub .faq-question::after {
+  content: "+";
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--text-light);
+  flex-shrink: 0;
+  margin-left: 20px;
+  transition: transform 0.3s;
+}
+
+.faq-list--sub details[open] .faq-question::after {
+  content: "\2212";
+  color: var(--forest);
+}
+
+.faq-list--sub .faq-answer {
+  padding: 0 0 24px;
+}
+
+.faq-list--sub .faq-answer p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-body);
+}
+
+.faq-list--sub .faq-answer ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.faq-list--sub .faq-answer li {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-body);
+  margin-bottom: 4px;
+}
+
+.faq-list--sub .faq-answer strong {
+  color: var(--forest-dark);
+  font-weight: 700;
+}
+
+/* ===== CONTACT INFO GRID ===== */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  padding: 28px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background: white;
+}
+
+.contact-card h3 {
+  margin-bottom: 12px;
+  color: var(--text-dark);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.contact-card p {
+  font-size: 16px;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 4px;
+}
+
+.contact-card a {
+  color: var(--forest);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.contact-card h4 {
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.contact-card strong {
+  color: var(--forest-dark);
+  font-weight: 700;
+}
+
+/* ===== MAP EMBED ===== */
+.map-wrap {
+  margin-top: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 220px;
+  border: none;
+  display: block;
+}
+
+/* ===== STAFF CARDS (override bundle) ===== */
+.staff-section .staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.staff-section .staff-card {
+  text-align: center;
+  padding: 24px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  background: white;
+}
+
+.staff-section .staff-card__avatar {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: var(--sage-light);
+  color: var(--forest-dark);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.staff-section .staff-card__name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.staff-section .staff-card__role {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.4;
+}
+
+.staff-section .staff-card--featured {
+  border-color: rgba(16, 101, 60, 0.15);
+  background: linear-gradient(180deg, white 0%, var(--sage-light) 100%);
+}
+
+.staff-division__title {
+  margin-top: 32px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--forest-dark);
+}
+
+/* ===== HIGHLIGHT CARDS (override bundle) ===== */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.highlight {
+  padding: 28px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  background: white;
+}
+
+.highlight h3 {
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.highlight p {
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ===== LINK CARDS (for parents resources) ===== */
+.link-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.link-card {
+  display: block;
+  padding: 28px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background: white;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.link-card h3 {
+  margin-bottom: 8px;
+  color: var(--forest-dark);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.link-card p {
+  color: var(--text-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===== TESTIMONIAL CARDS ===== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.testimonial {
+  padding: 32px 28px;
+  border-radius: 16px;
+  background: var(--sage-light);
+  border: 1px solid rgba(16, 101, 60, 0.08);
+}
+
+.testimonial p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+.testimonial footer {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--forest-dark);
+  font-style: normal;
+}
+
+/* ===== RESPONSIVE: TABLET ===== */
+@media (max-width: 1024px) {
+  .info-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .simple-photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .simple-photos img:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .form-panel .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== RESPONSIVE: MOBILE ===== */
+@media (max-width: 768px) {
+  .subpage-hero {
+    min-height: clamp(260px, 35svh, 340px);
+  }
+
+  .subpage-hero h1 {
+    font-size: 32px;
+    letter-spacing: -0.8px;
+  }
+
+  .subpage-hero p {
+    font-size: 16px;
+  }
+
+  .sub-section {
+    padding: 48px 0;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .simple-photos {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .link-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-panel {
+    padding: 24px 20px;
+  }
+
+  .tuition-panel {
+    padding: 24px 20px;
+  }
+}
