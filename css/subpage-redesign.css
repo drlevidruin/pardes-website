@@ -60,8 +60,14 @@
 
 /* Center grids with fewer than 4 items */
 .staff-grid-uniform--center {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+  gap: 20px;
+}
+
+.staff-grid-uniform--center .staff-card {
+  width: 200px;
 }
 
 /* ===== INFO CARDS ===== */
@@ -456,7 +462,7 @@
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  border: 4px solid var(--forest);
+  border: none;
 }
 
 .staff-section .staff-card__avatar {
@@ -471,7 +477,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 4px solid rgba(0, 0, 0, 0.08);
+  border: none;
 }
 
 .staff-section .staff-card__name {
@@ -487,40 +493,6 @@
   line-height: 1.45;
 }
 
-/* Division color borders */
-.staff-card--leadership .staff-card__photo,
-.staff-card--leadership .staff-card__avatar {
-  border-image: conic-gradient(var(--navy) 0% 33%, var(--forest) 33% 66%, #5e3b1d 66% 100%) 1;
-  border-image-slice: 1;
-  /* border-image doesn't work on border-radius, use gradient border trick */
-  border-color: transparent;
-  background-clip: padding-box;
-  position: relative;
-}
-
-/* Gradient border workaround for circles */
-.staff-card--leadership .staff-card__photo,
-.staff-card--leadership .staff-card__avatar {
-  border: none;
-  outline: 4px solid var(--navy);
-  outline-offset: 0px;
-  box-shadow: 0 0 0 2px var(--forest), 0 0 0 4px var(--navy);
-}
-
-.staff-card--preschool .staff-card__photo,
-.staff-card--preschool .staff-card__avatar {
-  border-color: var(--navy);
-}
-
-.staff-card--elementary .staff-card__photo,
-.staff-card--elementary .staff-card__avatar {
-  border-color: var(--forest);
-}
-
-.staff-card--middle .staff-card__photo,
-.staff-card--middle .staff-card__avatar {
-  border-color: #5e3b1d;
-}
 
 @media (max-width: 600px) {
   .staff-grid-uniform {
