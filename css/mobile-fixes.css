@@ -1,3 +1,12 @@
 /* Shared mobile hotfix file.
    Homepage mobile hero rules were consolidated into css/homepage-redesign.css
    during the 2026-03-25 homepage story polish pass. */
+
+/* ── Mobile nav sticky fix ──────────────────────────────────
+   The bundle sets `overflow-x: hidden` on html and body,
+   which breaks `position: sticky` on iOS Safari.
+   `overflow: clip` clips overflow without creating a scroll
+   container, so sticky elements keep working.            */
+html, body {
+  overflow-x: clip;
+}
