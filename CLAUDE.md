@@ -26,7 +26,9 @@ Static website for **Pardes Day School**, a Jewish day school in Miami Beach, FL
 │   ├── contact.html
 │   ├── elementary.html
 │   ├── faq.html
+│   ├── gallery.html            # Photo/video gallery (new)
 │   ├── middle-school.html
+│   ├── newsletter.html         # Newsletter archive (new)
 │   ├── parents.html
 │   ├── preschool.html
 │   ├── staff.html
@@ -45,10 +47,18 @@ Static website for **Pardes Day School**, a Jewish day school in Miami Beach, FL
 │       └── og/                 # Open Graph social sharing images
 ├── css/
 │   ├── alerts.css              # Announcement banner styles
-│   └── features.css            # Shared styles for new features (scholarship callout, share button)
+│   ├── features.css            # Shared styles for new features (scholarship callout, share button)
+│   └── storytelling.css        # Styles for gallery, newsletter, calendar, testimonials, staff lightbox
 ├── js/
 │   ├── alerts.js               # Announcement banner (reads /data/alerts.json)
-│   └── share.js                # Share button (Web Share API with clipboard fallback)
+│   ├── calendar.js             # School calendar on parents page (reads /data/calendar.json)
+│   ├── gallery.js              # Gallery grid + category filters (reads /data/gallery.json)
+│   ├── gallery-lightbox.js     # Full-screen gallery lightbox with prev/next nav
+│   ├── newsletter.js           # Newsletter archive grid (reads /data/newsletters.json)
+│   ├── newsletter-viewer.js    # Newsletter page-image viewer modal
+│   ├── share.js                # Share button (Web Share API with clipboard fallback)
+│   ├── staff-lightbox.js       # Staff photo lightbox with bio/standout (reads /data/staff-leadership.json)
+│   └── testimonials.js         # Scattered pull quotes + story cards (reads /data/testimonials.json)
 ├── data/
 │   ├── site.json               # School info, pillars, CTAs
 │   ├── homepage.json           # Homepage content
@@ -56,6 +66,9 @@ Static website for **Pardes Day School**, a Jewish day school in Miami Beach, FL
 │   ├── faq.json                # FAQ entries
 │   ├── testimonials.json       # Parent testimonials
 │   ├── contact.json            # Campus addresses, hours, phone
+│   ├── gallery.json            # Gallery photo/video items with categories
+│   ├── newsletters.json        # Newsletter issues (Canva page-image exports)
+│   ├── calendar.json           # School dates calendar (holidays, events, early dismissals)
 │   ├── image-manifest.json     # Generated image catalog (see Image System)
 │   └── alerts.json             # Announcement banner content (set active:false to hide)
 └── .gitignore
@@ -71,8 +84,11 @@ These JSON files power the site content. The admin panel reads/writes them via t
 | `homepage.json` | Homepage-specific content |
 | `staff-leadership.json` | Staff names, roles, bios |
 | `faq.json` | FAQ question/answer pairs |
-| `testimonials.json` | Parent testimonials |
+| `testimonials.json` | Parent testimonials with page targeting (type: quote/story, pages array) |
 | `contact.json` | Campus addresses, phone numbers, school hours |
+| `gallery.json` | Gallery items: src, alt, caption, category, type (photo/video) |
+| `newsletters.json` | Newsletter issues: title, cover image, page-image arrays (Canva exports) |
+| `calendar.json` | School dates: date (ISO 8601), label, type badge (holiday/no_school/early_dismissal/event) |
 | `image-manifest.json` | Auto-generated catalog of all images with category pools |
 
 ## Image System
@@ -136,6 +152,20 @@ Single minified file that handles all site interactivity:
 - **Hero carousel**: auto-rotating hero with touch/swipe support
 - **Reveal animations**: intersection observer for `[data-reveal]` elements
 
+## Standalone JS Files (js/)
+
+New features use standalone JS files (not the minified bundle). All follow the same pattern:
+
+- **IIFE wrapper**: `(function () { 'use strict'; ... })();`
+- **Safe DOM creation**: Always use `document.createElement()` + `.textContent` — never `innerHTML` (security hook enforces this)
+- **JSON data source**: Fetch from `data/` with path prefix logic for pages in subdirectories (`../` prefix when in `/pages/`)
+- **Loaded with `defer`**: Script tags use `defer` attribute
+- **No dependencies**: Each file is self-contained, no imports or shared modules
+
+### Navigation (js/site-shell.js)
+
+The `<site-header>` web component centralizes all navigation. Routes are defined in a single `ROUTES` object — adding a new page to the nav only requires editing this one file (no need to touch all 13+ HTML pages).
+
 ## Hosting & Deployment
 
 - **GitHub Pages** serves the site from the `main` branch root
@@ -178,3 +208,4 @@ This repo is actively worked on by both **Claude Code** and **OpenAI Codex**. Co
 | 2026-03-22 | Claude Code | Added share button (Web Share API) on admissions and contact pages: /js/share.js + styles in /css/features.css |
 | 2026-03-22 | Claude Code | Created OG sharing image: /assets/images/og/og-share.svg (1200x630 branded card for social previews) |
 | 2026-03-22 | Claude Code | Disabled announcement banner (active:false). Owner wants to re-enable later this week after mobile spacing is fixed. Banner pushes content down and has too much whitespace on mobile. Before re-enabling: fix mobile padding so banner sits tighter, and reduce gap between banner and hero section. |
+| 2026-03-27 | Claude Code | Added storytelling features: Gallery page (`pages/gallery.html` + `js/gallery.js` + `js/gallery-lightbox.js`), Newsletter archive (`pages/newsletter.html` + `js/newsletter.js` + `js/newsletter-viewer.js`), School calendar on parents page (`js/calendar.js` + `data/calendar.json`), Staff lightbox bios (`js/staff-lightbox.js` rewrite + bio/standout fields in `staff-leadership.json`), Scattered testimonials system (`js/testimonials.js` + page-targeted quotes/stories in `testimonials.json`), all styles in `css/storytelling.css`. Gallery and Newsletter added to nav in `js/site-shell.js`. |

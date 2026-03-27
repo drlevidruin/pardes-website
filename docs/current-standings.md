@@ -1,6 +1,6 @@
 # Pardes Website Current Standings
 
-Last updated: 2026-03-26
+Last updated: 2026-03-27
 
 ## Current State
 
@@ -77,11 +77,71 @@ If the live page ever looks wrong after a push:
 - Hard refresh the About page.
 - Check that `pages/about.html` is loading the current versioned stylesheet query.
 
+### 4. Storytelling Features (2026-03-27)
+
+Six new features were brainstormed, specced, and fully implemented in one session. All are live and working but some need real content from Levi.
+
+**Gallery Page** (`pages/gallery.html`)
+- New page added to the nav (Gallery link)
+- Photo grid with category filter pills (Classroom Life, Gan Katan, School Events)
+- Full-screen lightbox with prev/next arrow navigation and keyboard support
+- Currently populated with 27 existing school photos — works but needs organized/curated gallery photos
+- Supports video items too (type: "video" in `data/gallery.json`) — no videos uploaded yet
+- Files: `js/gallery.js`, `js/gallery-lightbox.js`, `data/gallery.json`
+
+**Newsletter Archive** (`pages/newsletter.html`)
+- New page added to the nav (Newsletter link)
+- Shows a grid of newsletter issue cards; clicking opens a page-image viewer modal
+- Currently shows an empty state ("Coming soon") because no issues have been added yet
+- **To add a newsletter**: Export each page from Canva as an image, put them in `assets/images/newsletters/`, then add an entry to `data/newsletters.json` with the title, cover, and page image paths
+- Files: `js/newsletter.js`, `js/newsletter-viewer.js`, `data/newsletters.json`
+
+**School Calendar** (on `pages/parents.html`)
+- Renders a dated list of school events grouped by month
+- Type badges: Holiday, No School, Early Dismissal, Event
+- Currently has rest-of-year dates (Pesach break through last day of school 2025-2026)
+- **To update**: Edit `data/calendar.json` — each entry has `date` (ISO format), `label`, and `type`
+- Files: `js/calendar.js`, `data/calendar.json`
+
+**Staff Lightbox Bios** (on `pages/staff.html`)
+- Clicking a staff card with a photo opens a lightbox showing a larger photo + bio + standout detail
+- All 48 staff members have placeholder bios based on their role/division
+- **Action needed**: Staff should review and fill in their real bios in `data/staff-leadership.json` (fields: `bio` and `standout`)
+- Files: `js/staff-lightbox.js`, `data/staff-leadership.json`
+
+**Scattered Testimonials** (across multiple pages)
+- Pull quotes and family story cards that appear on targeted pages
+- Each testimonial in `data/testimonials.json` has a `pages` array that controls where it shows up
+- Pull quotes insert before the soft-CTA section; story cards insert before the admissions form
+- Currently 9 testimonials: 6 pull quotes on various pages, 3 story cards on admissions
+- **Action needed**: Replace placeholder testimonials with real family quotes
+- Files: `js/testimonials.js`, `data/testimonials.json`
+
+**Shared Styles**
+- All storytelling feature styles live in `css/storytelling.css`
+- Loaded on every page via `<link>` tag
+- Responsive at 1024px and 768px breakpoints
+
+**Design Spec**: `docs/superpowers/specs/2026-03-27-site-storytelling-features-design.md`
+
 ## Known Open Items
 
 - Announcement banner is still disabled in `data/alerts.json`.
 - Before re-enabling the banner, mobile spacing still needs a careful pass so it does not create excess whitespace above the hero.
 - About page has already gone through many spacing iterations. If more work is done there, keep it focused and verify on the live site after deploy.
+- **Storytelling features need real content** — see checklist below.
+- Gallery and Newsletter pages have not been visually reviewed on mobile yet.
+
+## Content Levi Needs to Provide
+
+| Item | Where it goes | How to do it |
+|------|--------------|-------------|
+| Curated gallery photos | `data/gallery.json` + image files | Organize photos, add entries to gallery.json pointing to image paths |
+| Video clips (optional) | `data/gallery.json` | Add items with `"type": "video"` and a YouTube/Vimeo embed URL |
+| Newsletter Canva exports | `data/newsletters.json` + `assets/images/newsletters/` | Export each page as image, add issue entry to newsletters.json |
+| Real family testimonials | `data/testimonials.json` | Replace placeholder quotes with real ones, keep the `pages` array targeting |
+| Staff real bios | `data/staff-leadership.json` | Have each staff member review their `bio` and `standout` fields |
+| Calendar updates for next year | `data/calendar.json` | Update dates when 2026-2027 calendar is finalized |
 
 ## Recommended Next Page
 
@@ -111,4 +171,8 @@ Recommendation:
 
 - Live site: `https://drlevidruin.github.io/pardes-website/`
 - About page: `https://drlevidruin.github.io/pardes-website/pages/about.html`
+- Gallery: `https://drlevidruin.github.io/pardes-website/pages/gallery.html`
+- Newsletter: `https://drlevidruin.github.io/pardes-website/pages/newsletter.html`
+- Parents (calendar): `https://drlevidruin.github.io/pardes-website/pages/parents.html`
+- Staff (lightbox bios): `https://drlevidruin.github.io/pardes-website/pages/staff.html`
 - Repo: `https://github.com/drlevidruin/pardes-website`
