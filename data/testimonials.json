@@ -1,23 +1,92 @@
 {
-  "_note": "These are placeholder testimonials. Replace with real parent quotes once collected.",
+  "_note": "Placeholder testimonials. Replace with real parent quotes once collected. Type 'quote' = pull quotes scattered on pages. Type 'story' = family story cards on admissions.",
   "testimonials": [
     {
       "quote": "This is the school I wish I had growing up. Our kids love it here, and we see it in everything they bring home.",
-      "name": "Chaya M.",
+      "name": "The Margolis Family",
       "detail": "Parent of a 2nd grader and 4th grader",
-      "initials": "SM"
+      "initials": "SM",
+      "type": "quote",
+      "pages": ["about", "elementary"],
+      "since_year": 2022
     },
     {
-      "quote": "Our evenings are ours again. Practice happens at school with real teacher support, and our child is thriving. This is how school should work.",
+      "quote": "Our evenings are ours again. Practice happens at school with real teacher support, and our child is thriving.",
       "name": "David & Rachel L.",
       "detail": "Parents of three Pardes students",
-      "initials": "DL"
+      "initials": "DL",
+      "type": "quote",
+      "pages": ["student-life", "parents"],
+      "since_year": 2020
     },
     {
-      "quote": "We chose Pardes because our children are growing into the best versions of themselves, academically and as proud Jews. We wouldn't change a thing.",
+      "quote": "We chose Pardes because our children are growing into the best versions of themselves — academically and as proud Jews.",
       "name": "Jessica K.",
       "detail": "Preschool (Gan Katan) parent",
-      "initials": "JK"
+      "initials": "JK",
+      "type": "quote",
+      "pages": ["preschool", "about"],
+      "since_year": 2024
+    },
+    {
+      "quote": "The teachers here don't just teach — they really know my child. Every single one of them.",
+      "name": "The Friedman Family",
+      "detail": "Elementary parent",
+      "initials": "FF",
+      "type": "quote",
+      "pages": ["elementary", "student-life"],
+      "since_year": 2021
+    },
+    {
+      "quote": "My daughter went from being shy and quiet to leading her class. Pardes gave her that confidence.",
+      "name": "The Rivera Family",
+      "detail": "Parent of a 3rd grader",
+      "initials": "RF",
+      "type": "quote",
+      "pages": ["about"],
+      "since_year": 2023
+    },
+    {
+      "quote": "We looked at five schools. Within ten minutes at Pardes, we knew. This was different.",
+      "name": "The Goldstein Family",
+      "detail": "Kindergarten through 5th grade",
+      "initials": "GF",
+      "type": "story",
+      "story": "We moved to Miami Beach and visited five schools in one week. Most felt like brochures come to life — polished but impersonal. At Pardes, the principal knew every child's name. Teachers stopped to say hello. Our daughter sat in on a class and didn't want to leave. Three years later, our son started in Gan Katan. This school is home.",
+      "pages": ["admissions"],
+      "family_photo": "",
+      "since_year": 2021
+    },
+    {
+      "quote": "Our son started in Gan Katan barely speaking English. By first grade, he was reading in two languages.",
+      "name": "The Silva Family",
+      "detail": "Gan Katan through Elementary",
+      "initials": "SF",
+      "type": "story",
+      "story": "We moved to Miami from Brazil and were nervous about the transition. From day one, the Gan Katan teachers made our son feel safe and special. By first grade he was reading in both English and Hebrew. Now in third grade, he's the one helping new students feel welcome. Pardes didn't just teach him — they made him feel like he belongs.",
+      "pages": ["admissions"],
+      "family_photo": "",
+      "since_year": 2022
+    },
+    {
+      "quote": "The middle school program challenged our daughter in ways we didn't think possible.",
+      "name": "The Cohen Family",
+      "detail": "Middle School parent",
+      "initials": "CF",
+      "type": "story",
+      "story": "When Pardes announced the middle school program, we were skeptical. Could a young school really pull off 6th through 8th? Two years in, our daughter is reading Gemara, writing research papers, and leading community service projects. She's more confident, more curious, and more herself than ever. We're so glad we stayed.",
+      "pages": ["admissions"],
+      "family_photo": "",
+      "since_year": 2019
+    },
+    {
+      "quote": "Pardes is the rare school where every child is seen, known, and celebrated.",
+      "name": "The Berger Family",
+      "detail": "Preschool and Elementary parent",
+      "initials": "BF",
+      "type": "quote",
+      "pages": ["middle-school", "student-life"],
+      "since_year": 2020
     }
   ]
 }

@@ -1,0 +1,764 @@
+/* ============================================================
+   Pardes Day School — Storytelling Features
+   Gallery, Newsletter, Calendar, Testimonials, Staff Bio
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   1. Gallery Grid
+   ---------------------------------------------------------- */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item__caption {
+  font-size: 13px;
+  color: var(--text-body);
+  padding: 8px 12px;
+}
+
+/* Video items */
+.gallery-item__thumb {
+  position: relative;
+}
+
+.gallery-item--video {
+  position: relative;
+}
+
+.gallery-item--video .gallery-item__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: background 0.2s ease;
+}
+
+.gallery-item--video:hover .gallery-item__play {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.gallery-item__play::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 18px;
+  border-color: transparent transparent transparent #fff;
+  margin-left: 3px;
+}
+
+/* ----------------------------------------------------------
+   2. Gallery Filters
+   ---------------------------------------------------------- */
+
+.gallery-filters {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 32px;
+  padding-bottom: 4px;
+}
+
+.gallery-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-filter {
+  padding: 8px 20px;
+  border-radius: 100px;
+  background: #fff;
+  border: 1px solid rgba(16, 101, 60, 0.15);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.gallery-filter:hover {
+  border-color: var(--forest);
+  color: var(--forest);
+}
+
+.gallery-filter--active {
+  background: var(--forest);
+  color: #fff;
+  border-color: var(--forest);
+}
+
+/* ----------------------------------------------------------
+   3. Gallery Lightbox
+   ---------------------------------------------------------- */
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-lightbox--open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.gallery-lightbox__inner {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-lightbox__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-lightbox__inner img,
+.gallery-lightbox__photo {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.gallery-lightbox__close {
+  position: absolute;
+  top: -48px;
+  right: -8px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-lightbox__close:hover {
+  opacity: 0.7;
+}
+
+.gallery-lightbox__prev,
+.gallery-lightbox__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-lightbox__prev:hover,
+.gallery-lightbox__next:hover {
+  opacity: 0.7;
+}
+
+.gallery-lightbox__prev {
+  left: -64px;
+}
+
+.gallery-lightbox__next {
+  right: -64px;
+}
+
+.gallery-lightbox__caption {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 16px;
+  max-width: 600px;
+}
+
+/* Video mode */
+.gallery-lightbox__video {
+  position: relative;
+  width: 90vw;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-lightbox__video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ----------------------------------------------------------
+   4. Newsletter Grid
+   ---------------------------------------------------------- */
+
+.newsletter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ----------------------------------------------------------
+   5. Newsletter Card
+   ---------------------------------------------------------- */
+
+.newsletter-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(16, 101, 60, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.newsletter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-card__cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.newsletter-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 16px 16px 4px;
+  color: var(--text-dark);
+}
+
+.newsletter-card__desc {
+  font-size: 14px;
+  color: var(--text-body);
+  padding: 0 16px 16px;
+  line-height: 1.5;
+}
+
+/* ----------------------------------------------------------
+   6. Newsletter Viewer
+   ---------------------------------------------------------- */
+
+.newsletter-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.newsletter-viewer--open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.newsletter-viewer__inner {
+  position: relative;
+  background: #fff;
+  border-radius: 22px;
+  max-width: 700px;
+  width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.newsletter-viewer__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: background 0.2s ease;
+}
+
+.newsletter-viewer__close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-viewer__title {
+  text-align: center;
+  padding: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  border-bottom: 1px solid rgba(16, 101, 60, 0.1);
+}
+
+.newsletter-viewer__pages img,
+.newsletter-viewer__scroll img {
+  width: 100%;
+  display: block;
+}
+
+.newsletter-viewer__scroll {
+  overflow-y: auto;
+}
+
+/* ----------------------------------------------------------
+   7. Newsletter Empty State
+   ---------------------------------------------------------- */
+
+.newsletter-empty {
+  text-align: center;
+  padding: 80px 24px;
+  font-size: 18px;
+  color: var(--text-body);
+}
+
+/* ----------------------------------------------------------
+   8. Calendar Section
+   ---------------------------------------------------------- */
+
+.calendar-month__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--forest-dark);
+  margin-top: 32px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(16, 101, 60, 0.12);
+}
+
+.calendar-month__title:first-child {
+  margin-top: 0;
+}
+
+.calendar-date {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(16, 101, 60, 0.08);
+}
+
+.calendar-date__when {
+  font-weight: 600;
+  min-width: 130px;
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+.calendar-date__label {
+  flex: 1;
+  font-size: 15px;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Type badges */
+.calendar-date__badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.calendar-date__badge--holiday {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.calendar-date__badge--no_school {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.calendar-date__badge--early_dismissal {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.calendar-date__badge--event {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* ----------------------------------------------------------
+   9. Testimonial Pull Quote
+   ---------------------------------------------------------- */
+
+.testimonial-pullquote {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial-pullquote::before {
+  content: "\201C";
+  font-family: "Caveat", cursive;
+  font-size: 120px;
+  color: var(--forest);
+  opacity: 0.3;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.testimonial-pullquote__text {
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.testimonial-pullquote__attr {
+  margin-top: 20px;
+  font-size: 15px;
+  color: var(--text-body);
+  font-weight: 600;
+}
+
+.testimonial-pullquote__since {
+  font-weight: 400;
+  color: #8e8e93;
+}
+
+/* ----------------------------------------------------------
+   10. Testimonial Story Cards Grid
+   ---------------------------------------------------------- */
+
+.testimonial-stories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ----------------------------------------------------------
+   11. Testimonial Story Card
+   ---------------------------------------------------------- */
+
+.story-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 32px 28px;
+  border: 1px solid rgba(16, 101, 60, 0.12);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.story-card__quote {
+  font-size: 17px;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--text-dark);
+}
+
+.story-card__story {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 16px;
+  color: var(--text-body);
+}
+
+.story-card__footer {
+  margin-top: 20px;
+  border-top: 1px solid rgba(16, 101, 60, 0.1);
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.story-card__photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  float: left;
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+
+.story-card__initials {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--sage-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--forest-dark);
+  float: left;
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+
+.story-card__name {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+.story-card__detail {
+  font-size: 14px;
+  color: var(--text-body);
+}
+
+.story-card__since {
+  font-size: 14px;
+  color: var(--text-body);
+}
+
+/* ----------------------------------------------------------
+   12. Staff Lightbox Bio Enhancement
+   ---------------------------------------------------------- */
+
+.staff-lightbox__inner {
+  max-width: 480px;
+}
+
+.staff-lightbox__bio {
+  margin-top: 16px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #424245;
+  max-width: 420px;
+  text-align: center;
+}
+
+.staff-lightbox__standout {
+  margin-top: 14px;
+  padding: 14px 20px;
+  background: var(--sage-light, #f0f4ee);
+  border-radius: 12px;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--forest-dark);
+  max-width: 400px;
+  text-align: center;
+}
+
+/* data-reveal animations handled by the bundle (main-cpapzbpt.js) */
+
+/* ----------------------------------------------------------
+   Responsive — Tablet (<=1024px)
+   ---------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newsletter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-stories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ----------------------------------------------------------
+   Responsive — Mobile (<=768px)
+   ---------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-stories {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-lightbox__prev {
+    left: 8px;
+  }
+
+  .gallery-lightbox__next {
+    right: 8px;
+  }
+
+  .gallery-lightbox__close {
+    top: -40px;
+    right: 0;
+  }
+
+  .calendar-date {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .calendar-date__when {
+    min-width: unset;
+  }
+
+  .testimonial-pullquote {
+    padding: 36px 16px;
+  }
+
+  .story-card {
+    padding: 24px 20px;
+  }
+
+  .newsletter-viewer__inner {
+    border-radius: 16px;
+    max-width: 95vw;
+  }
+}
+
+/* ----------------------------------------------------------
+   Additional Classes (JS-generated elements)
+   ---------------------------------------------------------- */
+
+/* Hide the JS-created deco element since CSS ::before handles it */
+.testimonial-pullquote__deco {
+  display: none;
+}
+
+.testimonial-pullquote-section {
+  padding: 24px 0;
+}
+
+.testimonial-pullquote__name {
+  /* Inherits from __attr parent */
+}
+
+.testimonial-pullquote__detail {
+  font-size: 14px;
+  color: #8e8e93;
+  margin-top: 4px;
+}
+
+.story-card__avatar-wrap {
+  flex-shrink: 0;
+  margin-right: 14px;
+}
+
+.story-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.story-card__footer {
+  margin-top: 20px;
+  border-top: 1px solid rgba(16, 101, 60, 0.1);
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.calendar-month {
+  margin-bottom: 8px;
+}
+
+.calendar-download {
+  display: inline-block;
+  margin-bottom: 28px;
+  padding: 10px 24px;
+  border-radius: 100px;
+  background: var(--forest, #10653c);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.calendar-download:hover {
+  background: var(--forest-dark);
+}
+
+.calendar-empty {
+  text-align: center;
+  padding: 40px 24px;
+  font-size: 16px;
+  color: var(--text-body);
+}
+
+.newsletter-card__cover img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}

@@ -1,0 +1,59 @@
+{
+  "_note": "School calendar dates. Update at the start of each semester. No campus addresses displayed for security.",
+  "school_year": "2025-2026",
+  "dates": [
+    {
+      "date": "2026-04-13",
+      "end_date": "2026-04-21",
+      "label": "Pesach Break",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-04-22",
+      "label": "School Resumes",
+      "type": "event"
+    },
+    {
+      "date": "2026-05-01",
+      "label": "Lag B'Omer — Early Dismissal",
+      "type": "early_dismissal"
+    },
+    {
+      "date": "2026-05-22",
+      "label": "Teacher In-Service Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-05-25",
+      "label": "Memorial Day — No School",
+      "type": "no_school"
+    },
+    {
+      "date": "2026-06-01",
+      "end_date": "2026-06-02",
+      "label": "Shavuot — No School",
+      "type": "holiday"
+    },
+    {
+      "date": "2026-06-05",
+      "label": "Preschool (Gan Katan) End-of-Year Celebration",
+      "type": "event"
+    },
+    {
+      "date": "2026-06-10",
+      "label": "Elementary Awards Assembly",
+      "type": "event"
+    },
+    {
+      "date": "2026-06-11",
+      "label": "8th Grade Graduation",
+      "type": "event"
+    },
+    {
+      "date": "2026-06-12",
+      "label": "Last Day of School — Early Dismissal",
+      "type": "early_dismissal"
+    }
+  ],
+  "pdf_url": ""
+}

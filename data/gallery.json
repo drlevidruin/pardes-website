@@ -1,0 +1,194 @@
+{
+  "_note": "Gallery photo and video manifest. Add entries here when uploading new photos. Photos can reference existing image directories.",
+  "items": [
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251208_132924.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Elementary students engaged in classroom learning"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251209_111346.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Students working together on a group project"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251210_135448.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Hands-on learning activity in elementary classroom"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251210_132720.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Students collaborating during class time"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251204_095445.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Morning learning session in the elementary classroom"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251205_090913.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Students starting their school day"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251205_102507.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Interactive learning activity"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251204_120050.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Midday classroom activity"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251203_091648.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Elementary students during morning instruction"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251208_132948.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Students engaged in an afternoon lesson"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251216_132710.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "End of semester classroom celebration"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251210_144101.jpg",
+      "caption": "",
+      "category": "Classroom Life",
+      "alt": "Afternoon enrichment activity"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-01.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Preschool children during a classroom activity"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-02.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Gan Katan students exploring together"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-03.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Creative play time in preschool"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-04.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Preschool art and creativity session"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-05.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Outdoor play at Gan Katan"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-06.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Circle time in the preschool classroom"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-07.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Hands-on sensory activity"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-08.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Learning through play at Gan Katan"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-09.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Storytime in the preschool"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-10.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Preschool students during a special activity"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-11.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Music and movement in preschool"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/preschool/preschool-gallery-12.jpeg",
+      "caption": "",
+      "category": "Gan Katan",
+      "alt": "Exploring nature at Gan Katan"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251209_152138.jpg",
+      "caption": "",
+      "category": "School Events",
+      "alt": "Students celebrating at a school event"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20251212_112820(0).jpg",
+      "caption": "",
+      "category": "School Events",
+      "alt": "Community gathering and celebration"
+    },
+    {
+      "type": "photo",
+      "src": "assets/images/elementary/20250820_131935.jpg",
+      "caption": "",
+      "category": "School Events",
+      "alt": "Back to school day celebration"
+    }
+  ]
+}

@@ -16,6 +16,8 @@
       parents: 'pages/parents.html',
       support: 'pages/support.html',
       contact: 'pages/contact.html',
+      gallery: 'pages/gallery.html',
+      newsletter: 'pages/newsletter.html',
       tour: 'pages/admissions.html#schedule-tour'
     },
     subpage: {
@@ -27,6 +29,8 @@
       staff: '../pages/staff.html',
       admissions: '../pages/admissions.html',
       studentLife: '../pages/student-life.html',
+      gallery: '../pages/gallery.html',
+      newsletter: '../pages/newsletter.html',
       parents: '../pages/parents.html',
       support: '../pages/support.html',
       contact: '../pages/contact.html',
@@ -93,6 +97,8 @@
       '        </li>' +
       '        <li><a data-nav-link href="' + routes.admissions + '">Admissions</a></li>' +
       '        <li><a data-nav-link href="' + routes.studentLife + '">Student Life</a></li>' +
+      '        <li><a data-nav-link href="' + routes.gallery + '">Gallery</a></li>' +
+      '        <li><a data-nav-link href="' + routes.newsletter + '">Newsletter</a></li>' +
       '        <li class="nav-group">' +
       '          <span class="nav-group__label">Community</span>' +
       '          <div class="nav-dropdown">' +

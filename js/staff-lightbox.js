@@ -1,18 +1,38 @@
 /**
  * Staff Lightbox
  * Opens a full-screen modal with a larger view of a staff member's photo,
- * name, and role when their card is clicked.
+ * name, role, bio, and standout detail when their card is clicked.
  * Only cards with an <img> photo (not avatar initials) are clickable.
  */
 (function () {
   'use strict';
+
+  /* ---- Staff data (bios) ---- */
+  var staffData = {};
+
+  function loadStaffData() {
+    // Determine path prefix based on page location
+    var prefix = window.location.pathname.indexOf('/pages/') !== -1 ? '../' : '';
+    fetch(prefix + 'data/staff-leadership.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data.members) {
+          data.members.forEach(function (m) {
+            staffData[m.name] = m;
+          });
+        }
+      })
+      .catch(function () { /* bios are optional */ });
+  }
+
+  loadStaffData();
 
   /* ---- Build the lightbox DOM ---- */
   var overlay = document.createElement('div');
   overlay.className = 'staff-lightbox';
   overlay.setAttribute('role', 'dialog');
   overlay.setAttribute('aria-modal', 'true');
-  overlay.setAttribute('aria-label', 'Staff photo viewer');
+  overlay.setAttribute('aria-label', 'Staff member details');
 
   var inner = document.createElement('div');
   inner.className = 'staff-lightbox__inner';
@@ -36,8 +56,16 @@
   var roleEl = document.createElement('p');
   roleEl.className = 'staff-lightbox__role';
 
+  var bioEl = document.createElement('p');
+  bioEl.className = 'staff-lightbox__bio';
+
+  var standoutEl = document.createElement('div');
+  standoutEl.className = 'staff-lightbox__standout';
+
   infoDiv.appendChild(nameEl);
   infoDiv.appendChild(roleEl);
+  infoDiv.appendChild(bioEl);
+  infoDiv.appendChild(standoutEl);
   inner.appendChild(closeBtn);
   inner.appendChild(photo);
   inner.appendChild(infoDiv);
@@ -54,10 +82,31 @@
     var name = card.querySelector('.staff-card__name');
     var role = card.querySelector('.staff-card__role');
 
+    var staffName = name ? name.textContent : '';
+    var member = staffData[staffName] || {};
+
     photo.src = img.src;
     photo.alt = img.alt || '';
-    nameEl.textContent  = name ? name.textContent : '';
+    nameEl.textContent  = staffName;
     roleEl.textContent  = role ? role.textContent : '';
+
+    // Bio
+    if (member.bio) {
+      bioEl.textContent = member.bio;
+      bioEl.style.display = '';
+    } else {
+      bioEl.textContent = '';
+      bioEl.style.display = 'none';
+    }
+
+    // Standout detail
+    if (member.standout) {
+      standoutEl.textContent = member.standout;
+      standoutEl.style.display = '';
+    } else {
+      standoutEl.textContent = '';
+      standoutEl.style.display = 'none';
+    }
 
     previousFocus = document.activeElement;
 
@@ -108,7 +157,7 @@
     card.classList.add('staff-card--has-lightbox');
     card.setAttribute('tabindex', '0');
     card.setAttribute('role', 'button');
-    card.setAttribute('aria-label', 'View photo of ' + (card.querySelector('.staff-card__name') ? card.querySelector('.staff-card__name').textContent : ''));
+    card.setAttribute('aria-label', 'View details for ' + (card.querySelector('.staff-card__name') ? card.querySelector('.staff-card__name').textContent : ''));
 
     card.addEventListener('click', function () { open(this); });
     card.addEventListener('keydown', function (e) {
