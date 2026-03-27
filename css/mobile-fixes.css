@@ -10,3 +10,25 @@
 html, body {
   overflow-x: clip;
 }
+
+/* ── Mobile nav dropdown fix ────────────────────────────────
+   The nav dropdown items get clipped on the left edge on mobile.
+   Ensure the mobile nav panel has proper overflow and the
+   dropdown items have enough left padding.               */
+@media (max-width: 1024px) {
+  .site-nav {
+    overflow-x: visible;
+    overflow-y: auto;
+    max-height: calc(100vh - var(--header-height, 72px));
+    padding-left: var(--space-5, 1.5rem);
+    padding-right: var(--space-5, 1.5rem);
+  }
+
+  .nav-dropdown {
+    padding-left: var(--space-5, 1.5rem) !important;
+  }
+
+  .nav-list {
+    width: 100%;
+  }
+}
