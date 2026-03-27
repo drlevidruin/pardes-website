@@ -400,6 +400,7 @@
   margin: 0 auto 16px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 20%;
   display: block;
   border: 3px solid rgba(16, 101, 60, 0.2);
 }
